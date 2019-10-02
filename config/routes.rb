@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:show, :create, :destroy] do
     end
-    get '/identifier', to: 'users#identifier'
+    get '/identifier', to: 'users#identifier_valid?'
 
     resource :session, only: [:create, :destroy]
 

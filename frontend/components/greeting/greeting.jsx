@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+// lets refactor this as the navbar!
+
 class Greeting extends React.Component {
 
     render() {
@@ -13,12 +15,9 @@ class Greeting extends React.Component {
             )
         } else {
             return (
-                <div>
-                    <Link to={'/'}>Email or phone</Link>
-                    
-                    <br/>
-                    <Link to={'/users'}>Create account</Link>
-                    <button to=''>Next</button>
+                <div className='navbar-container'>
+                    <Link to={'/signin'}>SIGN IN</Link>
+                 
                 </div >
             )
         }

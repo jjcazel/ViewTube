@@ -20,17 +20,17 @@ class User < ApplicationRecord
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :username, :email, :password_digest, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
-  validates :email, format: { with: VALID_EMAIL_REGEX, message: 'Couldn\'t find your account' }
-  validates :phone, format: { with: VALID_PHONE_NUMBER_REGEX, message: 'Couldn\'t find your account' }
+  validates :email, format: { with: VALID_EMAIL_REGEX, message: 'not a valid email' }
+  # validates :phone, format: { with: VALID_PHONE_NUMBER_REGEX, message: 'not a valid phone number' }
 
   attr_reader :password
   after_initialize :ensure_session_token
 
   # has_many:
-  
 
-  def self.find_by_credentials(username, password)
-    user = User.find_by(username: username)
+
+  def self.find_by_credentials(identifier, password) # refactor to check the email and/or phone as well
+    user = User.find_by(email: identifier) || User.find_by(phone: identifier)
     user && user.is_password?(password) ? user : nil
   end
 

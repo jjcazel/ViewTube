@@ -20,7 +20,7 @@ const receiveErrors = error => ({
 });
 
 export const acct_validation = id => dispatch => {
-    return APIUtil.acct_validation(id).then(user => dispatch(receiveCurrentUser(user)));
+    return APIUtil.acct_validation(id);
 }
 
 export const login = user => dispatch => {
