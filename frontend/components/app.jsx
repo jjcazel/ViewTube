@@ -8,7 +8,7 @@ import { Route } from 'react-router-dom';
 const App = () => (
     <div>
         <header>
-            <h1>ViewTube!</h1>
+            <h1>ViewTube</h1>
             <GreetingContainer />
         </header>
 

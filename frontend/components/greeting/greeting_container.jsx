@@ -8,7 +8,7 @@ const msp = state => ({
 })
 
 const mdp = dispatch => ({
-    logout: (user) => dispatch(logout(user))
+    logout: () => dispatch(logout())
 })
 
 export default connect(msp, mdp)(Greeting);

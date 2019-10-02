@@ -4,7 +4,7 @@ import { login } from '../../actions/session_actions'
 
 const msp = (state, ownProps) => {
     const errors = [];
-    const formType = login;
+    const formType = 'Sign in';
 
     return { errors, formType }
 }
