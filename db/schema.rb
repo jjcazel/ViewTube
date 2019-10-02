@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_01_191325) do
+ActiveRecord::Schema.define(version: 2019_10_02_135346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "video_id", null: false
+    t.integer "user_id", null: false
+    t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["video_id"], name: "index_comments_on_video_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "video_id", null: false
+    t.integer "creator_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_likes_on_creator_id", unique: true
+    t.index ["video_id"], name: "index_likes_on_video_id", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -23,8 +42,20 @@ ActiveRecord::Schema.define(version: 2019_10_01_191325) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["password_digest"], name: "index_users_on_password_digest", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description"
+    t.integer "creator_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_videos_on_creator_id"
+    t.index ["title"], name: "index_videos_on_title"
   end
 
 end

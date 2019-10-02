@@ -13,8 +13,7 @@ class Api::SessionsController < ApplicationController
       login!(user)
     # render json?
     else
-    # render json[errors] ['please try again']
-      render :new
+    # render :json @session.full_messages[errors] status: 
     end
   end
 
