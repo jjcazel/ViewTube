@@ -14,9 +14,11 @@ class Greeting extends React.Component {
         } else {
             return (
                 <div>
-                    <Link to={'/session'}>Sign in</Link>
+                    <Link to={'/'}>Email or phone</Link>
+                    
                     <br/>
                     <Link to={'/users'}>Create account</Link>
+                    <button to=''>Next</button>
                 </div >
             )
         }

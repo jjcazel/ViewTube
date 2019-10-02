@@ -8,7 +8,9 @@ import { Route } from 'react-router-dom';
 const App = () => (
     <div>
         <header>
-            <h1>ViewTube</h1>
+            {/* <h2>ViewTube</h2>
+            <h1>Sign in</h1>
+            <h3>to continue to ViewTube</h3> */}
             <GreetingContainer />
         </header>
 

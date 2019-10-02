@@ -6,6 +6,14 @@ export const signup = user => (
     })
 );
 
+export const acct_validation = identifier => (
+    $.ajax({
+        method: 'GET',
+        url: 'api/identifier',
+        data: { identifier }
+    })
+);
+
 export const login = user => (
     $.ajax({
         method: 'POST',
@@ -19,4 +27,6 @@ export const logout = () => (
         method: 'DELETE',
         url: 'api/session'
     })
+
+
 );

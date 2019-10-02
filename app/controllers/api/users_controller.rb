@@ -1,8 +1,5 @@
 class Api::UsersController < ApplicationController
     
-    # def new
-    #     @user = User.new
-    # end
 
     def show
 
@@ -13,11 +10,22 @@ class Api::UsersController < ApplicationController
 
         if @user.save
             login!(@user)
-            # render ' '
+            render 
         else
             render json: @user.errors.full_messages, status: 422
         end
     end
+
+    def identifier
+        @email = email.find_by(params[identifier])
+        @phone = phone.find_by(params[identifier])
+        if @email || @phone
+            render json: {identifier: true}
+        else
+            # render json: errors.full_messages
+        end
+    end
+
 
   private
 

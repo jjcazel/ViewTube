@@ -13,15 +13,20 @@
 #
 
 class User < ApplicationRecord
-  
+
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  VALID_PHONE_NUMBER_REGEX = /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
+
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :username, :email, :password_digest, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
-  # validates :email need to validate it is a proper email address 
+  validates :email, format: { with: VALID_EMAIL_REGEX, message: 'Couldn\'t find your account' }
+  validates :phone, format: { with: VALID_PHONE_NUMBER_REGEX, message: 'Couldn\'t find your account' }
 
   attr_reader :password
   after_initialize :ensure_session_token
 
+  # has_many:
   
 
   def self.find_by_credentials(username, password)
