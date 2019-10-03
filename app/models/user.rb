@@ -30,7 +30,7 @@ class User < ApplicationRecord
 
 
   def self.find_by_credentials(identifier, password) # refactor to check the email and/or phone as well
-    user = User.find_by(email: identifier) || User.find_by(phone: identifier)
+    user = User.find_by(email: identifier) #|| User.find_by(phone: identifier)
     user && user.is_password?(password) ? user : nil
   end
 

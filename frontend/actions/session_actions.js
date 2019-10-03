@@ -14,10 +14,12 @@ const logoutCurrentUser = user => ({
     user
 });
 
-const receiveErrors = error => ({
+export const receiveErrors = error => ({
     type: RECEIVE_ERRORS,
     error
 });
+
+
 
 export const acct_validation = id => dispatch => {
     return APIUtil.acct_validation(id);

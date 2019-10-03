@@ -1,12 +1,12 @@
 import React from 'react';
-import { acct_validation, receive_errors } from '../../util/session_api_util';
+import { acct_validation, receiveErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 
 const mdp = dispatch => ({
     action: (id) => dispatch(acct_validation(id)),
-    receiveErrors: (error) => dispatch(receive_errors(error))
+    receiveErrors: (error) => dispatch(receiveErrors(error))
 })
 
 
@@ -41,8 +41,10 @@ class EmailForm extends React.Component {
         return (
             <div className='email-form-contianer'>
                 <form onSubmit={this.handleSubmit}>
-                    <p></p>
-                    <label>
+                    <p className='logo-signin'>ViewTube</p>
+                    <h2 className='other-text-email'>Sign in</h2>
+                    <h3 className='other-text-email'>to continue to ViewTube</h3>
+                    <label>Email or phone
                         <input type="text" value={this.state.identifier} onChange={this.update} />
                         <input type="submit" value= "Next" />
                     </label>
