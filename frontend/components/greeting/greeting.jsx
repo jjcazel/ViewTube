@@ -5,12 +5,15 @@ import { Link } from 'react-router-dom'
 
 class Greeting extends React.Component {
 
+    handleClick(e) {
+
+    }
     render() {
         if (this.props.currentUser) {
             return (
                 <div>
-                    <h2>Welcome, {this.props.currentUser}</h2>
-                    <Link to={`/session`}>Logout</Link>
+                    <h2>Welcome, {this.props.currentUser.email}</h2>
+                    <button onClick={this.props.logout}>Logout</button>
                 </div>
             )
         } else {

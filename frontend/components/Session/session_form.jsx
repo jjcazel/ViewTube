@@ -5,10 +5,10 @@ class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            Email: '',
+            email: '',
             password: '',
-            FirstName: '',
-            LastName: ''
+            firstName: '',
+            lastName: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -22,7 +22,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(() => this.props.history.push('/'));
         // this.props.action(this.state)
     }
 
@@ -74,15 +74,8 @@ class SessionForm extends React.Component {
                          />
                     </label>
 
-                    <label>Confirm
-                        <input type="password" 
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            className='signup-input'
-                         />
-                    </label>
                     <br/>
-                    
+                    <input type="submit" value='Next' />
 
                     {/* <Link to=""></Link> */}
 
