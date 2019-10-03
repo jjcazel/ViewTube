@@ -1,0 +1,78 @@
+
+
+.email-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    border: 1px solid lightgray;
+    padding: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    max-height: 550px;
+    border-radius: 5px;
+}
+
+.email-form-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+ } 
+
+ .logo-placeholder{
+     font-size: 1.5em;
+     text-align: center;
+     margin: 10px;
+     background: url("https://i.imgur.com/SgUg8pA.png") no-repeat;
+     opacity: 0.5;
+
+ }
+
+ .other-text-email{
+    font-size: 1.5em;
+    text-align: center;
+    margin: 10px;
+ }
+
+ .other-text-email-cont {
+    font-size: 1em;
+    text-align: center;
+    margin: 10px;
+ }
+
+ .email-label{
+
+ }
+
+ .input-field-email {
+    align-items: center;
+    padding: 5px;
+    font-size: 1.5em;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+
+
+ }
+
+ .input-field-email:hover{
+    border: 1px solid blue;
+    border-radius: 5px;
+ }
+
+ .next{
+    display: inline-block;
+    background-color: rgb(33, 107, 226);
+    border-radius: 5px;
+	border: 1px solid rgb(37, 108, 221);
+	color: white;
+ }
+
+ .create-link{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+ }

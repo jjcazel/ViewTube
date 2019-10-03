@@ -4,6 +4,7 @@ import  LoginFormContainer  from './Session/login_form_container';
 import SignupFormContainer from './Session/signup_form_container';
 import { Route } from 'react-router-dom';
 import EmailForm from '../components/email/email_form'
+import PasswordForm from '../components/password/password_form'
 
 
 const App = () => (
@@ -18,6 +19,7 @@ const App = () => (
         {/* <Route path="/" component={LoginFormContainer} /> */}
         <Route path="/signup" component={SignupFormContainer} />
         <Route path="/signin" component={EmailForm} />
+        <Route path="/login" component={PasswordForm} />
 
         <Route exact path='/' component={GreetingContainer} />
     </div>

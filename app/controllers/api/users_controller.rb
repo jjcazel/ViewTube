@@ -17,9 +17,9 @@ class Api::UsersController < ApplicationController
     end
 
     def identifier_valid?
-        @email = User.find_by(email: params[:email])
+        @user = User.find_by(email: params[:identifier][:identifier])
         # @phone = User.find_by(phone: params[:identifier])
-        if @email 
+        if @user 
             render json: {identifier: true}
         else
             render json: {identifier: false}

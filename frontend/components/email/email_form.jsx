@@ -19,6 +19,7 @@ class EmailForm extends React.Component {
 
     }
 
+
     update(e){
         this.setState({identifier: e.target.value })
     }
@@ -28,29 +29,34 @@ class EmailForm extends React.Component {
         this.props.action(this.state).then(({ identifier }) => {
             if (identifier){
                 this.props.history.push({
-                    pathname: '/',
-                    state: this.state
+                    pathname: '/login',
+                    state: this.state.identifier
                 })
             } else {
-                return dispatch(receiveErrors('Enter a valid email or phone number'))
+                return dispatch(receiveErrors('Enter a valid email or Username'))
             }
         })
     }
 
     render() {
         return (
-            <div >
+            <div className='email-form'>
                 <form className='email-form-container' onSubmit={this.handleSubmit}>
-                    <p className='logo-signin'>ViewTube</p>
+                    <br/>
+                    <h2 className='logo-placeholder'>ViewTube</h2>
                     <h2 className='other-text-email'>Sign in</h2>
-                    <h3 className='other-text-email'>to continue to ViewTube</h3>
-                    <label className='email-label'>Email or phone
-                        <input className='input-field' type="text" value={this.state.identifier} onChange={this.update} />
-                        <input className='next' type="submit" value= "Next" />
+
+                    <h3 className='other-text-email-cont'>to continue to ViewTube</h3>
+
+                    <label className='input-label'>
+                        <input className='input-field-email' type="text" placeholder="Email or username" value={this.state.identifier} onChange={this.update} />
                     </label>
-                    <div className='create-link'>
+
+                    <span className='create-link'>
                         <Link to='/signup'>Create account</Link>
-                    </div>
+                        <input className='next' type="submit" value= "Next" />
+                    </span>
+
                 </form>
             </div>
         )
