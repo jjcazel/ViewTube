@@ -39,18 +39,18 @@ class EmailForm extends React.Component {
 
     render() {
         return (
-            <div className='email-form-contianer'>
-                <form onSubmit={this.handleSubmit}>
+            <div >
+                <form className='email-form-container' onSubmit={this.handleSubmit}>
                     <p className='logo-signin'>ViewTube</p>
                     <h2 className='other-text-email'>Sign in</h2>
                     <h3 className='other-text-email'>to continue to ViewTube</h3>
-                    <label>Email or phone
-                        <input type="text" value={this.state.identifier} onChange={this.update} />
-                        <input type="submit" value= "Next" />
+                    <label className='email-label'>Email or phone
+                        <input className='input-field' type="text" value={this.state.identifier} onChange={this.update} />
+                        <input className='next' type="submit" value= "Next" />
                     </label>
-
-                    <Link to='/signup'>Create account</Link>
-
+                    <div className='create-link'>
+                        <Link to='/signup'>Create account</Link>
+                    </div>
                 </form>
             </div>
         )
