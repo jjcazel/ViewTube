@@ -4,12 +4,11 @@ class Api::SessionsController < ApplicationController
   #login
   def create
     @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
-    debugger
     if @user
       login!(@user)
       render :show
     else
-      render json: ['Invaild password'], status: 401
+      render json: @user.errors.full_messages
     end
   end
 

@@ -4,7 +4,7 @@ import { signup, receiveErrors } from '../../actions/session_actions'
 
 const msp = (state, ownProps) => {
     const errors = [];
-    const formType = signup;
+    const formType = 'create account';
 
     return { errors, formType }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { login, receiveErrors, receiveUserEmail } from '../../actions/session_actions';
+import { login, receiveErrors, receiveUserEmail, demoLogin } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
@@ -14,7 +14,8 @@ const msp = state => {
 const mdp = dispatch => ({
     receiveUserEmail: (email) => dispatch(receiveUserEmail(email)),
     action: (user) => dispatch(login(user)),
-    receiveErrors: (error) => dispatch(receiveErrors(error))
+    receiveErrors: (error) => dispatch(receiveErrors(error)),
+    demoLogin: () => dispatch(demoLogin())
 })
 
 
@@ -24,6 +25,7 @@ class PasswordForm extends React.Component {
         this.state = { email: this.props.location.state, password: '' }
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
 
     componentDidMount(){
@@ -31,6 +33,12 @@ class PasswordForm extends React.Component {
             this.props.history.push('/signin')
         }
     }
+
+    handleClick(e) {
+        e.preventDefault();
+        this.props.demoLogin().then(() => this.props.history.push('/'))
+    }
+
 
     update(e) {
         this.setState({ password: e.target.value })
@@ -69,7 +77,7 @@ class PasswordForm extends React.Component {
 
                     <span className='span-buttons'>
                         <div className='plain-text'>Forgot Password?</div>
-                        <input className='create-link' type="submit" value="Try the demo login" />
+                        <button className='create-link-2' onClick={this.handleClick}>Try the demo login!</button>
                         <input className='next' type="submit" value="Next"  />
                     </span>
                 </form>

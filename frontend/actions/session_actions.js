@@ -31,13 +31,12 @@ export const acct_validation = id => dispatch => {
 }
 
 export const renderErrors = () => dispatch => {
-    return APIUtil.renderErrors().then()
+    return APIUtil.renderErrors();
 }
 
 export const login = user => dispatch => {
     return APIUtil.login(user).then(
-        user => dispatch(receiveCurrentUser(user))
-        (error) => dispatch(receiveErrors(error)));
+        user => dispatch(receiveCurrentUser(user)))
 }
 
 export const signup = formUser => dispatch => {

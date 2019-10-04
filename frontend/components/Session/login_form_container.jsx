@@ -1,16 +1,17 @@
 import { connect } from 'react-redux'
 import  SessionForm  from './session_form';
-import { login } from '../../actions/session_actions'
+import { login, receiveErrors } from '../../actions/session_actions'
 
 const msp = (state, ownProps) => {
     const errors = [];
-    const formType = 'Sign in';
+    const formType = 'Login';
 
     return { errors, formType }
 }
 
 const mdp = dispatch => ({
-    processForm: (user) => dispatch(login(user))
+    processForm: (user) => dispatch(login(user)),
+    receiveErrors: (error) => dispatch(receiveErrors(error))
 })
 
 export default connect(msp, mdp)(SessionForm);

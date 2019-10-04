@@ -40,7 +40,7 @@ class EmailForm extends React.Component {
                     state: this.state.identifier
                 })
             } else {
-                return dispatch(receiveErrors('Enter a valid email or Username'))
+                return this.props.receiveErrors('Enter a valid email or Username')
             }
         })
     }
@@ -57,6 +57,7 @@ class EmailForm extends React.Component {
                 <div className='bottom-form'>
                     <label className='input-label'>
                         <input className='input-field-email' type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
+                        <div>{}</div>
                     </label>
                         <span className='plain-text'>Forgot email? Maybe just create another one... </span>
                         <button className='create-link-2' onClick={this.handleClick}>Or try the demo login!</button>
