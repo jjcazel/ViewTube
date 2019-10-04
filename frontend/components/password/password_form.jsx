@@ -1,11 +1,18 @@
 import React from 'react';
-import { login, receiveErrors } from '../../actions/session_actions';
+import { login, receiveErrors, receiveUserEmail } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 // do I need to map state to props here to get current user or can I use the greeeting container?
 
+const msp = state => {
+    const email = state.userEmail.email;
+
+    return { email }
+}
+
 const mdp = dispatch => ({
+    receiveUserEmail: (email) => dispatch(receiveUserEmail(email)),
     action: (user) => dispatch(login(user)),
     receiveErrors: (error) => dispatch(receiveErrors(error))
 })
@@ -14,9 +21,13 @@ const mdp = dispatch => ({
 class PasswordForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { username: this.props.location.state, password: '' }
+        this.state = { email: this.props.location.state, password: '' }
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    componentDidMount(){
+        this.props.receiveUserEmail(this.state.email)
     }
 
     update(e) {
@@ -46,7 +57,9 @@ class PasswordForm extends React.Component {
                     <p className='logo'><img className='logo' src={window.logoUrl} /></p>
                     <h2 className='other-text-email'>Welcome</h2>
                     <br/>
-                    <div className='other-text-email-2'>{this.props.location.state}</div>
+                    <div className='other-text-email-2-container'>
+                        <div className='other-text-email-2'>{this.props.email}</div>
+                    </div>
                     <label className='input-label'>
                         <input className='input-field-email' type="password" placeholder="Password" value={this.state.password} onChange={this.update} />
                     </label>
@@ -63,4 +76,4 @@ class PasswordForm extends React.Component {
     }
 }
 
-export default connect(null, mdp)(PasswordForm);
+export default connect(msp, mdp)(PasswordForm);
