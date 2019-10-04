@@ -43,13 +43,13 @@ class EmailForm extends React.Component {
             <div className='email-form'>
                 <form className='email-form-container' onSubmit={this.handleSubmit}>
                     <br/>
-                    <h2 className='logo-placeholder'>ViewTube</h2>
+                    <h2 className='logo-placeholder'> <img className='logo' src={window.logoUrl} /> </h2>
                     <h2 className='other-text-email'>Sign in</h2>
 
                     <h3 className='other-text-email-cont'>to continue to ViewTube</h3>
 
                     <label className='input-label'>
-                        <input className='input-field-email' type="text" placeholder="Email or username" value={this.state.identifier} onChange={this.update} />
+                        <input className='input-field-email' type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
                     </label>
 
                     <span className='create-link'>

@@ -42,5 +42,9 @@
   "bugs": {
     "url": "https://github.com/jjcazel/ViewTube/issues"
   },
-  "homepage": "https://github.com/jjcazel/ViewTube#readme"
+  "homepage": "https://github.com/jjcazel/ViewTube#readme",
+  "devDependencies": {
+    "file-loader": "^4.2.0",
+    "url-loader": "^2.1.0"
+  }
 }

@@ -41,8 +41,9 @@ class PasswordForm extends React.Component {
     render() {
         // debugger
         return (
-            <div >
+            <div className='email-form'>
                 <form className='email-form-container' onSubmit={this.handleSubmit}>
+                    
                     <p className='logo-signin'>ViewTube</p>
                     <h2 className='other-text'>Welcome
                     <br/> {this.props.location.state}</h2>
