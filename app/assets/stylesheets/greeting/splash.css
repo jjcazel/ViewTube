@@ -1,0 +1,27 @@
+.navbar-container{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+
+   font-family: arial, sans-serif;
+   color: #000000;
+   padding: 0 16px;
+}
+
+.signin {
+    background-color: white;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid rgb(37, 108, 221);
+    color: #065FD4;
+    /* height: 36px; */
+    min-width: 88px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: .25px;
+    line-height: 20px;
+    text-decoration: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}

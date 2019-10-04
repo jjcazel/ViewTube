@@ -30,8 +30,14 @@ export const acct_validation = id => dispatch => {
     return APIUtil.acct_validation(id);
 }
 
+export const renderErrors = () => dispatch => {
+    return APIUtil.renderErrors().then()
+}
+
 export const login = user => dispatch => {
-    return APIUtil.login(user).then(user => dispatch(receiveCurrentUser(user)));
+    return APIUtil.login(user).then(
+        user => dispatch(receiveCurrentUser(user))
+        (error) => dispatch(receiveErrors(error)));
 }
 
 export const signup = formUser => dispatch => {
@@ -44,7 +50,7 @@ export const logout = () => dispatch => {
 
 export const demoLogin = () => dispatch => {
     const user = {
-        username: 'user',
+        email: 'user@gmail.com',
         password: 'password'
     }
     return dispatch(login(user))

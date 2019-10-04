@@ -3,7 +3,8 @@ class Api::SessionsController < ApplicationController
 
   #login
   def create
-    @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
+    @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
+    debugger
     if @user
       login!(@user)
       render :show

@@ -12,14 +12,14 @@ class Greeting extends React.Component {
         if (this.props.currentUser) {
             return (
                 <div>
-                    <h2>Welcome, {this.props.currentUser.email}</h2>
+                    <h2>{this.props.currentUser.email}</h2>
                     <button onClick={this.props.logout}>Logout</button>
                 </div>
             )
         } else {
             return (
                 <div className='navbar-container'>
-                    <Link to={'/signin'}>SIGN IN</Link>
+                    <Link className='signin'to={'/signin'}>SIGN IN</Link>
                  
                 </div >
             )

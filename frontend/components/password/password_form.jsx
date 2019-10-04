@@ -27,7 +27,9 @@ class PasswordForm extends React.Component {
     }
 
     componentDidMount(){
-        this.props.receiveUserEmail(this.state.email)
+        if (!this.state.email){
+            this.props.history.push('/signin')
+        }
     }
 
     update(e) {
@@ -58,7 +60,7 @@ class PasswordForm extends React.Component {
                     <h2 className='other-text-email'>Welcome</h2>
                     <br/>
                     <div className='other-text-email-2-container'>
-                        <div className='other-text-email-2'>{this.props.email}</div>
+                        <div className='other-text-email-2'>{this.state.email}</div>
                     </div>
                     <label className='input-label'>
                         <input className='input-field-email' type="password" placeholder="Password" value={this.state.password} onChange={this.update} />

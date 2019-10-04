@@ -1,12 +1,13 @@
 import React from 'react';
-import { acct_validation, receiveErrors } from '../../actions/session_actions';
+import { acct_validation, receiveErrors, demoLogin } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 
 const mdp = dispatch => ({
     action: (id) => dispatch(acct_validation(id)),
-    receiveErrors: (error) => dispatch(receiveErrors(error))
+    receiveErrors: (error) => dispatch(receiveErrors(error)),
+    demoLogin: () => dispatch(demoLogin())
 })
 
 
@@ -16,12 +17,18 @@ class EmailForm extends React.Component {
         this.state = {identifier: ''}
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleClick = this.handleClick.bind(this)
 
     }
 
 
     update(e){
         this.setState({identifier: e.target.value })
+    }
+
+    handleClick(e){
+        e.preventDefault();
+        this.props.demoLogin().then(() => this.props.history.push('/'))
     }
 
     handleSubmit(e){
@@ -52,7 +59,7 @@ class EmailForm extends React.Component {
                         <input className='input-field-email' type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
                     </label>
                         <span className='plain-text'>Forgot email? Maybe just create another one... </span>
-                        <Link className='create-link-2' to='/'>Or try the demo login!</Link>
+                        <button className='create-link-2' onClick={this.handleClick}>Or try the demo login!</button>
 
                     <span className='span-buttons'>
                         <Link className='create-link' to='/signup'>Create account</Link>
