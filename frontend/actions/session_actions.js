@@ -25,7 +25,6 @@ export const receiveErrors = error => ({
 });
 
 
-
 export const acct_validation = id => dispatch => {
     return APIUtil.acct_validation(id);
 }
