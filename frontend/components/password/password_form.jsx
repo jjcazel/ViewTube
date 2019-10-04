@@ -17,7 +17,6 @@ class PasswordForm extends React.Component {
         this.state = { username: this.props.location.state, password: '' }
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-
     }
 
     update(e) {
@@ -39,22 +38,23 @@ class PasswordForm extends React.Component {
     }
 
     render() {
-        // debugger
+    
         return (
             <div className='email-form'>
                 <form className='email-form-container' onSubmit={this.handleSubmit}>
 
                     <p className='logo'><img className='logo' src={window.logoUrl} /></p>
-                    <h2 className='other-text-email'>Welcome
-                    <br/> {this.props.location.state}</h2>
+                    <h2 className='other-text-email'>Welcome</h2>
                     <br/>
+                    <div className='other-text-email-2'>{this.props.location.state}</div>
                     <label className='input-label'>
                         <input className='input-field-email' type="password" placeholder="Password" value={this.state.password} onChange={this.update} />
                     </label>
                     <br/>
 
                     <span className='span-buttons'>
-                        <Link className='create-link' to='/signup'>Create account</Link>
+                        <div className='plain-text'>Forgot Password?</div>
+                        <input className='create-link' type="submit" value="Try the demo login" />
                         <input className='next' type="submit" value="Next"  />
                     </span>
                 </form>

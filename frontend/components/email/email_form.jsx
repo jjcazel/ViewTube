@@ -42,21 +42,23 @@ class EmailForm extends React.Component {
         return (
             <div className='email-form'>
                 <form className='email-form-container' onSubmit={this.handleSubmit}>
-                    <br/>
+                
                     <h2 className='logo-placeholder'> <img className='logo' src={window.logoUrl} /> </h2>
                     <h2 className='other-text-email'>Sign in</h2>
 
                     <h3 className='other-text-email-cont'>to continue to ViewTube</h3>
-
+                <div className='bottom-form'>
                     <label className='input-label'>
                         <input className='input-field-email' type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
                     </label>
+                        <span className='plain-text'>Forgot email? Maybe just create another one... </span>
+                        <Link className='create-link-2' to='/'>Or try the demo login!</Link>
 
                     <span className='span-buttons'>
                         <Link className='create-link' to='/signup'>Create account</Link>
                         <input className='next' type="submit" value= "Next" />
                     </span>
-
+                </div>
                 </form>
             </div>
         )
