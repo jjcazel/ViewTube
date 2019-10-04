@@ -52,8 +52,8 @@ class EmailForm extends React.Component {
                         <input className='input-field-email' type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
                     </label>
 
-                    <span className='create-link'>
-                        <Link to='/signup'>Create account</Link>
+                    <span className='span-buttons'>
+                        <Link className='create-link' to='/signup'>Create account</Link>
                         <input className='next' type="submit" value= "Next" />
                     </span>
 
