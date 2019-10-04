@@ -35,7 +35,6 @@
     margin: 0 auto;
     width: 75px;
     min-height: 24px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     top: 0px;
     font-weight: 500;
 }
@@ -165,8 +164,6 @@
     text-decoration: none;
     padding-left: 2px;
     font-weight: 600;
-    outline-color: rgba(26, 115, 232)
-    
  }
 
  .create-link-2 {

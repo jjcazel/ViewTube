@@ -30,10 +30,6 @@ export const acct_validation = id => dispatch => {
     return APIUtil.acct_validation(id);
 }
 
-export const renderErrors = () => dispatch => {
-    return APIUtil.renderErrors();
-}
-
 export const login = user => dispatch => {
     return APIUtil.login(user).then(
         user => dispatch(receiveCurrentUser(user)))
