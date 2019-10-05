@@ -45,7 +45,7 @@ export const logout = () => dispatch => {
 export const demoLogin = () => dispatch => {
     const user = {
         email: 'user@gmail.com',
-        password: 'password'
+        password: 'password1'
     }
     return dispatch(login(user))
 }

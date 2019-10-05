@@ -26,6 +26,7 @@ class PasswordForm extends React.Component {
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleClick = this.handleClick.bind(this)
+        this.handleEnterPress = this.handleEnterPress.bind(this);
     }
 
     componentDidMount(){
@@ -58,6 +59,13 @@ class PasswordForm extends React.Component {
         })
     }
 
+    handleEnterPress(e) {
+        if (e.keyCode === 13) {
+            e.preventDefault();
+            this.handleSubmit(e);
+        }
+    }
+
     render() {
     
         return (
@@ -71,7 +79,7 @@ class PasswordForm extends React.Component {
                         <div className='other-text-email-2'>{this.state.email}</div>
                     </div>
                     <label className='input-label'>
-                        <input className='input-field-email' type="password" placeholder="Password" value={this.state.password} onChange={this.update} />
+                        <input className='input-field-email' onKeyDown={this.handleEnterPress} type="password" placeholder="Password" value={this.state.password} onChange={this.update} />
                     </label>
                     <br/>
 

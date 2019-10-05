@@ -14,12 +14,12 @@ const mdp = dispatch => ({
 class EmailForm extends React.Component {
     constructor(props){
         super(props)
-        this.state = {identifier: '', errors: []}
+        this.state = {identifier: '', errors: ''}
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleClick = this.handleClick.bind(this)
         // this.renderErrors = this.renderErrors.bind(this)
-
+        this.handleEnterPress = this.handleEnterPress.bind(this);
     }
 
 
@@ -41,12 +41,21 @@ class EmailForm extends React.Component {
                     state: this.state.identifier
                 })
             } else {
+                debugger
                 return this.props.receiveErrors('Please enter a valid email')
             }
         })
     }
 
+    handleEnterPress(e) {
+        if (e.keyCode === 13){
+            e.preventDefault();
+            this.handleSubmit(e);
+        }
+    }
+
     // renderErrors() {
+    //     debugger
     //     return (
     //         <ul>
     //             {this.props.errors.map((error, i) => (
@@ -69,8 +78,8 @@ class EmailForm extends React.Component {
                     <h3 className='other-text-email-cont'>to continue to ViewTube</h3>
                 <div className='bottom-form'>
                     <label className='input-label'>
-                        <input className='input-field-email' type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
-                        {/* <div>{this.renderErrors()}</div> */}
+                        <input className='input-field-email' onKeyDown={this.handleEnterPress} type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
+                        {/* <div>{this.}</div> */}
                     </label>
                         <span className='plain-text'>Forgot email? Maybe just create another one... </span>
                         <button className='create-link-2' onClick={this.handleClick}>Or try the demo login!</button>
