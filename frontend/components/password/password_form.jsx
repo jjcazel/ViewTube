@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom'
 
 const msp = state => {
     const email = state.userEmail.email;
-
-    return { email }
+    const errors = state.errors.session
+    return { email, errors }
 }
 
 const mdp = dispatch => ({
@@ -23,10 +23,11 @@ class PasswordForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = { email: this.props.location.state, password: '' }
-        this.update = this.update.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleClick = this.handleClick.bind(this)
+        this.update = this.update.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.handleEnterPress = this.handleEnterPress.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     componentDidMount(){
@@ -66,6 +67,19 @@ class PasswordForm extends React.Component {
         }
     }
 
+    renderErrors() {
+        // debugger
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
+
     render() {
     
         return (
@@ -81,6 +95,7 @@ class PasswordForm extends React.Component {
                     <label className='input-label'>
                         <input className='input-field-email' onKeyDown={this.handleEnterPress} type="password" placeholder="Password" value={this.state.password} onChange={this.update} />
                     </label>
+                    {this.renderErrors()}
                     <br/>
 
                     <span className='span-buttons'>
