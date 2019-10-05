@@ -11,9 +11,9 @@ class Greeting extends React.Component {
     render() {
         if (this.props.currentUser) {
             return (
-                <div>
-                    <h2>{this.props.currentUser.email}</h2>
-                    <button onClick={this.props.logout}>Logout</button>
+                <div className='navbar-container'>
+                    <h2 className='signin'>{this.props.currentUser.email}</h2>
+                    <button onClick={this.props.logout}>Sign out</button>
                 </div>
             )
         } else {
