@@ -22,8 +22,8 @@ class EmailForm extends React.Component {
         this.update = this.update.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleClick = this.handleClick.bind(this)
-        this.renderErrors = this.renderErrors.bind(this)
         this.handleEnterPress = this.handleEnterPress.bind(this);
+        this.renderErrors = this.renderErrors.bind(this)
     }
 
 

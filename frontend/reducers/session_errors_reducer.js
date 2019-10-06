@@ -7,6 +7,7 @@ export default (state = _nullErrors, action) => {
     switch (action.type) {
         case RECEIVE_ERRORS:
             // return Object.assign({}, { errors: action.errors });
+            // debugger
             return [action.error];
         case RECEIVE_CURRENT_USER:
             return _nullErrors;

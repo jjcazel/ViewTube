@@ -21,6 +21,7 @@ class Api::UsersController < ApplicationController
         if @user 
             render json: {identifier: true}
         else
+            # debugger
             render json: {identifier: false}
         end
     end

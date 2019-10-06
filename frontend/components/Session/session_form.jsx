@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 // import { Session } from 'inspector';
 
 class SessionForm extends React.Component {
@@ -36,46 +38,60 @@ class SessionForm extends React.Component {
 
     render() {
         return (
-            <div className='signup-form-container'>
+            <div className='signup-form'>
                 {/* <h2>{this.props.formType}</h2> */}
                 <form onSubmit={this.handleSubmit} className='signup-form-box'>
                    
                     {/* <input type="text" value={this.state.username} onChange={this.update('username')} /> */}
-                    
-                    <label>First name
-                        <input type="text" 
-                            value={this.state.first_name}
-                            onChange={this.update('first_name')}
-                            className='signup-input'
-                         />
-                    </label>
-                    
-                    <label>Last name
-                        <input type="text" 
-                            value={this.state.last_name}
-                            onChange={this.update('last_name')}
-                            className='signup-input'
-                         />
-                    </label>
+                    <h2 className='logo-placeholder'> <img className='logo' src={window.logoUrl} /> </h2>
+                    <h2 className='heading-text'>Create your ViewTube Account</h2>
 
-                    <label>Your email address
+                    <h3 className='heading-text-cont'>to continue to ViewTube</h3>
+
+                    <div className='name-container'>
+                        <label>
+                            <input type="text"
+                                placeholder="First name"
+                                value={this.state.first_name}
+                                onChange={this.update('first_name')}
+                                className='signup-input'
+                            />
+                        </label>
+
+                        <label>
+                            <input type="text"
+                                placeholder="Last name"
+                                value={this.state.last_name}
+                                onChange={this.update('last_name')}
+                                className='signup-input'
+                            />
+                        </label>
+                    </div>
+                    
+
+                    <label>
                         <input type="text" 
+                            placeholder="Your email address"
                             value={this.state.email}
                             onChange={this.update('email')}
                             className='signup-input'
                          />
                     </label>
 
-                    <label>Password
+                    <label>
                         <input type="password" 
+                            placeholder="Password"
                             value={this.state.password}
                             onChange={this.update('password')}
                             className='signup-input'
                          />
                     </label>
+                
+                    <span className='span-buttons'>
+                        <Link className='create-link' to='/signin'>Or sign in instead</Link>
+                        <input className='next' type="submit" value='Next' />
 
-                    <br/>
-                    <input type="submit" value='Next' />
+                    </span>
 
                     {/* <Link to=""></Link> */}
 

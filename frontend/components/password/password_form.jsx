@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 
 // do I need to map state to props here to get current user or can I use the greeeting container?
 
-const msp = state => {
-    const email = state.userEmail.email;
-    const errors = state.errors.session
-    return { email, errors }
-}
+const msp = state => ({
+    email: state.userEmail.email,
+    errors: state.errors.session
+
+})
 
 const mdp = dispatch => ({
     receiveUserEmail: (email) => dispatch(receiveUserEmail(email)),
@@ -22,7 +22,7 @@ const mdp = dispatch => ({
 class PasswordForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { email: this.props.location.state, password: '' }
+        this.state = { email: this.props.location.state, password: '', errors: '' }
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -48,14 +48,16 @@ class PasswordForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state).then(({ user}) => {
+        this.props.action(this.state).then(({ user }) => {
             if (user) {
+                // debugger
                 this.props.history.push({
                     pathname: '/',
                     state: this.state
                 })
-            } else {
-                return dispatch(receiveErrors('Password is invalid. You changed your password today!'))
+            } else if (status === 404) {
+                // debugger
+                this.props.receiveErrors('Password is invalid. You changed your password today!')
             }
         })
     }
