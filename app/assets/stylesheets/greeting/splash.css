@@ -33,3 +33,15 @@
     padding-right: 11px;
     height: 28px;
 }
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    max-width: 300px;
+    max-height: 500px;
+    border: 1px solid var(--yt-spec-10-percent-layer);
+    border-top: none;
+    background: var(--yt-spec-brand-background-solid);
+
+}

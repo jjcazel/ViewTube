@@ -5,16 +5,61 @@ import { Link } from 'react-router-dom';
 // lets refactor this as the navbar!
 
 class Greeting extends React.Component {
-
-    handleClick(e) {
-
+    constructor() {
+        super();
+        
+        this.state = {
+            showMenu: false,
+        };
+        this.showMenu = this.showMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
     }
+
+    showMenu(event) {
+        event.preventDefault();
+
+        this.setState({ showMenu: true }, () => {
+            document.addEventListener('click', this.closeMenu);
+        });
+    }
+    
+    closeMenu(event) {
+
+        if (!this.dropdownMenu.contains(event.target)) {
+
+            this.setState({ showMenu: false }, () => {
+                document.removeEventListener('click', this.closeMenu);
+            });
+
+        }
+    }
+
+    // handleClick(e) {
+
+    // }
     render() {
         if (this.props.currentUser) {
             return (
                 <div className='navbar-container'>
-                    <h2 className='signin'>{this.props.currentUser.email}</h2> 
-                    <button onClick={this.props.logout}>Sign out</button>
+                    <button className='signin' onClick={this.showMenu}>{this.props.currentUser.email}</button>
+                        
+                    {
+                        this.state.showMenu
+                        ? (
+                            <div
+                            className="menu"
+                            ref={(element) => {
+                                this.dropdownMenu = element;
+                            }}
+                            >
+                            <button onClick={this.props.logout}>Sign out</button>
+                                   
+                            </div>
+                            )
+                            : (
+                                null
+                            )
+                    }
                 </div>
             )
         } else {
