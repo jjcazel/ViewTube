@@ -1,3 +1,7 @@
-export const fetchVideos = id => ({
-    
-})
+export const fetchVideos = id => (
+    $.ajax({
+        method: 'GET',
+        url: `/api/videos/${id}`
+    })
+)
+
