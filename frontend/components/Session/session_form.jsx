@@ -43,29 +43,26 @@ class SessionForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className='signup-form-box'>
                    
                     {/* <input type="text" value={this.state.username} onChange={this.update('username')} /> */}
-                    <h2 className='logo-placeholder'> <img className='logo' src={window.logoUrl} /> </h2>
+                    <h2 className='logo-placeholder-2'> <img className='logo-2' src={window.logoUrl} /> </h2>
                     <h2 className='heading-text'>Create your ViewTube Account</h2>
 
                     <h3 className='heading-text-cont'>to continue to ViewTube</h3>
 
                     <div className='name-container'>
-                        <label>
-                            <input type="text"
-                                placeholder="First name"
-                                value={this.state.first_name}
-                                onChange={this.update('first_name')}
-                                className='signup-input'
-                            />
-                        </label>
-
-                        <label>
-                            <input type="text"
-                                placeholder="Last name"
-                                value={this.state.last_name}
-                                onChange={this.update('last_name')}
-                                className='signup-input'
-                            />
-                        </label>
+                        
+                        <input type="text"
+                            placeholder="First name"
+                            value={this.state.first_name}
+                            onChange={this.update('first_name')}
+                            className='fname-input'
+                        />
+                
+                        <input type="text"
+                            placeholder="Last name"
+                            value={this.state.last_name}
+                            onChange={this.update('last_name')}
+                            className='signup-input'
+                        />
                     </div>
                     
 
@@ -74,21 +71,24 @@ class SessionForm extends React.Component {
                             placeholder="Your email address"
                             value={this.state.email}
                             onChange={this.update('email')}
-                            className='signup-input'
+                            className='signup-input-2'
                          />
                     </label>
+                    <br/>
 
                     <label>
                         <input type="password" 
                             placeholder="Password"
                             value={this.state.password}
                             onChange={this.update('password')}
-                            className='signup-input'
+                            className='signup-input-2'
                          />
                     </label>
+
+                    <span className='plain-text-2'>Use 6 or more characters with a mix of letters, numbers & symbols </span>
                 
                     <span className='span-buttons'>
-                        <Link className='create-link' to='/signin'>Or sign in instead</Link>
+                        <Link className='create-link' to='/signin'>Sign in instead</Link>
                         <input className='next' type="submit" value='Next' />
 
                     </span>

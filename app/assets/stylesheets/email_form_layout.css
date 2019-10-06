@@ -215,6 +215,15 @@
      margin-top: 32px;
      background: transparent;
      box-sizing: inherit;
+ }
 
+ .error {
+    display: flex;
+    justify-content: end;
+    color: #d93025;
+    font-size: 12px;
+    line-height: normal;
+    margin-top: 2px;
+    padding-left: 6px;
 
  }

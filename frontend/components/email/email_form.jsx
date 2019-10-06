@@ -2,6 +2,9 @@ import React from 'react';
 import { acct_validation, receiveErrors, demoLogin, clearErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+
 
 const msp = state => ({
     errors: state.errors.session
@@ -67,8 +70,14 @@ class EmailForm extends React.Component {
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
+                    <li className='error'
+                        key={`error-${i}`}>
+                        <div className='warning'>
+                            <FontAwesomeIcon icon={faExclamationCircle} />
+                        </div>
+                        <div className='error'>
+                            {error}
+                        </div>
                     </li>
                 ))}
             </ul>
@@ -88,7 +97,7 @@ class EmailForm extends React.Component {
                     <label className='input-label'>
                         <input className='input-field-email' onKeyDown={this.handleEnterPress} type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
                     </label>
-                        {this.renderErrors()}
+                        <div >{this.renderErrors()}</div>
                         <span className='plain-text'>Forgot email? Maybe just create another one... </span>
                         <button className='create-link-2' onClick={this.handleClick}>Or try the demo login!</button>
 
