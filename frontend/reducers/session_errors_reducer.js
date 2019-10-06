@@ -1,4 +1,4 @@
-import { RECEIVE_ERRORS, RECEIVE_CURRENT_USER } from "../actions/session_actions";
+import { RECEIVE_ERRORS, RECEIVE_CURRENT_USER, CLEAR_ERRORS } from "../actions/session_actions";
 
 const _nullErrors = [];
 
@@ -9,6 +9,8 @@ export default (state = _nullErrors, action) => {
             // return Object.assign({}, { errors: action.errors });
             return [action.error];
         case RECEIVE_CURRENT_USER:
+            return _nullErrors;
+        case CLEAR_ERRORS:
             return _nullErrors;
         default:
             return state;

@@ -17,7 +17,7 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   VALID_PHONE_NUMBER_REGEX = /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
 
-  validates :email, :password_digest, :session_token, presence: true
+  validates :first_name, :last_name, :email, :password_digest, :session_token, presence: true
   validates :email, :password_digest, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
   validates :email, format: { with: VALID_EMAIL_REGEX, message: 'not a valid email' }

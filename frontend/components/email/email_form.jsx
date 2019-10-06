@@ -1,5 +1,5 @@
 import React from 'react';
-import { acct_validation, receiveErrors, demoLogin } from '../../actions/session_actions';
+import { acct_validation, receiveErrors, demoLogin, clearErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
@@ -10,7 +10,8 @@ const msp = state => ({
 const mdp = dispatch => ({
     action: (id) => dispatch(acct_validation(id)),
     receiveErrors: (error) => dispatch(receiveErrors(error)),
-    demoLogin: () => dispatch(demoLogin())
+    demoLogin: () => dispatch(demoLogin()),
+    clearErrors: () => dispatch(clearErrors())
 })
 
 
@@ -33,6 +34,10 @@ class EmailForm extends React.Component {
     handleClick(e){
         e.preventDefault();
         this.props.demoLogin().then(() => this.props.history.push('/'))
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
 
     handleSubmit(e){
