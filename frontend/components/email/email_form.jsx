@@ -1,9 +1,9 @@
 import React from 'react';
 import { acct_validation, receiveErrors, demoLogin, clearErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
 
 const msp = state => ({
@@ -39,6 +39,16 @@ class EmailForm extends React.Component {
         this.props.demoLogin().then(() => this.props.history.push('/'))
     }
 
+    componentDidMount() {
+        this.props.clearErrors();
+    }
+
+    componentDidUpdate(){
+        <div className='warning'>
+            <FontAwesomeIcon icon={faExclamationCircle} />
+        </div>
+    }
+
     componentWillUnmount() {
         this.props.clearErrors();
     }
@@ -72,9 +82,7 @@ class EmailForm extends React.Component {
                 {this.props.errors.map((error, i) => (
                     <li className='error'
                         key={`error-${i}`}>
-                        <div className='warning'>
-                            <FontAwesomeIcon icon={faExclamationCircle} />
-                        </div>
+                        
                         <div className='error'>
                             {error}
                         </div>
@@ -97,7 +105,8 @@ class EmailForm extends React.Component {
                     <label className='input-label'>
                         <input className='input-field-email' onKeyDown={this.handleEnterPress} type="text" placeholder="Email" value={this.state.identifier} onChange={this.update} />
                     </label>
-                        <div >{this.renderErrors()}</div>
+                        
+                        {this.renderErrors()}
                         <span className='plain-text'>Forgot email? Maybe just create another one... </span>
                         <button className='create-link-2' onClick={this.handleClick}>Or try the demo login!</button>
 

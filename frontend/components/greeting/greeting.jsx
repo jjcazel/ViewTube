@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // lets refactor this as the navbar!
 
@@ -12,7 +13,7 @@ class Greeting extends React.Component {
         if (this.props.currentUser) {
             return (
                 <div className='navbar-container'>
-                    <h2 className='signin'>{this.props.currentUser.email}</h2>
+                    <h2 className='signin'>{this.props.currentUser.email}</h2> 
                     <button onClick={this.props.logout}>Sign out</button>
                 </div>
             )
