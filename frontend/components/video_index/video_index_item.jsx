@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const VideoIndexItem = (props) => {
-    const video = props.video;
+const VideoIndexItem = ({ video }) => {
     
     return (
         <div>

@@ -20,6 +20,7 @@ const receiveVideoErrors = errors => ({
 });
 
 export const fetchVideos = () => dispatch => {
+    debugger
     return VideoAPI.fetchVideos().then((videos) => dispatch(receiveVideos(videos)))
 }
 

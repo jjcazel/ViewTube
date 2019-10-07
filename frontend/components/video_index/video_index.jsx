@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
+// import VideoIndexContainer from './video_index_container';
 
 class VideoIndex extends React.Component {
     constructor(props) {
@@ -13,18 +14,24 @@ class VideoIndex extends React.Component {
     }
 
     render() {
-        const videos = this.props.videos.map(video => {
-            return (
-                <div>
+        debugger
+        if(this.props.videos){
+            const videos = this.props.videos.map(video => {
+                return (
                     <VideoIndexItem
                         key={video.id}
                         video={video}
                     />
-
-                </div>
-                // <span></span>
-            )
-        })
+                )
+            })
+        }
+        return (
+            <div>
+                <ul>
+                    {videos}
+                </ul>
+            </div>
+        )
     }
 
 }

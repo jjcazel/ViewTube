@@ -13,7 +13,7 @@ const mdp = dispatch => ({
 
 })
 
-class VideoApp extends React.Component {
+class VideoShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,14 +26,17 @@ class VideoApp extends React.Component {
     }
 
     render() {
-        return (
-            <div className=''>
-                {/* <h2>{this.props.formType}</h2> */}
-                { <VideoIndex />}
-            <h1>Here are videos</h1>
-            </div>
-        )
+        debugger
+        if (this.props.videos) {
+            return (
+                <div className=''>
+                    <h1>Videos go here</h1>
+                    {/* <VideoIndex /> */}
+                </div>
+            )
+
+        }
     }
 }
 
-export default connect(msp, mdp)(VideoApp)
+export default connect(msp, mdp)(VideoShow)
