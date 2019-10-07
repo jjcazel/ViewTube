@@ -25,6 +25,7 @@ export const fetchVideos = () => dispatch => {
 }
 
 export const fetchVideo = id => dispatch => {
+    debugger
     return VideoAPI.fetchVideo(id).then(
         video => dispatch(receiveVideo(video)),
         errors => dispatch(receiveVideoErrors(errors)));

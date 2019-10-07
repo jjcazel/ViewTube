@@ -1,39 +1,35 @@
 import React from 'react'
 import VideoIndexContainer from '../video_index/video_index_container';
-import { fetchVideo } from '../../actions/video_actions';
-import { connect } from 'react-redux'
 
-const msp = state => ({
-    // video: state.entities.videos,
-
-})
-
-const mdp = dispatch => ({
-    fetchVideo: (id) => dispatch(fetchVideo(id)),
-
-})
 
 class VideoShow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            videos: []
-        };
+    
     }
 
     componentDidMount(){
-        this.props.fetchVideo(this.props.match.params.id);
+        const videoId = this.props.match.params.videoId
+        debugger
+        this.props.fetchVideo(videoId).then(response => {
+            debugger
+            this.props.fetchUser(response.video[videoId].creatorId)})
     }
 
     render() {
         debugger
+        const video = this.props.video
         return (
             <div className='video-show'>
                 <video width="320" height="240" controls>
                     <source src={video.photoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                
+
+                <div>{video.title}</div>
+                <div>{video.description}</div>
+                <div>{this.props.creator.first_name} {this.props.creator.last_name}</div>
+
                 {/* <VideoIndexContainer /> */}
               
             </div>
@@ -41,4 +37,4 @@ class VideoShow extends React.Component {
     }
 }
 
-export default connect(msp, mdp)(VideoShow)
+export default VideoShow
