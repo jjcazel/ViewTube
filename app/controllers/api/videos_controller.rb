@@ -10,7 +10,7 @@ class Api::VideosController < ApplicationController
         if @video
             render :show
         else
-            render json: ['Video not found'], status 404
+            render json: ['Video not found'], status: 404
         end
 
     end
