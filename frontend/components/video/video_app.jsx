@@ -26,7 +26,7 @@ export default class VideoApp extends React.Component {
 
     render() {
         return (
-            <div className='signup-form-container'>
+            <div className=''>
                 {/* <h2>{this.props.formType}</h2> */}
                 <form fetchVideos={this.fetchVideos} />
                 <VideoIndex videos={this.state.videos}/>

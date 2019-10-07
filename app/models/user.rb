@@ -26,7 +26,9 @@ class User < ApplicationRecord
   attr_reader :password
   after_initialize :ensure_session_token
 
-  # has_many:
+  has_many :videos,
+    foreign_key: :creator_id,
+    class_name: :Video
 
 
   def self.find_by_credentials(identifier, password) # refactor to check the email and/or phone as well

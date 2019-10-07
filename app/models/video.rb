@@ -11,7 +11,12 @@
 #
 
 class Video < ApplicationRecord
+    validates :title, :creator_id, presence: true
+    
+    has_one_attached :video
 
-has_one_attached :video
+    belongs_to :creator,
+        foreign_key: :creator_id,
+        class_name: :User
 
 end
