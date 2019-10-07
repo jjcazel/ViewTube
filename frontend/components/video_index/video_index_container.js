@@ -4,14 +4,15 @@ import { fetchVideos } from '../../actions/video_actions';
 
 const msp = state => {
     debugger
-    return ({
-        videos: Object.values(state.entities.videos)
+    return {
+        videos: Object.values(state.entities.videos),
+        // users: 
 
-    })
+    }
 }
 
 const mdp = dispatch => ({
-    fetchVideos: (videos) => dispatch(fetchVideos(videos))
+    fetchVideos: () => dispatch(fetchVideos())
 })
 
 export default connect(msp, mdp)(VideoIndex)

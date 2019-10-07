@@ -10,21 +10,20 @@ class VideoIndex extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         this.props.fetchVideos();
     }
 
     render() {
         debugger
-        if(this.props.videos){
-            const videos = this.props.videos.map(video => {
-                return (
-                    <VideoIndexItem
-                        key={video.id}
-                        video={video}
-                    />
-                )
-            })
-        }
+        const videos = this.props.videos.map(video => {
+            return (
+                <VideoIndexItem
+                    key={video.id}
+                    video={video}
+                />
+            )
+        })
         return (
             <div>
                 <ul>

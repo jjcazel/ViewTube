@@ -1,4 +1,4 @@
-import { RECEIVE_USER_EMAIL } from '../actions/session_actions';
+import { RECEIVE_USER_EMAIL } from '../../actions/session_actions';
 
 
 export default (state = {email: ''}, action) => {

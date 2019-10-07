@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom';
 
 const VideoIndexItem = ({ video }) => {
     
+    // handleClick{
+    //     return(e) => {
+
+    //     }
+    // }
+
     return (
-        <div>
-            <Link to={`/videos/${video.id}`}> </Link>
-
-            <div>
-                <Link to={`/videos/${video.id}`}>{video.title}</Link>
-            </div>
-
+        <div onClick=''>
+            <video width="320" height="240" controls>
+                <source src={video.photoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
 
         </div>
     )
