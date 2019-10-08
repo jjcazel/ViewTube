@@ -12,17 +12,17 @@ class VideoShow extends React.Component {
         const videoId = this.props.match.params.videoId
         debugger
         this.props.fetchVideo(videoId).then(response => {
-            debugger
             this.props.fetchUser(response.video[videoId].creatorId)})
     }
 
     render() {
-        debugger
+        // debugger
         const video = this.props.video
         return (
             <div className='video-show'>
+
                 <video width="320" height="240" controls>
-                    <source src={video.photoUrl} type="video/mp4" />
+                    <source src={video.videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
