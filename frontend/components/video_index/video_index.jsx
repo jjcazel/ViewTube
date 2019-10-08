@@ -10,12 +10,12 @@ class VideoIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
+        // debugger
         this.props.fetchVideos();
     }
 
     render() {
-        debugger
+        // debugger
         const videos = this.props.videos.map(video => {
             return (
                 <VideoIndexItem

@@ -13,5 +13,14 @@ fred = User.create!(email: 'freddy@gmail.com', password: 'password', first_name:
 Bob = User.create!(email: 'bobby@gmail.com', password: 'password5', first_name: "Robert", last_name: "Deniro" )
 
 Video.destroy_all
-file = open('<your_file_url>')
-v1 = Video.create!(title: "Test", Descitption: "Good Stuff", creator_id: 6)
+v1 = Video.create!(title: "Test", description: "Chipmunk", creator_id: user.id)
+file = open('https://viewtube2-dev.s3.amazonaws.com/dramatic_chipmunk360p.mp4')
+v1.video.attach(io: file, filename: 'dramatic_chipmunk360p.mp4')
+
+v2 = Video.create!(title: "Test2", description: "Developers!", creator_id: fred.id)
+file = open('https://viewtube2-dev.s3.amazonaws.com/steve_ballmer_developers360p.mp4')
+v2.video.attach(io: file, filename: 'steve_ballmer_developers360p.mp4')
+
+v3 = Video.create!(title: "Test3", description: "oooo, ahh!", creator_id: Bob.id)
+file = open('https://viewtube2-dev.s3.amazonaws.com/FireworksSlowMotion.mp4')
+v3.video.attach(io: file, filename: 'FireworksSlowMotion.mp4')

@@ -1,5 +1,5 @@
 export const fetchUser = id => {
-    debugger
+    // debugger
     return $.ajax({
         method: 'GET',
         url: `/api/users/${id}`

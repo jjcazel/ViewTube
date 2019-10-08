@@ -5,11 +5,10 @@ import { fetchVideo } from '../../actions/video_actions';
 import { fetchUser } from '../../actions/users_actions';
 
 const msp = (state, ownProps) => {
-    const video = state.entities.videos[ownProps.match.params.videoId] || {videoUrl: '', title: '', description: ''};
-    const creator = state.entities.users[video.creatorId] || {first_name: '', last_name: ''} ;
-    // const currentUser = state.entities.users[state.session.id]
-    // debugger
-    return { video, creator}
+    const video = state.entities.videos[ownProps.match.params.videoId] 
+    let creator = !video || !state.entities.users[video.creatorId]  ? { first_name: '', last_name: '' } : state.entities.users[video.creatorId]
+        
+    return { video, creator }
 }
 
 const mdp = dispatch => ({

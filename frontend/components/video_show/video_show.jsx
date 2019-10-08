@@ -18,6 +18,10 @@ class VideoShow extends React.Component {
     render() {
         // debugger
         const video = this.props.video
+        if(!video){
+            return null
+        }
+        debugger
         return (
             <>
                 <div className='nav'>
@@ -43,7 +47,7 @@ class VideoShow extends React.Component {
 
 
                     <div className='rightsidebar'>
-                        <RightSidebarContainer />
+                        {/* <RightSidebarContainer /> */}
                     </div>
                     <br/>
                     
