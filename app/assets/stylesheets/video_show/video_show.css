@@ -1,0 +1,36 @@
+.show-form{
+    display: flex;
+    flex-direction: row;
+}
+
+.video-show{
+    display: flex;
+    flex-direction: column;
+}
+
+.rightsidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 170px;
+}
+
+.rightsidebar-item{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.title, .description {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: roboto, Arial, sans-serif
+}
+
+ .creator{
+     font-size: 14px;
+     color: #0d0d0d;
+
+ }

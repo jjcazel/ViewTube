@@ -1,5 +1,5 @@
 import React from 'react'
-import VideoIndexContainer from '../video_index/video_index_container';
+import RightSidebarContainer from '../video_show/right_sidebar_container';
 
 
 class VideoShow extends React.Component {
@@ -19,20 +19,27 @@ class VideoShow extends React.Component {
         // debugger
         const video = this.props.video
         return (
-            <div className='video-show'>
+            <form className="show-form">
 
-                <video width="320" height="240" controls>
-                    <source src={video.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <div className='video-show'>
 
-                <div>{video.title}</div>
-                <div>{video.description}</div>
-                <div>{this.props.creator.first_name} {this.props.creator.last_name}</div>
+                    <video width="520" height="400" controls>
+                        <source src={video.videoUrl} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <br/>
+                    <div className="title">{video.title}</div>
+                    <div className="description">{video.description}</div>
+                    <br/>
+                    <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
 
-                {/* <VideoIndexContainer /> */}
-              
-            </div>
+                
+                </div>
+
+                <div className='rightsidebar'>
+                    <RightSidebarContainer />
+                </div>
+            </form>
         )
     }
 }
