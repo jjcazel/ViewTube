@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import RightSidebarItem from './right_sidebar_item';
+import GreetingContainer from '../greeting/greeting_container'
 
 
 class RightSidebar extends React.Component {
@@ -18,10 +19,12 @@ class RightSidebar extends React.Component {
         debugger
         const videos = this.props.videos.map(video => {
             return (
-                <RightSidebarItem
-                    key={video.id}
-                    video={video}
-                />
+                <div>
+                    <RightSidebarItem
+                        key={video.id}
+                        video={video}
+                    />
+                </div>
             )
         })
         return (
