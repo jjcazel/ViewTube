@@ -43,7 +43,7 @@ class Greeting extends React.Component {
         if (this.props.currentUser) {  
             return (
                 <div className='navbar-container'>
-                    <div class="play"></div>
+                    <div className="play"></div>
 
                     <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 
 

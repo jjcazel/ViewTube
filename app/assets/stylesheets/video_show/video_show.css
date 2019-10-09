@@ -1,6 +1,7 @@
 .show-form{
     display: flex;
     flex-direction: row;
+    justify-content: end;
     
 }
 
@@ -19,10 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 35%;
     padding-top: 24px;
     padding-right: 24px;
-    min-width: 300px;
 
 }
 
@@ -76,11 +75,14 @@
 
 
  .thumb-info{
+    display: flex;
+    flex-direction: row;
     font-size: 14px;
     font-weight: bold;
     font-family: Roboto, Arial, sans-serif;
     cursor: pointer;
     padding-left: 6px;
+    width: 50%;
  }
 
  .thumb-title{
@@ -92,8 +94,16 @@
     line-height: 1.6rem;
     max-height: 3.2rem;
     color: #0d0d0d;
+    width: 50%;
+    text-decoration: none;
  }
 
  .h2{
     font-family: Tobot, Arial, sans-serif;
+ }
+
+ .thumbnail-container{
+     display: flex;
+     flex-direction: row;
+     text-decoration: none;
  }

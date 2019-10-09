@@ -20,6 +20,7 @@ class RightSidebar extends React.Component {
         const videos = this.props.videos.map(video => {
            
         const user = this.props.users[video.creatorId];
+        debugger
             return (
                 <div>
                     <RightSidebarItem

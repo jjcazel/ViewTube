@@ -28,7 +28,7 @@ class VideoShow extends React.Component {
                 <section className="show-form">
                     <div className='video-show'>
 
-                        <video width="520" height="400" controls class='video'>
+                        <video width="520" height="400" controls className='video'>
                             <source src={video.videoUrl} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
