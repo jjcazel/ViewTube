@@ -52,14 +52,14 @@
   border-radius: 50% / 10%;
   color: #FFFFFF;
   font-size: 1em; /* change this to change size */
-  height: 2.9em;
+  height: 2em;
   margin: 20px;
   padding: 0;
   position: relative;
   text-align: center;
   text-indent: 0.1em;
   transition: all 150ms ease-out;
-  width: 2.5em;
+  width: 2em;
   max-height: 24px;
   cursor: pointer;
   position: relative;
@@ -84,12 +84,12 @@
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
   content: ' ';
   font-size: 0.1em;
-  height: -10%;
+  height: -100%;
   margin: -1em 0 0 -0.75em;
   top: 50%;
   position: absolute;
   width: 0;
-  color: #FFFFFF;
+  
 }
 
 .search{

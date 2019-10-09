@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+
 
 // lets refactor this as the navbar!
 
@@ -38,7 +40,7 @@ class Greeting extends React.Component {
 
     // }
     render() {
-        if (this.props.currentUser) {
+        if (this.props.currentUser) {  
             return (
                 <div className='navbar-container'>
                     <div class="play"></div>
@@ -46,6 +48,7 @@ class Greeting extends React.Component {
                     <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 
 
                     <input className='search' type="search" placeholder='Search' q='googlesearch'/>
+                    {/* <FontAwesomeIcon icon={fasfa-search} /> */}
                     <br/>
                     <button className='signin' onClick={this.showMenu}>{this.props.currentUser.email}</button>
                         
