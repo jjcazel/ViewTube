@@ -4,7 +4,6 @@ import { fetchVideos } from '../../actions/video_actions';
 import { withRouter } from 'react-router'
 
 const msp = (state, ownProps) => {
-    debugger
     return {
         videos: Object.values(state.entities.videos).filter(video => {
             return video.id !== Number(ownProps.match.params.videoId)

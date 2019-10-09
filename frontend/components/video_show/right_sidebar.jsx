@@ -1,14 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import RightSidebarItem from './right_sidebar_item';
-import GreetingContainer from '../greeting/greeting_container'
-import { withRouter } from 'react-router'
+
 
 
 class RightSidebar extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     componentDidMount() {
@@ -16,11 +14,8 @@ class RightSidebar extends React.Component {
     }
 
     render() {
-        
-        const videos = this.props.videos.map(video => {
-           
+        const videos = this.props.videos.map(video => { 
         const user = this.props.users[video.creatorId];
-        debugger
             return (
                 <div>
                     <RightSidebarItem

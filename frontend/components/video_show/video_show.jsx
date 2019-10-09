@@ -14,6 +14,11 @@ class VideoShow extends React.Component {
             this.props.fetchUser(response.video[videoId].creatorId)})
     }
 
+    componentDidUpdate(prevProps){
+        if (prevProps.match.params.videoId !== this.props.match.params.videoId )
+        this.props.fethcVideo(this.props.match.params.videoId)
+    }
+
     render() {
         const video = this.props.video
         if(!video){

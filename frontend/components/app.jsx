@@ -1,6 +1,6 @@
 import React from "react";
 import GreetingContainer from "./greeting/greeting_container";
-
+import VideoIndexContainer from './video_index/video_index_container'
 import SignupFormContainer from './Session/signup_form_container';
 import { Route } from 'react-router-dom';
 import EmailForm from '../components/email/email_form';
@@ -12,6 +12,7 @@ const App = () => (
     <div>
         
         <Route exact path='/' component={GreetingContainer} />
+        <Route exact path='/videos' component={VideoIndexContainer} />
         <Route path="/signup" component={SignupFormContainer} />
         <Route path="/videos/:videoId" component={VideoShowContainer} />
         <AuthRoute path="/signin" component={EmailForm} />

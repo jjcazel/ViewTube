@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
-
 // lets refactor this as the navbar!
 
 class Greeting extends React.Component {
