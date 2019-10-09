@@ -10,18 +10,15 @@ class VideoShow extends React.Component {
 
     componentDidMount(){
         const videoId = this.props.match.params.videoId
-        debugger
         this.props.fetchVideo(videoId).then(response => {
             this.props.fetchUser(response.video[videoId].creatorId)})
     }
 
     render() {
-        // debugger
         const video = this.props.video
         if(!video){
             return null
         }
-        debugger
         return (
             <>
                 <div className='nav'>
@@ -29,28 +26,27 @@ class VideoShow extends React.Component {
                 </div>
                 
                 <section className="show-form">
-
                     <div className='video-show'>
 
-                        <video width="520" height="400" controls>
+                        <video width="520" height="400" controls class='video'>
                             <source src={video.videoUrl} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <br/>
                         <div className="title">{video.title}</div>
-                        <div className="description">{video.description}</div>
+                        <br/>
                         <br/>
                         <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
+                        <br/>
+                        <br/>
+                        <div className="description">{video.description}</div>
 
-                    
                     </div>
-
 
                     <div className='rightsidebar'>
-                        {/* <RightSidebarContainer /> */}
+                        <RightSidebarContainer />
                     </div>
                     <br/>
-                    
                 </section>
             </>
         )

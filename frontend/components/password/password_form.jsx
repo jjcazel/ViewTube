@@ -51,13 +51,11 @@ class PasswordForm extends React.Component {
         e.preventDefault();
         this.props.action(this.state).then(({ user }) => {
             if (user) {
-                // debugger
                 this.props.history.push({
                     pathname: '/',
                     state: this.state
                 })
             } else if (status === 404) {
-                // debugger
                 this.props.receiveErrors('Password is invalid. You changed your password today!')
             }
         })
@@ -71,7 +69,6 @@ class PasswordForm extends React.Component {
     }
 
     renderErrors() {
-        // debugger
         return (
             <ul>
                 {this.props.errors.map((error, i) => (

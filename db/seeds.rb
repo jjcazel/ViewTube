@@ -24,3 +24,11 @@ v2.video.attach(io: file, filename: 'steve_ballmer_developers360p.mp4')
 v3 = Video.create!(title: "Test3", description: "oooo, ahh!", creator_id: Bob.id)
 file = open('https://viewtube2-dev.s3.amazonaws.com/FireworksSlowMotion.mp4')
 v3.video.attach(io: file, filename: 'FireworksSlowMotion.mp4')
+
+v4 = Video.create!(title: "Test4", description: "Make It Count!", creator_id: fred.id)
+file = open('https://viewtube2-dev.s3.amazonaws.com/Make+It+Count.mp4')
+v4.video.attach(io: file, filename: 'Make It Count.mp4')
+
+v5 = Video.create!(title: "Test5", description: "How does it sound?", creator_id: Bob.id)
+file = open('https://viewtube2-dev.s3.amazonaws.com/jurassic_park_theme_song_melodica_cover360p.mp4')
+v5.video.attach(io: file, filename: 'jurassic_park_theme_song_melodica_cover360p.mp4')

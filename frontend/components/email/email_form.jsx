@@ -62,7 +62,6 @@ class EmailForm extends React.Component {
                     state: this.state.identifier
                 })
             } else {
-                // debugger
                 this.props.receiveErrors('Couldn\'t find your Viewtube Account')
             }
         })
@@ -76,7 +75,6 @@ class EmailForm extends React.Component {
     }
 
     renderErrors() {
-        // debugger
         return (
             <ul>
                 {this.props.errors.map((error, i) => (

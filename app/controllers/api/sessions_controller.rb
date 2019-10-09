@@ -8,11 +8,9 @@ class Api::SessionsController < ApplicationController
        params[:user][:password]
       )
     if @user
-      # debugger
       login!(@user)
       render :show
     else
-      # debugger
       render json: 'error', status: 404
     end
   end

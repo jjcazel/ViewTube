@@ -1,31 +1,37 @@
 .show-form{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    
 }
 
 .video-show{
     display: flex;
     flex-direction: column;
+    width: 775px;
     margin-left: 24px;
     padding-top: 24px;
     padding-right: 24px;
-    padding-bottom: 24px;
+    min-height: 1000px;
+    
 }
 
 .rightsidebar{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 170px;
+    justify-content: flex-start;
+    width: 35%;
     padding-top: 24px;
     padding-right: 24px;
-    
+    min-width: 300px;
+
 }
 
 .rightsidebar-item{
     display: flex;
     flex-direction: row;
+    position: relative;
+    padding-bottom: 8px;
+    min-width: 300px;
 
 }
 
@@ -43,8 +49,10 @@
 
  }
 
- .navbar-container{
-
+ .thumbnail{
+    align-items: right;
+    position: relative;
+    object-fit: fill;
  }
 
  .title{
@@ -53,14 +61,15 @@
  }
 
  .creator{
-     padding-top: 16px;
+    padding-top: 16px;
 
  }
 
- video {
-    
-
+ .video {
+    width: 100%;
+    object-fit: fill;
  }
+
 
  .nav{
 

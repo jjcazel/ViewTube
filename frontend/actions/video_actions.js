@@ -4,10 +4,13 @@ export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 export const RECEIVE_VIDEO_ERRORS = 'RECEIVE_VIDEO_ERRORS';
 
-const receiveVideos = ( videos ) => ({
-    type: RECEIVE_VIDEOS,
-    videos
-});
+const receiveVideos = ( videos ) => {
+    return {
+        type: RECEIVE_VIDEOS,
+        videos
+
+    }
+};
 
 const receiveVideo = (video) => ({
     type: RECEIVE_VIDEO,
@@ -20,12 +23,14 @@ const receiveVideoErrors = errors => ({
 });
 
 export const fetchVideos = () => dispatch => {
-    // debugger
-    return VideoAPI.fetchVideos().then((videos) => dispatch(receiveVideos(videos)))
+    return VideoAPI.fetchVideos().then((videos) => {
+        dispatch(receiveVideos(videos))
+    }, response => { 
+        console.log(response)
+    })
 }
 
-export const fetchVideo = id => dispatch => {
-    // debugger
+export const fetchVideo = id => dispatch => 
     return VideoAPI.fetchVideo(id).then(
         video => dispatch(receiveVideo(video)),
         errors => dispatch(receiveVideoErrors(errors)));
