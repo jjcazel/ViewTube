@@ -19,9 +19,12 @@ const RightSidebarItem = ({ video }) => {
                 <source src={video.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag. 
             </video>
-            <h1>Title</h1><br/>
+            <section className="thumb-info">
+                <h1 className='thumb-title'>Title</h1>
+                    <br/>
+                <h2>creator</h2>
 
-            <h2>creator</h2>
+            </section>
 
 
             <div >

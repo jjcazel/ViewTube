@@ -30,7 +30,7 @@ export const fetchVideos = () => dispatch => {
     })
 }
 
-export const fetchVideo = id => dispatch => 
+export const fetchVideo = id => dispatch => {
     return VideoAPI.fetchVideo(id).then(
         video => dispatch(receiveVideo(video)),
         errors => dispatch(receiveVideoErrors(errors)));

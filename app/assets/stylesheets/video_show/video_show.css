@@ -29,9 +29,11 @@
 .rightsidebar-item{
     display: flex;
     flex-direction: row;
+    justify-content: end;
     position: relative;
     padding-bottom: 8px;
     min-width: 300px;
+    cursor: pointer;
 
 }
 
@@ -40,12 +42,13 @@
     flex-direction: column;
     font-size: 18px;
     font-weight: 400;
-    font-family: roboto, Arial, sans-serif
+    font-family: roboto, Arial, sans-serif;
 }
 
  .creator{
      font-size: 14px;
      color: #0d0d0d;
+     font-family: roboto, Arial, sans-serif;
 
  }
 
@@ -53,6 +56,7 @@
     align-items: right;
     position: relative;
     object-fit: fill;
+    cursor: pointer;
  }
 
  .title{
@@ -71,6 +75,25 @@
  }
 
 
- .nav{
+ .thumb-info{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Roboto, Arial, sans-serif;
+    cursor: pointer;
+    padding-left: 6px;
+ }
 
+ .thumb-title{
+    display: flex;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    max-height: 3.2rem;
+    color: #0d0d0d;
+ }
+
+ .h2{
+    font-family: Tobot, Arial, sans-serif;
  }

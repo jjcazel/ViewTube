@@ -34,7 +34,6 @@ class RightSidebar extends React.Component {
             <div>
                 <ul>
                     {videos}
-                    <li>{}</li>
                 </ul>
             </div>
         )

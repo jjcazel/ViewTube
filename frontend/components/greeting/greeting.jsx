@@ -41,6 +41,12 @@ class Greeting extends React.Component {
         if (this.props.currentUser) {
             return (
                 <div className='navbar-container'>
+                    <div class="play"></div>
+
+                    <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 
+
+                    <input className='search' type="search" placeholder='Search' q='googlesearch'/>
+                    <br/>
                     <button className='signin' onClick={this.showMenu}>{this.props.currentUser.email}</button>
                         
                     {
