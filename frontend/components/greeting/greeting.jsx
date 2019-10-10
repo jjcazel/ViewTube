@@ -14,6 +14,7 @@ class Greeting extends React.Component {
         };
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
     }
 
     showMenu(event) {
@@ -35,16 +36,16 @@ class Greeting extends React.Component {
         }
     }
 
-    // handleClick(e) {
 
-    // }
     render() {
         if (this.props.currentUser) {  
             return (
                 <div className='navbar-container'>
                     <section className='logo-play-container'>
-                        <div className="play"></div>
+                        <Link to='/'><div className="play"></div> </Link>
+                        
                         <div><img className='logo-2' src={window.logoUrl} /></div>
+                    
                     </section>
 
                     <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 

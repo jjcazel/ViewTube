@@ -3,13 +3,12 @@
    justify-content: space-between;
    flex-direction: row;
    align-items: center;
-    vertical-align: center;
+vertical-align: center;
    font-family: arial, sans-serif;
    color: #000000;
    padding: 0 16px;
    background: transparent;
    height: 56px;
-   z-index: 2;
 }
 
 .signin {
@@ -108,4 +107,29 @@
     padding-top: 18px;
     padding-right: 20px;
     color: #0d0d0d;
+}
+
+.index-container{
+    display: inline-block;
+    justify-content: center;
+    padding-top: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.thumbnail-2{
+    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.index-item{
+    display: inline-block;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    padding-bottom: 8px;
+    width: 210px;
+    cursor: pointer;
 }

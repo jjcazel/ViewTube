@@ -1,7 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router'
 
-const VideoIndexItem = ({video, user}) => {
-    
+const VideoIndexItem = (props) => {
+    const video = props.video;
+    const user = props.user
+
     const handleClick = () => {
         debugger
         props.history.push(`/videos/${video.id}`)
@@ -13,9 +16,9 @@ const VideoIndexItem = ({video, user}) => {
     }
 
     return (
-        <div onClick={handleClick} className="rightsidebar-item">
+        <div onClick={handleClick} className="index-item">
 
-            <video width="170" height="90" className='thumbnail' >
+            <video width="210" height="118" className='thumbnail-2' >
                 <source src={video.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
                 </video>
@@ -31,4 +34,4 @@ const VideoIndexItem = ({video, user}) => {
 
 }
 
-export default VideoIndexItem;
+export default withRouter(VideoIndexItem);
