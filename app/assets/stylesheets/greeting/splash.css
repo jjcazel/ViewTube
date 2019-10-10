@@ -4,7 +4,7 @@
     flex-direction: row;
     align-items: center;
     vertical-align: center;
-    font-family: arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #000000;
     padding: 0 16px;
     background: transparent;
@@ -49,7 +49,7 @@
 
 .logo-play-container{
   padding-left: 50px;
-  font-family: roboto, arial, sans-serif;
+  font-family: 'roboto', sans-serif;
 }
 
 .play { 
@@ -97,11 +97,11 @@
 
 .trending{
     position: relative;
-    font-family: roboto, arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-size: 16px;
     color: #0d0d0d;
-    font-weight: 700;
+    font-weight: 500;
     min-height: 20px;
 }
 
@@ -118,10 +118,11 @@
     color: #0d0d0d;
     padding-left: 26px;
     cursor: pointer;
-    font-family: roboto, arial, sans-serif;
+    font-family: 'roboto', sans-serif;
     align-items: baseline;
     font-weight: 700;
     max-width: 80px;
+    vertical-align: middle;
 }
 
 .index-container{
