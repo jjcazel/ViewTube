@@ -63,10 +63,13 @@
  }
 
  .video {
+    display: block;
+    object-fit: contain;
     width: 100%;
     object-fit: fill;
     height: auto;
-    max-height: 50%;
+    max-height: 69vh;
+    margin: 0 auto;
  }
 
 

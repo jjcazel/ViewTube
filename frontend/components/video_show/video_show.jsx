@@ -15,12 +15,8 @@ class VideoShow extends React.Component {
     }
 
     componentDidUpdate(prevProps){
-        console.log(this.props.match.params.videoId)
-        debugger
-        console.log(this.props.match.params.videoId)
         if (prevProps.match.params.videoId !== this.props.match.params.videoId ){
             this.props.fetchVideo(this.props.match.params.videoId).then(response => {
-                debugger
                 this.props.fetchUser(response.video[this.props.match.params.videoId].creatorId)
             })
         }
@@ -37,7 +33,6 @@ class VideoShow extends React.Component {
 
     render() {
         const video = this.props.video
-        debugger
         if(!video){
             return null
         }
@@ -55,11 +50,11 @@ class VideoShow extends React.Component {
                         <div className="title">{video.title}
                             <p className='date'>Oct 9, 2019</p> 
                         </div>
-                        <p className='content'>
+                        <section className='content'>
                             <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
                             <div className="description">{video.description}</div>
 
-                        </p>
+                        </section>
 
                     </div>
 

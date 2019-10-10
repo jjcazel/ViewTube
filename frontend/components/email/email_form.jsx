@@ -44,7 +44,7 @@ class EmailForm extends React.Component {
 
     componentDidUpdate(){
         <div className='warning'>
-            <FontAwesomeIcon icon={faExclamationCircle} />
+            {/* <FontAwesomeIcon icon={faExclamationCircle} /> */}
         </div>
     }
 

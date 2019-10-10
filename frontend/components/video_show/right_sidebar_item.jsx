@@ -7,7 +7,6 @@ const RightSidebarItem = (props) => {
     const user = props.user
 
     const handleClick = () => { 
-        debugger
         props.history.push(`/videos/${video.id}`) }
 
     let username;

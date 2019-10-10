@@ -10,8 +10,7 @@ class Greeting extends React.Component {
         this.state = {
             results: []
         }
-        
-        this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount(){
@@ -55,35 +54,37 @@ class Greeting extends React.Component {
    
 
     render() {
-        debugger
         if (this.props.currentUser) {  
             return (
                 <div className='navbar-container'>
 
                     <section className='logo-play-container'>
-                        <Link to='/'><div className="play"></div> </Link>
-                        
-                        <div><img className='logo-2' src={window.logoUrl} /></div>
-                    
+                        <Link to='/' className="play"> </Link>
+                        <h1 className='logo-2'>ViewTube</h1>                    
                     </section>
-
-                    <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 
 
                     <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
                     {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
-    
                     <br/>
-                <section >
-                    <DropdownContainer />
-                </section>    
+                    <br/>
+                    <section >
+                        <DropdownContainer />
+                    </section>    
                 
                 </ div>
-
             )         
         } else {
             
             return (
                 <div className='navbar-container'>
+
+                    <section className='logo-play-container'>
+                        <Link to='/' className="play"> </Link>
+                        <div className='logo-2'>ViewTube</div>
+                    </section>
+
+                    <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
+                    {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
                     <Link className='signin' to='/signin'>SIGN IN</Link>
                 </div >
             )

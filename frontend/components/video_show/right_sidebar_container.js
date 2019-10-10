@@ -15,7 +15,6 @@ const msp = (state, ownProps) => {
 }
 
 const mdp = dispatch => {
-    debugger
     return {
         fetchVideos: () => dispatch(fetchVideos()),
         fetchUsers: () => dispatch(fetchUsers())

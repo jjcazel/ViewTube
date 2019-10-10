@@ -17,9 +17,7 @@ class RightSidebar extends React.Component {
     }
 
     render() {
-        debugger
-        const videos = this.props.videos.map(video => { 
-            debugger
+        const videos = this.props.videos.map(video => {
         const user = this.props.users[video.creatorId];
             return (
                 <div key={video.videoUrl}>

@@ -14,13 +14,11 @@ class Dropdown extends React.Component {
     };
 
     showDropdownMenu(event) {
-        debugger
         event.preventDefault();
         this.setState({ displayMenu: !this.state.displayMenu })
     }
 
     hideDropdownMenu(e) {
-        debugger
         e.preventDefault();
         this.setState({ displayMenu: false })
     }
@@ -30,7 +28,6 @@ class Dropdown extends React.Component {
     }
 
     render() {
-        debugger
             return (
                 
                 <div >

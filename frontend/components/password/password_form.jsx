@@ -1,10 +1,7 @@
 import React from 'react';
-import { login, receiveErrors, receiveUserEmail, demoLogin } from '../../actions/session_actions';
+import { login, receiveErrors, receiveUserEmail, demoLogin, clearErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-
-// do I need to map state to props here to get current user or can I use the greeeting container?
 
 const msp = state => ({
     email: state.userEmail.email,
@@ -16,9 +13,9 @@ const mdp = dispatch => ({
     receiveUserEmail: (email) => dispatch(receiveUserEmail(email)),
     action: (user) => dispatch(login(user)),
     receiveErrors: (error) => dispatch(receiveErrors(error)),
-    demoLogin: () => dispatch(demoLogin())
+    demoLogin: () => dispatch(demoLogin()),
+    clearErrors: () => dispatch(clearErrors())
 })
-
 
 class PasswordForm extends React.Component {
     constructor(props) {
@@ -32,6 +29,7 @@ class PasswordForm extends React.Component {
     }
 
     componentDidMount(){
+        this.props.clearErrors();
         if (!this.state.email){
             this.props.history.push('/signin')
         }
@@ -87,20 +85,23 @@ class PasswordForm extends React.Component {
                 <form className='email-form-container' onSubmit={this.handleSubmit}>
 
                     <p className='logo'><img className='logo' src={window.logoUrl} /></p>
-                    <h2 className='other-text-email'>Welcome</h2>
+                        <h2 className='other-text-email'>Welcome</h2>
                     <br/>
+
                     <div className='other-text-email-2-container'>
                         <div className='other-text-email-2'>{this.state.email}</div>
                     </div>
+
                     <label className='input-label'>
                         <input className='input-field-email' onKeyDown={this.handleEnterPress} type="password" placeholder="Password" value={this.state.password} onChange={this.update} />
                     </label>
+
                     {this.renderErrors()}
                     <br/>
 
                     <span className='span-buttons'>
                         <div className='plain-text'>Forgot Password?</div>
-                        <button className='create-link-2' onClick={this.handleClick}>Try the demo login!</button>
+                            <button className='create-link-2' onClick={this.handleClick}>Try the demo login!</button>
                         <input className='next' type="submit" value="Next"  />
                     </span>
                 </form>

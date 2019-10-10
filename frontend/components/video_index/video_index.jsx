@@ -16,10 +16,9 @@ class VideoIndex extends React.Component {
     }
 
     render() {
-        debugger
         const videos = this.props.videos.map(video => {
             const user = this.props.users[video.creatorId];
-            debugger
+
             return (
                 <VideoIndexItem
                     key={video.id}
@@ -31,7 +30,12 @@ class VideoIndex extends React.Component {
         return (
             <div >
                 <ul className='index-container'>
-                    {videos}
+                    <li>
+                        <div className='trending'>Trending</div>
+                        <br/>
+                        <br/>
+                        {videos}
+                    </li> 
                 </ul>
             </div>
         )
