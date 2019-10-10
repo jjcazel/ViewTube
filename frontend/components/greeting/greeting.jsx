@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fasearch} from "@fortawesome/free-solid-svg-icons";
 import DropdownContainer from './dropdown_container';
 
 // lets refactor this as the navbar!
