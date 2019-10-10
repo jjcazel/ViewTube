@@ -28,16 +28,18 @@ class VideoIndex extends React.Component {
             )
         })
         return (
-            <div >
-                <ul className='index-container'>
-                    <li>
-                        <div className='trending'>Trending</div>
-                        <br/>
-                        <br/>
-                        {videos}
-                    </li> 
-                </ul>
-            </div>
+            <section>
+                <div >
+                    <ul className='index-container'>
+                        <li className='vids'>
+                            <div className='trending'>Trending</div>
+                            <br/>
+                            <br/>
+                            {videos}
+                        </li> 
+                    </ul>
+                </div>
+            </section>
         )
     }
 

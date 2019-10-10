@@ -76,12 +76,14 @@
  .thumb-info{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     font-size: 14px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     padding-left: 6px;
     width: 50%;
+
  }
 
  .thumb-title{
@@ -101,6 +103,8 @@
     font-size: 13px;
     color: #606060;
     font-weight: 400;
+    padding-bottom: 15px;
+    vertical-align: text-top;
  }
 
  .thumbnail-container{

@@ -62,7 +62,7 @@ class Greeting extends React.Component {
                         <Link to='/' className="play"> </Link>
                         <h1 className='logo-2'>ViewTube</h1>                    
                     </section>
-
+                    <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 
                     <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
                     {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
                     <br/>
@@ -79,8 +79,9 @@ class Greeting extends React.Component {
                 <div className='navbar-container'>
 
                     <section className='logo-play-container'>
-                        <Link to='/' className="play"> </Link>
-                        <div className='logo-2'>ViewTube</div>
+                        <Link to='/' className="play"> 
+                            <div className='logo-2'>ViewTube</div>
+                        </Link>
                     </section>
 
                     <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
