@@ -2,18 +2,19 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
-    
+    background-color: hsla(0, 0%, 93.3%, .4);
 }
 
 .video-show{
     display: flex;
     flex-direction: column;
-    width: 775px;
+    justify-content: flex-start;
+    width: 65%;
     margin-left: 24px;
     padding-top: 24px;
     padding-right: 24px;
     min-height: 1000px;
-    
+    background-color: hsla(0, 0%, 93.3%, .4);
 }
 
 .rightsidebar{
@@ -22,7 +23,10 @@
     justify-content: flex-start;
     padding-top: 24px;
     padding-right: 24px;
-
+    width: 30%;
+    background: transparent;
+    flex-wrap: wrap;
+    background-color: hsla(0, 0%, 93.3%, .4);
 }
 
 .rightsidebar-item{
@@ -44,13 +48,6 @@
     font-family: roboto, Arial, sans-serif;
 }
 
- .creator{
-     font-size: 14px;
-     color: #0d0d0d;
-     font-family: roboto, Arial, sans-serif;
-
- }
-
  .thumbnail{
     align-items: right;
     position: relative;
@@ -59,24 +56,22 @@
  }
 
  .title{
-     padding-top: 20px;
-
- }
-
- .creator{
-    padding-top: 16px;
-
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #0d0d0d;
+    border-bottom: 1px solid #dbdbdd;
  }
 
  .video {
     width: 100%;
     object-fit: fill;
+    height: 52%
  }
 
 
  .thumb-info{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 14px;
     font-weight: bold;
     font-family: Roboto, Arial, sans-serif;
@@ -87,23 +82,72 @@
 
  .thumb-title{
     display: flex;
-    font-size: 14px;
-    font-family: Roboto, Arial, sans-serif;
-    font-weight: 500;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
     font-size: 0.9rem;
-    line-height: 1.6rem;
+    line-height: 1.2rem;
     max-height: 3.2rem;
     color: #0d0d0d;
-    width: 50%;
     text-decoration: none;
+    margin-bottom: 4px;
  }
 
- .h2{
-    font-family: Tobot, Arial, sans-serif;
+ .username{
+    font-family: Robot, Arial, sans-serif;
+    font-size: 13px;
+    color: #606060;
+    font-weight: 400;
  }
 
  .thumbnail-container{
-     display: flex;
-     flex-direction: row;
-     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+ }
+
+ .up-next{
+    font-family: roboto, arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #0d0d0d;
+    font-weight: 500;
+ }
+
+ .date{
+    font-family: roboto, arial, sans-serif;
+    font-size: 14px;
+    color: #606060;
+    padding-top: 10px;
+ }
+
+.description {
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #0d0d0d;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 50px;
+}
+
+.creator{
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 16px;
+    padding-left: 50px;
+    color: rgb(13, 13, 13);
+    text-decoration-color: rgb(13, 13, 13);
+    text-decoration-style: solid; 
+    font-weight: bold;
+    font-size: 14px;
+    color: #0d0d0d;
+    font-family: Arial, sans-serif;
+    margin-bottom: 12px;
+ }
+
+ .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dbdbdd;
  }

@@ -7,19 +7,24 @@ import RightSidebarItem from './right_sidebar_item';
 class RightSidebar extends React.Component {
     constructor(props) {
         super(props);
+
     }
 
     componentDidMount() {
-        this.props.fetchVideos();
+        this.props.fetchVideos().then(() => {
+            this.props.fetchUsers()
+        })
     }
 
     render() {
+        debugger
         const videos = this.props.videos.map(video => { 
+            debugger
         const user = this.props.users[video.creatorId];
             return (
-                <div>
+                <div key={video.videoUrl}>
+                    
                     <RightSidebarItem
-                        key={video.id}
                         video={video}
                         user={user}
                     />

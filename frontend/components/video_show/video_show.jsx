@@ -15,12 +15,29 @@ class VideoShow extends React.Component {
     }
 
     componentDidUpdate(prevProps){
-        if (prevProps.match.params.videoId !== this.props.match.params.videoId )
-        this.props.fethcVideo(this.props.match.params.videoId)
+        console.log(this.props.match.params.videoId)
+        debugger
+        console.log(this.props.match.params.videoId)
+        if (prevProps.match.params.videoId !== this.props.match.params.videoId ){
+            this.props.fetchVideo(this.props.match.params.videoId).then(response => {
+                debugger
+                this.props.fetchUser(response.video[this.props.match.params.videoId].creatorId)
+            })
+        }
+    }
+
+    renderVideo(video){
+        return (
+            <video key={video.videoUrl} width="520" height="400" controls className='video'>
+                <source src={video.videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        )
     }
 
     render() {
         const video = this.props.video
+        debugger
         if(!video){
             return null
         }
@@ -33,22 +50,21 @@ class VideoShow extends React.Component {
                 <section className="show-form">
                     <div className='video-show'>
 
-                        <video width="520" height="400" controls className='video'>
-                            <source src={video.videoUrl} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <br/>
-                        <div className="title">{video.title}</div>
-                        <br/>
-                        <br/>
-                        <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
-                        <br/>
-                        <br/>
-                        <div className="description">{video.description}</div>
+                        {this.renderVideo(video)}
+                    
+                        <div className="title">{video.title}
+                            <p className='date'>Oct 9, 2019</p> 
+                        </div>
+                        <p className='content'>
+                            <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
+                            <div className="description">{video.description}</div>
+
+                        </p>
 
                     </div>
 
                     <div className='rightsidebar'>
+                        <h2 className='up-next'>Up next</h2>
                         <RightSidebarContainer />
                     </div>
                     <br/>

@@ -12,7 +12,7 @@ const App = () => (
     <div>
         
         <Route exact path='/' component={GreetingContainer} />
-        <Route exact path='/videos' component={VideoIndexContainer} />
+        <Route exact path='/' component={VideoIndexContainer} />
         <Route path="/signup" component={SignupFormContainer} />
         <Route path="/videos/:videoId" component={VideoShowContainer} />
         <AuthRoute path="/signin" component={EmailForm} />

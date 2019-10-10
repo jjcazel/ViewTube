@@ -42,7 +42,10 @@ class Greeting extends React.Component {
         if (this.props.currentUser) {  
             return (
                 <div className='navbar-container'>
-                    <div className="play"></div>
+                    <section className='logo-play-container'>
+                        <div className="play"></div>
+                        <div><img className='logo-2' src={window.logoUrl} /></div>
+                    </section>
 
                     <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 
 

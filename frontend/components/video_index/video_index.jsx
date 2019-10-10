@@ -10,13 +10,15 @@ class VideoIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchVideos();
+        this.props.fetchVideos().then(() => {
+            this.props.fetchUsers()
+        })
     }
 
     render() {
-        const user = this.props.users[video.creatorId];
         debugger
         const videos = this.props.videos.map(video => {
+            const user = this.props.users[video.creatorId];
             debugger
             return (
                 <VideoIndexItem
@@ -28,7 +30,6 @@ class VideoIndex extends React.Component {
         })
         return (
             <div>
-                <GreetingContainer />
                 <ul>
                     {videos}
                 </ul>

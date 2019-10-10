@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "static_pages#root"
 
   namespace :api, defaults: {format: :json} do
-    resources :users, only: [:show, :create, :destroy] 
+    resources :users, only: [:index, :show, :create, :destroy] 
   
     get '/identifier', to: 'users#identifier_valid?'
 
