@@ -7,6 +7,7 @@ import EmailForm from '../components/email/email_form';
 import PasswordForm from '../components/password/password_form';
 import { AuthRoute } from '../util/route_util';
 import  VideoShowContainer  from './video_show/video_show_container';
+import  DropdownContainer  from './greeting/dropdown_container';
 
 const App = () => (
     <div>
