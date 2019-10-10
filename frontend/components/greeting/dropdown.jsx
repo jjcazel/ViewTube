@@ -1,7 +1,4 @@
 import React from 'react';
-// import './style.css';
-import { Link } from 'react-router-dom';
-
 
 class Dropdown extends React.Component {
     constructor(props) {
@@ -13,54 +10,48 @@ class Dropdown extends React.Component {
 
         this.showDropdownMenu = this.showDropdownMenu.bind(this);
         this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
-
+        this.logout = this.logout.bind(this);
     };
 
     showDropdownMenu(event) {
+        debugger
         event.preventDefault();
-        this.setState({ displayMenu: true }, () => {
-            document.addEventListener('click', this.hideDropdownMenu);
-        });
+        this.setState({ displayMenu: !this.state.displayMenu })
     }
 
-    hideDropdownMenu() {
-        this.setState({ displayMenu: false }, () => {
-            document.removeEventListener('click', this.hideDropdownMenu);
-        });
-
+    hideDropdownMenu(e) {
+        debugger
+        e.preventDefault();
+        this.setState({ displayMenu: false })
+    }
+    logout(e){
+        e.stopPropagation();
+       this.props.logout().then(() => this.props.history.push('/'))
     }
 
     render() {
-        if (this.props.currentUser){
-
-            debugger
+        debugger
             return (
-                <div className="dropdown" style={{ background: "white", width: "120px" }} >
-                    <div className="signin" onClick={this.showDropdownMenu}> {this.props.currentUser.email}</div>
-    
+                
+                <div >
+                    <div className='signin-cont' onClick={this.showDropdownMenu} > 
+                        <div className="signin">{this.props.currentUser.email}</div> 
+                    
                     {this.state.displayMenu ? (
-                        <ul>
-                            <li><a className="active" onClick={this.props.logout} href="#Create Page">Sign out</a></li>
-                            {/* <button onClick={this.props.logout}>Sign out</button> */}
+                        <ul className='dropdown'>
+                            <li onClick={this.logout}>Sign out</li>
+
                         </ul>
                     ) :
                         (
                             null
                         )
                     }
-    
+                    </div>
                 </div>
     
             );
-        } else {
-            return (
-                <div className='navbar-container'>
-
-                    <Link className='signin' to='/signin'>SIGN IN</Link>
-
-                </div >
-            )
-        }
+         
     }
 }
 

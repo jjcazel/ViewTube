@@ -66,6 +66,7 @@
     width: 100%;
     object-fit: fill;
     height: auto;
+    max-height: 50%;
  }
 
 

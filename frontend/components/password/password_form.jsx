@@ -2,7 +2,7 @@ import React from 'react';
 import { login, receiveErrors, receiveUserEmail, demoLogin } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // do I need to map state to props here to get current user or can I use the greeeting container?
 

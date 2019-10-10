@@ -2,15 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fasearch} from "@fortawesome/free-solid-svg-icons";
-import Dropdown from './dropdown';
+import DropdownContainer from './dropdown_container';
 
 // lets refactor this as the navbar!
 
 class Greeting extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            results: []
+        }
         
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidMount(){
+        this.props.fetchVideos().then(() => {
+            this.setState({results: this.props.videos })
+        });
     }
 
     handleChange(e) {
@@ -22,7 +31,7 @@ class Greeting extends React.Component {
         // If the search bar isn't empty
         if (e.target.value !== "") {
             // Assign the original list to currentList
-            currentList = this.props.fetchVideos();
+            currentList = this.props.videos;
 
             // Use .filter() to determine which items should be displayed
             // based on the search terms
@@ -48,6 +57,7 @@ class Greeting extends React.Component {
    
 
     render() {
+        debugger
         if (this.props.currentUser) {  
             return (
                 <div className='navbar-container'>
@@ -63,21 +73,20 @@ class Greeting extends React.Component {
 
                     <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
                     {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
-                    
+    
                     <br/>
-
-                <section>
-                    <Dropdown />
+                <section >
+                    <DropdownContainer />
                 </section>    
                 
                 </ div>
 
             )         
         } else {
+            
             return (
                 <div className='navbar-container'>
                     <Link className='signin' to='/signin'>SIGN IN</Link>
-
                 </div >
             )
         }         

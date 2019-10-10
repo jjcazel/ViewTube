@@ -1,14 +1,14 @@
 .navbar-container{
-   display: flex;
-   justify-content: space-between;
-   flex-direction: row;
-   align-items: center;
-vertical-align: center;
-   font-family: arial, sans-serif;
-   color: #000000;
-   padding: 0 16px;
-   background: transparent;
-   height: 56px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: center;
+    font-family: arial, sans-serif;
+    color: #000000;
+    padding: 0 16px;
+    background: transparent;
+    height: 56px;
 }
 
 .signin {
@@ -110,18 +110,21 @@ vertical-align: center;
 }
 
 .index-container{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     padding-top: 30px;
-    align-items: center;
+    /* align-items:  ; */
     width: 100%;
+    background-color: hsla(0, 0%, 93.3%, .4);
+    height: 500px;
 }
 
 .thumbnail-2{
     object-fit: fill;
     display: flex;
     flex-direction: column;
-
+    margin: 2px;
 }
 
 .index-item{
@@ -132,4 +135,13 @@ vertical-align: center;
     padding-bottom: 8px;
     width: 210px;
     cursor: pointer;
+}
+
+.dropdown{
+    position: absolute;
+    right: 40px;
+}
+
+.signin-cont{
+    position: relative;
 }
