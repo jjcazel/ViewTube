@@ -124,11 +124,13 @@
     font-weight: 700;
     max-width: 80px;
     vertical-align: middle;
+    font-size: 18px;
 }
 
 .index-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     padding-top: 30px;
     width: 100%;

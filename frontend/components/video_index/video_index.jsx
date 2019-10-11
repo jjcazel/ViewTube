@@ -32,7 +32,7 @@ class VideoIndex extends React.Component {
                 <div >
                     <ul className='index-container'>
                         <li className='vids'>
-                            <div className='trending'>Trending</div>
+                        <div className='trending'>Trending</div>
                             <br/>
                             <br/>
                             {videos}
