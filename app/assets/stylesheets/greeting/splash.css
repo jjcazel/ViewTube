@@ -97,13 +97,14 @@
 }
 
 .trending{
-    position: relative;
+    /* position: absolute; */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-size: 16px;
     color: #0d0d0d;
     font-weight: 500;
-    min-height: 20px;
+    max-height: 20px;
+    /* margin-bottom: 10px; */
 }
 
 .search{
@@ -130,31 +131,32 @@
 .index-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     padding-top: 30px;
     width: 100%;
     background-color: hsla(0, 0%, 93.3%, .4);
-    height: 500px;
+    height: auto;
+    border-bottom: 1px solid #dbdbdd;
 
 }
 
 .thumbnail-2{
     object-fit: fill;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     margin: 2px;
-    padding: 4px;
+    padding: 4px; */
 }
 
 .index-item{
     display: inline-block;
     justify-content: end;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     padding-bottom: 8px;
     width: 210px;
     cursor: pointer;
+    height: 45%;
 }
 
 .dropdown{
@@ -169,9 +171,9 @@
 }
 
 .dropdown:hover {
-    background-color: lightgray;
+    background-color: #ebebf0;
     /* background: transparent; */
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .signin-cont{
@@ -187,7 +189,23 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 .vids{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.vid1, .vid2, .vid3, .vid4, .vid5, .vid6, .vid7, .vid8{
+    padding-right: 4px;
+}
+
+.index-container-1{
+    display: inline-block;
+    padding-top: 30px;
+    width: 100%;
+    background-color: hsla(0, 0%, 93.3%, .4);
+    height: auto;
+    border-bottom: 1px solid #dbdbdd;
+    padding-left: 530px;
 }
