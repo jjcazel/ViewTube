@@ -97,14 +97,16 @@
 }
 
 .trending{
-    /* position: absolute; */
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-size: 16px;
     color: #0d0d0d;
     font-weight: 500;
     max-height: 20px;
-    /* margin-bottom: 10px; */
+    padding-left: 10%;
 }
 
 .search{
@@ -142,10 +144,6 @@
 
 .thumbnail-2{
     object-fit: fill;
-    /* display: flex;
-    flex-direction: column;
-    margin: 2px;
-    padding: 4px; */
 }
 
 .index-item{
@@ -193,7 +191,9 @@
 .vids{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-top: 20px;
+    
 }
 
 .vid1, .vid2, .vid3, .vid4, .vid5, .vid6, .vid7, .vid8{
@@ -207,5 +207,4 @@
     background-color: hsla(0, 0%, 93.3%, .4);
     height: auto;
     border-bottom: 1px solid #dbdbdd;
-    padding-left: 530px;
 }
