@@ -47,13 +47,14 @@ class PasswordForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state).then(({ user }) => {
-            if (user) {
+        this.props.action(this.state).then(({ password }) => {
+            if (password) {
                 this.props.history.push({
                     pathname: '/',
                     state: this.state
                 })
-            } else if (status === 404) {
+                debugger
+            } else {
                 this.props.receiveErrors('Password is invalid. You changed your password today!')
             }
         })
@@ -67,11 +68,14 @@ class PasswordForm extends React.Component {
     }
 
     renderErrors() {
+        debugger
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
-                        {error}
+                        <div>
+                            {error}
+                        </div>
                     </li>
                 ))}
             </ul>
@@ -79,7 +83,7 @@ class PasswordForm extends React.Component {
     }
 
     render() {
-    
+        debugger
         return (
             <div className='email-form'>
                 <form className='email-form-container' onSubmit={this.handleSubmit}>
@@ -93,11 +97,11 @@ class PasswordForm extends React.Component {
                     </div>
 
                     <label className='input-label'>
-                        <input className='input-field-email' onKeyDown={this.handleEnterPress} type="password" placeholder="Password" value={this.state.password} onChange={this.update} />
+                        <input className='input-field-email' onKeyDown={this.handleEnterPress} type="password" placeholder="Password" 
+                            value={this.state.password} onChange={this.update} />
                     </label>
 
                     {this.renderErrors()}
-                    <br/>
 
                     <span className='span-buttons'>
                         <div className='plain-text'>Forgot Password?</div>

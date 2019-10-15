@@ -10,8 +10,9 @@ class Api::SessionsController < ApplicationController
     if @user
       login!(@user)
       render :show
+      debugger
     else
-      render json: 'error', status: 404
+      render json: [error: 'error'], status: 404
     end
   end
 
