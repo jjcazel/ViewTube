@@ -148,10 +148,6 @@
     object-fit: fill;
 }
 
-.outer-cont.{
-    width: 100%;
-}
-
 .index-item{
     display: inline-block;
     justify-content: end;
