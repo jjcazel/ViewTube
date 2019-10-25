@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
-import GreetingContainer from '../greeting/greeting_container';
-import VideoIndexContainer from './video_index_container'
+// import GreetingContainer from '../greeting/greeting_container';
+// import VideoIndexContainer from './video_index_container'
 
 class VideoIndex extends React.Component {
     constructor(props) {
@@ -31,8 +31,8 @@ class VideoIndex extends React.Component {
             <section>
                 <div >
                     <ul className='row-wrapper'>
-                        <div>
-                            <div className='title'>Trending</div>
+                        <div className='outer-cont.'>
+                            <div className='title-splash'>Trending</div>
                             <div className='index-container'>
                                 <li className="vid1">{videos[0]}</li> 
                                 <li className="vid2">{videos[1]}</li> 
@@ -43,8 +43,8 @@ class VideoIndex extends React.Component {
                         </div>
                     </ul>
                     <ul className="row-wrapper">
-                        <div>
-                            <div className="title"></div>
+                        <div className='outer-cont.'>
+                            <div className="title-splash"></div>
                             <div className='index-container'>
                                 <li className="vid5">{videos[4]}</li> 
                                 <li className="vid6">{videos[5]}</li> 

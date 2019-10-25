@@ -59,14 +59,16 @@ class Greeting extends React.Component {
                 <div className='navbar-container'>
 
                     <section className='logo-play-container'>
-                        <Link to='/' className="play"> </Link>
-                        <h1 className='logo-2'>ViewTube</h1>                    
+                        <Link to='/' className="play">
+                            <div className='logo-2'>ViewTube</div>
+                        </Link>
                     </section>
+
                     <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 
+
                     <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
                     {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
-                    <br/>
-                    <br/>
+                   
                     <section >
                         <DropdownContainer />
                     </section>    
@@ -87,6 +89,7 @@ class Greeting extends React.Component {
                     <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
                     {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
                     <Link className='signin' to='/signin'>SIGN IN</Link>
+
                 </div >
             )
         }         

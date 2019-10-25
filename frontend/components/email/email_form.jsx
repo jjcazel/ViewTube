@@ -60,7 +60,7 @@ class EmailForm extends React.Component {
                     pathname: '/login',
                     state: this.state.identifier
                 })
-                debugger
+                // debugger
             } else {
                 this.props.receiveErrors('Couldn\'t find your Viewtube Account')
             }
@@ -75,7 +75,7 @@ class EmailForm extends React.Component {
     }
 
     renderErrors() {
-        debugger
+        // debugger
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
@@ -91,7 +91,7 @@ class EmailForm extends React.Component {
     }
 
     render() {
-        debugger
+        // debugger
         return (
             <div className='email-form'>
                 <form className='email-form-container' onSubmit={this.handleSubmit}>

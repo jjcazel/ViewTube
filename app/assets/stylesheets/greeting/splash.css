@@ -12,7 +12,6 @@
     width: 98%;
 }
 
-
 .signin {
     display: flex;
     flex-direction: row;
@@ -49,8 +48,15 @@
 }
 
 .logo-play-container{
-  padding-left: 50px;
-  font-family: 'roboto', sans-serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+  height: 43%;
+  width: 12%;
+  padding-left: 10px;
+  font-family: 'roboto', Arial, sans-serif;
 }
 
 .play { 
@@ -96,7 +102,7 @@
 
 }
 
-.title{
+.title-splash{
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -106,54 +112,50 @@
     color: #0d0d0d;
     font-weight: 500;
     max-height: 20px;
-    /* margin-left: 30px; */
 }
 
 .search{
-   position: relative;
-   width: 40%;
-   min-height: 26px; 
-   padding-left: 8px;
-   margin-right: 60px;
-   font-weight: 300;
+  position: relative;
+  width: 40%;
+  min-height: 26px; 
+  padding-left: 8px;
+  margin-right: 60px;
+  font-weight: 300;
 }
 
 .logo-2 {
-    color: #0d0d0d;
-    padding-left: 26px;
-    cursor: pointer;
-    font-family: 'roboto', sans-serif;
-    align-items: baseline;
-    font-weight: 700;
-    max-width: 80px;
-    vertical-align: middle;
-    font-size: 18px;
+  display: flex;
+  color: #0d0d0d;
+  padding-left: 26px;
+  cursor: pointer;
+  font-family: 'roboto', Arial, sans-serif;
+  align-items: baseline;
+  font-weight: 700;
+  max-width: 60px;
+  vertical-align: middle;
+  font-size: 16px;
 }
 
 .index-container{
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     padding-top: 30px;
     width: 100%;
-    background-color: hsla(0, 0%, 93.3%, .4);
     height: auto;
-    border-bottom: 1px solid #dbdbdd;
-}
-
-.index-container li:first-child {
-    /* margin-left: 30px; */
 }
 
 .thumbnail-2{
     object-fit: fill;
 }
 
+.outer-cont.{
+    width: 100%;
+}
+
 .index-item{
     display: inline-block;
     justify-content: end;
     align-items: center;
-    /* position: relative; */
     padding-bottom: 8px;
     width: 210px;
     cursor: pointer;
@@ -173,7 +175,6 @@
 
 .dropdown:hover {
     background-color: #ebebf0;
-    /* background: transparent; */
     opacity: 0.8;
 }
 
@@ -189,7 +190,6 @@
     text-align: left;
     font-family: 'Roboto', sans-serif;
 }
-
 
 .vids{
     display: flex;
