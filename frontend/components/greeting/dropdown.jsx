@@ -37,7 +37,11 @@ class Dropdown extends React.Component {
                     
                     {this.state.displayMenu ? (
                         <ul className='dropdown'>
-                            <li onClick={this.logout}>Sign out</li>
+                          <div className="drop-top">
+                            <li className="drop-email">{this.props.currentUser.email}</li>
+                          </div>
+                          
+                          <li className="signout" onClick={this.logout}>Sign out</li>
 
                         </ul>
                     ) :

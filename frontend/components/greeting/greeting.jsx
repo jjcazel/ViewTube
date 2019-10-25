@@ -64,7 +64,7 @@ class Greeting extends React.Component {
                         </Link>
                     </section>
 
-                    <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a> 
+                    {/* <a href="https://github.com/CSS-Tricks/Shapes-Of-CSS"> </a>  */}
 
                     <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
                     {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}

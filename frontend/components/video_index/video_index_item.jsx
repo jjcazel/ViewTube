@@ -20,7 +20,7 @@ const VideoIndexItem = (props) => {
             <video width="210" height="118" className='thumbnail-2' >
                 <source src={video.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
-                </video>
+            </video>
 
             <section className="thumb-info">
                 <h1 className='thumb-title'>{video.title}</h1>
