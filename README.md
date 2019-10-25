@@ -24,7 +24,7 @@ const msp = (state, ownProps) => {
 ## User Interface
 I made great effort to clone the Google sign-in and account creation forms as close as I could, paying meticulous attention to every detail. My CSS skills greatly improved throughout this project and I feel much more confident styling UIs now. Take a look...
 
-![signin](/app/assets/images/ViewTube_signin.png) 
+![signin](/app/assets/images/ViewTube_signin_450p.png) 
 ![Google signin](/app/assets/images/Google_sign_450p.png)
 
 ## Features to come
