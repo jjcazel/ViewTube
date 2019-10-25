@@ -12,7 +12,7 @@ class Api::SessionsController < ApplicationController
       render :show
       # debugger
     else
-      render json: [error: 'error'], status: 404
+      render json: [error: 'Password is invalid. You changed your password today!'], status: 404
     end
   end
 

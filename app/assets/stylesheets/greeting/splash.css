@@ -170,7 +170,8 @@
   border: 1px solid #dbdbdd;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: rgba(255, 255, 255, 0.98)
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1;
 }
 
 .signout:hover {
@@ -219,7 +220,7 @@
   height: 16px;
   width: 100%;
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .drop-top{
@@ -232,8 +233,10 @@
 
 .signout{
   display: flex;
+  justify-content: center;
   width: 100%;
   padding-top: 10px;
   /* padding-left: 16px; */
   padding-bottom: 10px;
+  font-size: 16px;
 }

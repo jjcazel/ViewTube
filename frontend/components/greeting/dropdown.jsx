@@ -1,60 +1,60 @@
 import React from 'react';
 
 class Dropdown extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            displayMenu: false,
-        };
-
-        this.showDropdownMenu = this.showDropdownMenu.bind(this);
-        this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
-        this.logout = this.logout.bind(this);
+    this.state = {
+        displayMenu: false,
     };
 
-    showDropdownMenu(event) {
-        event.preventDefault();
-        this.setState({ displayMenu: !this.state.displayMenu })
-    }
+    this.showDropdownMenu = this.showDropdownMenu.bind(this);
+    this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
+    this.logout = this.logout.bind(this);
+  };
 
-    hideDropdownMenu(e) {
-        e.preventDefault();
-        this.setState({ displayMenu: false })
-    }
-    logout(e){
-        // debugger
-        e.stopPropagation();
-       this.props.logout().then(() => this.props.history.push('/'))
-    }
+  showDropdownMenu(event) {
+    event.preventDefault();
+    this.setState({ displayMenu: !this.state.displayMenu })
+  }
 
-    render() {
-            return (
-                
-                <div >
-                    <div className='signin-cont' onClick={this.showDropdownMenu} > 
-                        <div className="signin">{this.props.currentUser.email}</div> 
-                    
-                    {this.state.displayMenu ? (
-                        <ul className='dropdown'>
-                          <div className="drop-top">
-                            <li className="drop-email">{this.props.currentUser.email}</li>
-                          </div>
-                          
-                          <li className="signout" onClick={this.logout}>Sign out</li>
+  hideDropdownMenu(e) {
+    e.preventDefault();
+    this.setState({ displayMenu: false })
+  }
+  logout(e){
+    // debugger
+    e.stopPropagation();
+      this.props.logout().then(() => this.props.history.push('/'))
+  }
 
-                        </ul>
-                    ) :
-                        (
-                            null
-                        )
-                    }
-                    </div>
-                </div>
-    
-            );
-         
-    }
+  render() {
+    return (
+        
+      <div >
+          <div className='signin-cont' onClick={this.showDropdownMenu} > 
+            <div className="signin">{this.props.currentUser.email}</div> 
+          
+          {this.state.displayMenu ? (
+            <ul className='dropdown'>
+              <div className="drop-top">
+                <li className="drop-email">{this.props.currentUser.email}</li>
+              </div>
+              
+              <li className="signout" onClick={this.logout}>Sign out</li>
+
+            </ul>
+          ) :
+              (
+                null
+              )
+          }
+          </div>
+      </div>
+
+    );
+        
+  }
 }
 
 export default Dropdown;

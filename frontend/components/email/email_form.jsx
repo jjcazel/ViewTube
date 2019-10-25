@@ -3,8 +3,6 @@ import { acct_validation, receiveErrors, demoLogin, clearErrors } from '../../ac
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-
-
 const msp = state => ({
     errors: state.errors.session
 })
@@ -40,12 +38,6 @@ class EmailForm extends React.Component {
 
     componentDidMount() {
         this.props.clearErrors();
-    }
-
-    componentDidUpdate(){
-        <div className='warning'>
-            {/* <FontAwesomeIcon icon={faExclamationCircle} /> */}
-        </div>
     }
 
     componentWillUnmount() {

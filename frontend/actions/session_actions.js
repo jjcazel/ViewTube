@@ -37,7 +37,9 @@ export const acct_validation = id => dispatch => {
 
 export const login = user => dispatch => {
     return APIUtil.login(user)
-    .then(user => dispatch(receiveCurrentUser(user)))
+        .then(user => dispatch(receiveCurrentUser(user)), error => {
+            dispatch(receiveErrors(error.responseJSON[0].error))
+        })
 }
 
 export const signup = formUser => dispatch => {

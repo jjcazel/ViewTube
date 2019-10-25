@@ -46,17 +46,13 @@ class PasswordForm extends React.Component {
     }
 
     handleSubmit(e) {
+        // debugger
         e.preventDefault();
         this.props.action(this.state).then(({ password }) => {
-            if (password) {
-                this.props.history.push({
-                    pathname: '/',
-                    state: this.state
-                })
-                debugger
-            } else {
-                this.props.receiveErrors('Password is invalid. You changed your password today!')
-            }
+            this.props.history.push({
+                pathname: '/',
+                state: this.state
+            })
         })
     }
 
@@ -68,12 +64,12 @@ class PasswordForm extends React.Component {
     }
 
     renderErrors() {
-        debugger
+        // debugger
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
-                        <div>
+                        <div className='error'>
                             {error}
                         </div>
                     </li>
@@ -83,35 +79,35 @@ class PasswordForm extends React.Component {
     }
 
     render() {
-        debugger
+        // debugger
         return (
-            <div className='email-form'>
-                <form className='email-form-container' onSubmit={this.handleSubmit}>
+          <div className='email-form'>
+              <form className='email-form-container' onSubmit={this.handleSubmit}>
 
-                    <p className='logo'><img className='logo' src={window.logoUrl} /></p>
-                        <h2 className='other-text-email'>Welcome</h2>
-                    <br/>
+                  <p className='logo'><img className='logo' src={window.logoUrl} /></p>
+                      <h2 className='other-text-email'>Welcome</h2>
+                  <br/>
 
-                    <div className='other-text-email-2-container'>
-                        <div className='other-text-email-2'>{this.state.email}</div>
-                    </div>
+                  <div className='other-text-email-2-container'>
+                      <div className='other-text-email-2'>{this.state.email}</div>
+                  </div>
 
-                    <label className='input-label'>
-                        <input className='input-field-email' onKeyDown={this.handleEnterPress} type="password" placeholder="Password" 
-                            value={this.state.password} onChange={this.update} />
-                    </label>
+                  <label className='input-label'>
+                      <input className='input-field-email' onKeyDown={this.handleEnterPress} type="password" placeholder="Password" 
+                          value={this.state.password} onChange={this.update} />
+                  </label>
 
-                    {this.renderErrors()}
+                  {this.renderErrors()}
 
-                    <span className='span-buttons'>
-                        <div className='plain-text'>Forgot Password?</div>
-                            <button className='create-link-2' onClick={this.handleClick}>Try the demo login!</button>
-                        <input className='next' type="submit" value="Next"  />
-                    </span>
-                </form>
-            </div>
-        )
-    }
+                  <span className='span-buttons'>
+                      <div className='plain-text'>Forgot Password?</div>
+                          <button className='create-link-2' onClick={this.handleClick}>Try the demo login!</button>
+                      <input className='next' type="submit" value="Next"  />
+                  </span>
+              </form>
+          </div>
+      )
+  }
 }
 
 export default connect(msp, mdp)(PasswordForm);
