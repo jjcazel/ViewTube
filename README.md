@@ -24,9 +24,18 @@ const msp = (state, ownProps) => {
 ## User Interface
 I made great effort to clone the Google sign-in and account creation forms as close as I could, paying meticulous attention to every detail. My CSS skills greatly improved throughout this project and I feel much more confident styling UIs now. Take a look...
 
+<<<<<<< HEAD
 ![signin](/app/assets/images/ViewTube_signin.png)
 
 ![Google signin](/app/assets/images/Google_sign.png)
 
 ## Features to come
 I am planning to implement commenting on videos and like/dislike functionality on the page as my next steps. I will also be adding functionality to the search bar and ability to upload your own videos! All this will include meticulous CSS styling creating a clean and pristine design for my completed site! Enjoy!
+=======
+![signin](/Users/jaredcaz/Desktop/ViewTube_signin.png)
+
+![Google signin](/Users/jaredcaz/Desktop/Google_sign.png)
+
+## Features to come
+I am planning to implement commenting and like/dislike functionality on the page as my next steps. I will also be adding functionality to the search bar and ability to upload your own videos! All this will include meticulous CSS styling creating a clean and pristine design for my completed site! Enjoy!
+>>>>>>> ea3e9c080e16bc33720000ef51ce1e946f394753
