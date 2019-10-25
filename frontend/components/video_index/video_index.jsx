@@ -30,24 +30,31 @@ class VideoIndex extends React.Component {
         return (
             <section>
                 <div >
-                    <ul className='index-container-1'>
-                        <div className='trending'>Trending</div>
-                        <div className='vids'>
-                            <br/>
-                            <br/>
-                            <li className="vid1">{videos[0]}</li> 
-                            <li className="vid2">{videos[1]}</li> 
-                            <li className="vid3">{videos[2]}</li> 
-                            <li className="vid4">{videos[3]}</li> 
-                        </div> 
+                    <ul className='row-wrapper'>
+                        <div>
+                            <div className='title'>Trending</div>
+                            <div className='index-container'>
+                                <li className="vid1">{videos[0]}</li> 
+                                <li className="vid2">{videos[1]}</li> 
+                                <li className="vid3">{videos[2]}</li> 
+                                <li className="vid4">{videos[3]}</li> 
+                            </div> 
+
+                        </div>
                     </ul>
+                    <ul className="row-wrapper">
+                        <div>
+                            <div className="title"></div>
+                            <div className='index-container'>
+                                <li className="vid5">{videos[4]}</li> 
+                                <li className="vid6">{videos[5]}</li> 
+                                <li className="vid7">{videos[6]}</li> 
+                                <li className="vid8">{videos[7]}</li> 
+                            </div>
+                        </div>
+                    </ul>
+
                 </div>
-                    <ul className='index-container'>
-                        <li className="vid5">{videos[4]}</li> 
-                        <li className="vid6">{videos[5]}</li> 
-                        <li className="vid7">{videos[6]}</li> 
-                        <li className="vid8">{videos[7]}</li> 
-                    </ul>
             </section>
         )
     }
