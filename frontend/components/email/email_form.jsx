@@ -74,6 +74,7 @@ class EmailForm extends React.Component {
                     <li className='error'
                         key={`error-${i}`}>
                         <div className='error'>
+                        <i class="fad fa-exclamation-circle"></i>
                             {error}
                         </div>
                     </li>
