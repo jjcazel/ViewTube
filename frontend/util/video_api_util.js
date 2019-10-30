@@ -12,3 +12,9 @@ export const fetchVideo = id => (
     })
 )
 
+export const fetchUploadedVideos = id => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/users/${id}/uploaded`
+    });
+};

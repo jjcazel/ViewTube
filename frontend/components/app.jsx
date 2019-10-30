@@ -8,6 +8,7 @@ import PasswordForm from '../components/password/password_form';
 import { AuthRoute } from '../util/route_util';
 import  VideoShowContainer  from './video_show/video_show_container';
 import  DropdownContainer  from './greeting/dropdown_container';
+import VideoUploadForm from './video_upload/video_upload_container'
 
 const App = () => (
     <div>
@@ -18,8 +19,8 @@ const App = () => (
         <Route path="/videos/:videoId" component={VideoShowContainer} />
         <AuthRoute path="/signin" component={EmailForm} />
         <AuthRoute path="/login" component={PasswordForm} />
+        <AuthRoute path="/upload" component={VideoUploadForm} />
         
-
     </div>
 );
 

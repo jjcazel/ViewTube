@@ -54,43 +54,51 @@ class Greeting extends React.Component {
    
 
     render() {
-        if (this.props.currentUser) {  
-            return (
-                <div className='navbar-container'>
+      if (this.props.currentUser) {  
+        return (
+          <div className='navbar-container'>
 
-                    <section className='logo-play-container'>
-                        <Link to='/' className="play">
-                            <div className='logo-2'>ViewTube</div>
-                        </Link>
-                    </section>
+              <section className='logo-play-container'>
+                  <Link to='/' className="play">
+                      <div className='logo-2'>ViewTube</div>
+                  </Link>
+              </section>
 
+              <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
+              //upload button
+              <div id='title-right'>
+                  <Link to='/upload'>
+                      <div className='highlight-circle'>
+                          <img id='upload-right' src={window.upload} />
+                      </div>
+                  </Link>
+                  {this.sessionButton()}
+              </div>
+              
+              <section >
+                  <DropdownContainer />
+              </section>    
+          
+          </ div>
+        )         
+      } else {
+          
+          return (
+              <div className='navbar-container'>
 
-                    <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
-                   
-                    <section >
-                        <DropdownContainer />
-                    </section>    
-                
-                </ div>
-            )         
-        } else {
-            
-            return (
-                <div className='navbar-container'>
+                  <section className='logo-play-container'>
+                      <Link to='/' className="play"> 
+                          <div className='logo-2'>ViewTube</div>
+                      </Link>
+                  </section>
 
-                    <section className='logo-play-container'>
-                        <Link to='/' className="play"> 
-                            <div className='logo-2'>ViewTube</div>
-                        </Link>
-                    </section>
+                  <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
+                  {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
+                  <Link className='signin' to='/signin'>SIGN IN</Link>
 
-                    <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
-                    {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
-                    <Link className='signin' to='/signin'>SIGN IN</Link>
-
-                </div >
-            )
-        }         
+              </div >
+          )
+      }         
     }
 }
 
