@@ -3,10 +3,11 @@ import {
   createVideo,
   addUploadErrors,
 } from '../../actions/video_actions';
-// import { recentUploadUI } from '../../actions/ui_actions';
+import { recentUploadUI } from '../../actions/ui_actions';
 import VideoUpload from './video_upload';
 
 const msp = state => {
+  debugger
   const lastVideoUploadId = state.ui.lastVideoUploadId;
   const uploadErrors = state.errors.videos;
 

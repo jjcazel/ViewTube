@@ -1,5 +1,5 @@
 import * as VideoAPI from '../util/video_api_util';
-// import { recentUploadUI } from './ui_actions'
+import { recentUploadUI } from './ui_actions'
 
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
@@ -17,13 +17,13 @@ const receiveVideo = (video) => ({
     video
 });
 
-// const receiveUploadedVideo = ({ users, videos }) => {
-//     return {
-//         type: RECEIVE_UPLOADED_VIDEO,
-//         users,
-//         videos,
-//     };
-// };
+const receiveUploadedVideo = ({ users, videos }) => {
+    return {
+        type: RECEIVE_UPLOADED_VIDEO,
+        users,
+        videos,
+    };
+};
 
 export const addUploadErrors = errors => {
     return {

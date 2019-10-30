@@ -65,14 +65,13 @@ class Greeting extends React.Component {
               </section>
 
               <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
-              //upload button
+            
               <div id='title-right'>
                   <Link to='/upload'>
                       <div className='highlight-circle'>
-                          <img id='upload-right' src={window.upload} />
+                          <img id='upload-right' src='app/assets/images/upload.png' />
                       </div>
                   </Link>
-                  {this.sessionButton()}
               </div>
               
               <section >
