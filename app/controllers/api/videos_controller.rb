@@ -20,13 +20,13 @@ class Api::VideosController < ApplicationController
 
   def create
     return false unless logged_in?
-    debugger
+    # debugger
     @user = current_user
     @video = Video.new(video_params)
     @video.creator_id = @user.id
-    debugger
+    # debugger
     if @video.save
-      @comments = @video.comments
+      # @comments = @video.comments
       render 'api/videos/show.json.jbuilder'
     else
       render json: @video.errors.full_messages, status: 422

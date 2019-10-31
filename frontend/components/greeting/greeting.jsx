@@ -69,7 +69,7 @@ class Greeting extends React.Component {
               <div id='title-right'>
                   <Link to='/upload'>
                       <div className='highlight-circle'>
-                          <img id='upload-right' src='app/assets/images/upload.png' />
+                  <img id='upload-right' src='upload.png' />
                       </div>
                   </Link>
               </div>

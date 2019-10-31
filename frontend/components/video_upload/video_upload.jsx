@@ -18,12 +18,6 @@ class VideoUpload extends React.Component {
     this.submit = this.submit.bind(this);
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.lastVideoUploadId !== this.props.lastVideoUploadId) {
-  //     createHistory().push(`/videos/${this.props.lastVideoUploadId}`);
-  //   }
-  // }
-
   changeField(field) {
     return e => this.setState({ [field]: e.target.value });
   }
@@ -66,7 +60,7 @@ class VideoUpload extends React.Component {
 
   submit(e) {
     e.preventDefault();
-    debugger
+    // debugger
     if (this.state.title === '' ||
       this.state.description === '' ||
       this.state.file === null ||
@@ -74,7 +68,7 @@ class VideoUpload extends React.Component {
 
       return;
     }
-    debugger
+    // debugger
     this.setState({ loading: true });
     let test = new FormData();
     test.append('title', this.state.title);
