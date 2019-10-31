@@ -18,3 +18,16 @@ export const fetchUploadedVideos = id => {
         url: `/api/users/${id}/uploaded`
     });
 };
+
+export const createVideo = data => {
+    debugger
+    return $.ajax({
+        method: 'POST',
+        url: `/api/videos`,
+        data: data,
+        contentType: false,
+        processData: false
+    });
+};
+
+

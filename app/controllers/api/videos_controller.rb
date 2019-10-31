@@ -2,7 +2,7 @@ class Api::VideosController < ApplicationController
 
   def index
       @videos = Video.all.with_attached_video.includes!(:creator)
-      
+
       render :index
   end
 
@@ -20,10 +20,11 @@ class Api::VideosController < ApplicationController
 
   def create
     return false unless logged_in?
-
+    debugger
     @user = current_user
-    @video = @user.videos.new(video_params)
-
+    @video = Video.new(video_params)
+    @video.creator_id = @user.id
+    debugger
     if @video.save
       @comments = @video.comments
       render 'api/videos/show.json.jbuilder'
@@ -55,7 +56,7 @@ class Api::VideosController < ApplicationController
   private
 
   def video_params
-    params.require(:video).permit(:title, :description, :video)
+    params.permit(:title, :description, :video)
   end
 
 end

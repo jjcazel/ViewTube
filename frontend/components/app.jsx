@@ -19,7 +19,7 @@ const App = () => (
         <Route path="/videos/:videoId" component={VideoShowContainer} />
         <AuthRoute path="/signin" component={EmailForm} />
         <AuthRoute path="/login" component={PasswordForm} />
-        <AuthRoute path="/upload" component={VideoUploadForm} />
+        <Route path="/upload" component={VideoUploadForm} />
         
     </div>
 );

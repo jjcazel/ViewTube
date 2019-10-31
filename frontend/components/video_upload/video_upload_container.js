@@ -3,16 +3,15 @@ import {
   createVideo,
   addUploadErrors,
 } from '../../actions/video_actions';
-import { recentUploadUI } from '../../actions/ui_actions';
 import VideoUpload from './video_upload';
 
 const msp = state => {
-  debugger
-  const lastVideoUploadId = state.ui.lastVideoUploadId;
+  // debugger
+  // const lastVideoUploadId = state.entities.videos.id;
   const uploadErrors = state.errors.videos;
 
   return {
-    lastVideoUploadId,
+    // lastVideoUploadId,
     uploadErrors,
   };
 };

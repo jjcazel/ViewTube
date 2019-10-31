@@ -6,7 +6,7 @@ class VideoUpload extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      file: null,
+      video: null,
       fileUrl: null,
       title: '',
       description: '',
@@ -18,11 +18,11 @@ class VideoUpload extends React.Component {
     this.submit = this.submit.bind(this);
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.lastVideoUploadId !== this.props.lastVideoUploadId) {
-      createHistory().push(`/videos/${this.props.lastVideoUploadId}`);
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.lastVideoUploadId !== this.props.lastVideoUploadId) {
+  //     createHistory().push(`/videos/${this.props.lastVideoUploadId}`);
+  //   }
+  // }
 
   changeField(field) {
     return e => this.setState({ [field]: e.target.value });
@@ -30,7 +30,7 @@ class VideoUpload extends React.Component {
 
   cancelUpload() {
     this.setState({
-      file: null,
+      video: null,
       title: '',
       description: '',
     });
@@ -58,7 +58,7 @@ class VideoUpload extends React.Component {
   uploadFile(file) {
     const fileReader = new FileReader();
     this.setState({
-      file: file,
+      video: file,
       fileUrl: fileReader.result,
       title: file.name,
     });
@@ -66,7 +66,7 @@ class VideoUpload extends React.Component {
 
   submit(e) {
     e.preventDefault();
-
+    debugger
     if (this.state.title === '' ||
       this.state.description === '' ||
       this.state.file === null ||
@@ -74,9 +74,13 @@ class VideoUpload extends React.Component {
 
       return;
     }
-
+    debugger
     this.setState({ loading: true });
-    this.props.createVideo(this.state);
+    let test = new FormData();
+    test.append('title', this.state.title);
+    test.append('description', this.state.description);
+    test.append('video', this.state.video);
+    this.props.createVideo(test);
   }
 
   render() {
@@ -86,10 +90,10 @@ class VideoUpload extends React.Component {
         <form id='upload'>
           <input
             autoComplete='false'
-            name='hidden'
-            type='text'
-            style={{ display: 'none' }} />
+            type='file' 
+            onChange={this.handleFile}/>
           <input type='text'
+            placeholder='Title'
             onChange={this.changeField('title')}
             className='upload-form-field'
             value={this.state.title}
@@ -103,10 +107,13 @@ class VideoUpload extends React.Component {
             value={this.state.description}
             rows='4'>
           </textarea>
+
           <div>
+            <button 
+              onClick={this.submit}>SUBMIT</button>
             <button onClick={this.cancelUpload}
               id='cancel'
-              className={cancelButtonClass}>CANCEL</button>
+              className="cancel">CANCEL</button>
           </div>
         </form>
       </div>
