@@ -79,7 +79,7 @@ class VideoUpload extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="video-upload-main">
         <div className='nav'>
           <GreetingContainer />
         </div>
@@ -105,7 +105,7 @@ class VideoUpload extends React.Component {
           </textarea>
 
           <div>
-            <button 
+            <button className="next"
               onClick={this.submit}>SUBMIT</button>
             <button onClick={this.cancelUpload}
               id='cancel'

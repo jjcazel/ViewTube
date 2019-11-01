@@ -1,16 +1,14 @@
 .navbar-container{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    vertical-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: #000000;
-    padding: 0 16px;
-    background: transparent;
-    height: 56px;
-    width: 98%;
-    min-width: 750px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: center;
+  font-family: 'Roboto', sans-serif;
+ 
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 56px;
 }
 
 .signin {
@@ -50,69 +48,24 @@
 
 .logo-play-container{
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  position: relative;
-  height: 43%;
-  width: 12%;
-  padding-left: 10px;
   font-family: 'roboto', Arial, sans-serif;
-}
-
-.play { 
-    background: red;
-    border-radius: 50% / 10%;
-    color: #FFFFFF;
-    font-size: 0.75em; /* change this to change size */
-    height: 1.5em;
-    margin: 0px;
-    padding-left: 0px;
-    position: absolute;
-    text-align: center;
-    text-indent: 0.1em;
-    transition: all 150ms ease-out;
-    width: 2em;
-    max-height: 24px;
-    cursor: pointer;
-    max-width: 30px;
-}
-
-.play::before { 
-    background: inherit;
-    border-radius: 5% / 50%;
-    bottom: 9%;
-    content: "";
-    left: -5%;
-    position: absolute;
-    right: -5%;
-    top: 9%;
- 
-}
-
-.play::after {
-    border-style: solid;
-    border-width: 0.6em 0.4em .4em .8em;
-    border-color: transparent transparent transparent #FFFFFF;
-    content: ' ';
-    font-size: 0.1em;
-    height: 0;
-    margin: -1em 0 0 -0.45em;
-    top: 70%;
-    position: absolute;
-
+  
+  height: 24px;
+  cursor: pointer;
+  font-weight: 500;
+  align-items: center;
 }
 
 .title-splash{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-size: 16px;
-    color: #0d0d0d;
-    font-weight: 500;
-    max-height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-size: 16px;
+  color: #0d0d0d;
+  font-weight: 500;
+  max-height: 20px;
 }
 
 .search{
@@ -132,17 +85,13 @@
 
 }
 
-.logo-2 {
-  display: flex;
-  color: #0d0d0d;
-  padding-left: 26px;
+.nav-logo {
   cursor: pointer;
   font-family: 'roboto', Arial, sans-serif;
-  align-items: baseline;
-  font-weight: 700;
-  max-width: 60px;
-  vertical-align: middle;
-  font-size: 16px;
+  /* align-items: baseline; */
+  font-weight: 500;
+  font-size: 10vw;
+  
 }
 
 .index-container{
@@ -259,10 +208,15 @@
 .hamburger{
   height: 14px;
   max-width: auto;
-
+  cursor: pointer;
 }
 
-.play-button{
-  height: 14px;
+.play-button {
+  height: 1rem;
   max-width: auto;
+}
+
+.icon-button{
+  padding: 8px;
+  margin-right: 16px;
 }
