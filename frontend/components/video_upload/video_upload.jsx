@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import GreetingContainer from '../greeting/greeting_container'
 
 class VideoUpload extends React.Component {
 
@@ -80,7 +80,9 @@ class VideoUpload extends React.Component {
   render() {
     return (
       <div>
-        <h2>Upload Your Video Here!</h2>
+        <div className='nav'>
+          <GreetingContainer />
+        </div>
         <form id='upload'>
           <input
             autoComplete='false'

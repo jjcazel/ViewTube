@@ -9,8 +9,8 @@ class Api::VideosController < ApplicationController
   def show 
       @video = Video.find_by(id: params[:id])
       if @video
-        @users = [@video.creator] + @video.commenters
-        @comments = @video.comments
+        # @users = [@video.creator] + @video.commenters
+        # @comments = @video.comments
         render :show
       else
         render json: ['Video not found'], status: 404

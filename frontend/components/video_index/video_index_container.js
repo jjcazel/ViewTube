@@ -6,8 +6,8 @@ import { fetchUsers } from '../../actions/users_actions';
 const msp = state => {
     return {
         videos: Object.values(state.entities.videos),
-        users: state.entities.users
-
+        users: state.entities.users,
+        currentUser: state.entities.users[state.session.id]
     }
 }
 

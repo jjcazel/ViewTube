@@ -5,12 +5,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel=“stylesheet” href=“https://use.fontawesome.com/releases/v5.6.3/css/all.css”
-    integrity=“sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/”
-    crossorigin=“anonymous”>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+      integrity=“sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/”
+      crossorigin=“anonymous”>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script type="text/javascript">
       window.logoUrl = "<%= image_url('festisite_google.png') %>"
+      window.uploadUrl = "<%= image_url('upload.png') %>"
+      window.hamburgerUrl = "<%= image_url('hamburger.png') %>"
+      window.playIconUrl = "<%= image_url('yt_icon_rgb.png') %>"
     </script>
     <link rel="shortcut icon" href='https://cdn.pixabay.com/photo/2016/07/03/18/36/youtube-1495277__340.png' type='image/x-icon'>
   </head>

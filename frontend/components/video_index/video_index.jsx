@@ -1,8 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import VideoIndexItem from './video_index_item';
-// import GreetingContainer from '../greeting/greeting_container';
-// import VideoIndexContainer from './video_index_container'
 
 class VideoIndex extends React.Component {
     constructor(props) {
@@ -30,30 +27,44 @@ class VideoIndex extends React.Component {
     return (
       <section>
         <div >
+          <ul className='row-wrapper'>
+            <div className='outer-cont.'>
+              <div className='title-splash'>Trending</div>
+              <div className='index-container'>
+                  <li className="vid">{videos[0]}</li> 
+                  <li className="vid">{videos[1]}</li> 
+                  <li className="vid">{videos[2]}</li> 
+                  <li className="vid">{videos[3]}</li> 
+                  <li className="vid">{videos[4]}</li> 
+              </div> 
+
+            </div>
+          </ul>
+            <ul className="row-wrapper">
+              <div className='outer-cont.'>
+                <div className="title-splash"></div>
+                <div className='index-container'>
+                    <li className="vid">{videos[5]}</li> 
+                    <li className="vid">{videos[6]}</li> 
+                    <li className="vid">{videos[7]}</li>
+                    <li className="vid">{videos[8]}</li>
+                    <li className="vid">{videos[9]}</li>
+                </div>
+              </div>
+            </ul>
             <ul className='row-wrapper'>
               <div className='outer-cont.'>
-                <div className='title-splash'>Trending</div>
+                <div className='title-splash'>Recently Uploaded</div>
                 <div className='index-container'>
-                    <li className="vid1">{videos[0]}</li> 
-                    <li className="vid2">{videos[1]}</li> 
-                    <li className="vid3">{videos[2]}</li> 
-                    <li className="vid4">{videos[3]}</li> 
-                </div> 
+                  <li className="vid">{videos[9]}</li>
+                  <li className="vid">{videos[8]}</li>
+                  <li className="vid">{videos[7]}</li>
+                  <li className="vid">{videos[6]}</li>
+                  <li className="vid">{videos[5]}</li>
+                </div>
 
               </div>
             </ul>
-              <ul className="row-wrapper">
-                <div className='outer-cont.'>
-                  <div className="title-splash"></div>
-                  <div className='index-container'>
-                      <li className="vid5">{videos[4]}</li> 
-                      <li className="vid6">{videos[5]}</li> 
-                      <li className="vid7">{videos[6]}</li> 
-                      <li className="vid8">{videos[7]}</li> 
-                  </div>
-                </div>
-              </ul>
-
           </div>
       </section>
   )

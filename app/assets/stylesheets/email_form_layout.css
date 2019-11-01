@@ -30,13 +30,13 @@
  } 
 
 .logo{
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    width: 75px;
-    min-height: 24px;
-    top: 0px;
-    font-weight: 500;
+   display: block;
+   position: relative;
+   margin: 0 auto;
+   width: 75px;
+   min-height: 24px;
+   top: 0px;
+   font-weight: 500;
 }
 
  .logo-placeholder{

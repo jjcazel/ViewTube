@@ -10,6 +10,7 @@
     background: transparent;
     height: 56px;
     width: 98%;
+    min-width: 750px;
 }
 
 .signin {
@@ -36,14 +37,14 @@
 }
 
 .menu{
-    display: flex;
-    flex-direction: column;
-    outline: none;
-    max-width: 300px;
-    max-height: 500px;
-    border: 1px solid var(--yt-spec-10-percent-layer);
-    border-top: none;
-    background: var(--yt-spec-brand-background-solid);
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  max-width: 300px;
+  max-height: 500px;
+  border: 1px solid var(--yt-spec-10-percent-layer);
+  border-top: none;
+  background: var(--yt-spec-brand-background-solid);
 
 }
 
@@ -115,12 +116,20 @@
 }
 
 .search{
-  position: relative;
-  width: 40%;
+  position: static;
+  width: 100%;
   min-height: 26px; 
   padding-left: 8px;
   margin-right: 60px;
   font-weight: 300;
+}
+
+.search-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+
 }
 
 .logo-2 {
@@ -139,6 +148,7 @@
 .index-container{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding-top: 30px;
     width: 100%;
     height: auto;
@@ -149,7 +159,7 @@
 }
 
 .index-item{
-    display: inline-block;
+    /* display: inline-block; */
     justify-content: end;
     align-items: center;
     padding-bottom: 8px;
@@ -200,7 +210,7 @@
     margin-top: 20px;
 }
 
-.vid1, .vid2, .vid3, .vid4, .vid5, .vid6, .vid7, .vid8{
+.vid {
     padding-right: 4px;
 }
 
@@ -239,4 +249,20 @@
   /* padding-left: 16px; */
   padding-bottom: 10px;
   font-size: 16px;
+}
+
+.upload-right{
+  height: 14px;
+  max-width: auto;
+}
+
+.hamburger{
+  height: 14px;
+  max-width: auto;
+
+}
+
+.play-button{
+  height: 14px;
+  max-width: auto;
 }

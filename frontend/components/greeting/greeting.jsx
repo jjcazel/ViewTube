@@ -57,19 +57,25 @@ class Greeting extends React.Component {
       if (this.props.currentUser) {  
         return (
           <div className='navbar-container'>
-
+              <div>
+                <button>
+                  <img className="hamburger"src={window.hamburgerUrl} alt=""/>
+                </button>
+              </div>
               <section className='logo-play-container'>
-                  <Link to='/' className="play">
-                      <div className='logo-2'>ViewTube</div>
-                  </Link>
+                   <Link to='/'>
+                    <img className="play-button" src={window.playIconUrl}/>
+                   </Link>
+                  <div className='logo-2'>ViewTube</div>
               </section>
-
-              <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
+              <div className="search-container">
+                <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
+              </div>
             
               <div id='title-right'>
                   <Link to='/upload'>
                       <div className='highlight-circle'>
-                  <img id='upload-right' src='upload.png' />
+                            <img className='upload-right' src={window.uploadUrl} />
                       </div>
                   </Link>
               </div>
@@ -90,9 +96,10 @@ class Greeting extends React.Component {
                           <div className='logo-2'>ViewTube</div>
                       </Link>
                   </section>
-
-                  <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
-                  {/* <button ><FontAwesomeIcon icon={fasearch} /></button> */}
+                  <div className="search-container">
+                    <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
+                  </div>
+                  <br/>
                   <Link className='signin' to='/signin'>SIGN IN</Link>
 
               </div >
