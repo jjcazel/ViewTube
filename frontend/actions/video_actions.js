@@ -72,9 +72,9 @@ export const fetchUploadedVideos = id => dispatch => {
     );
 };
 
-export const fetchUploadedVideo = id => dispatch => {
-    return VideoAPI.fetchUploadedVideo(id).then(
-        video => dispatch(receiveUploadedVideo(video)),
-        errors => dispatch(receiveVideoErrors(errors))
-    );
-};
+// export const fetchUploadedVideo = id => dispatch => {
+//     return VideoAPI.fetchUploadedVideo(id).then(
+//         video => dispatch(receiveUploadedVideo(video)),
+//         errors => dispatch(receiveVideoErrors(errors))
+//     );
+// };
