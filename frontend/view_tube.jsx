@@ -4,7 +4,10 @@ import { signup, login, logout } from './actions/session_actions';
 import configureStore from './store/store';
 import Root from "./components/root";
 import { fetchUsers } from "./actions/users_actions";
+import JavascriptTimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
 
+JavascriptTimeAgo.locale(en)
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -30,4 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch
   window.getState = store.getState
   window.fetchUsers = fetchUsers
+
 });

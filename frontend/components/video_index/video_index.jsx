@@ -1,7 +1,6 @@
 import React from 'react';
 import VideoIndexItem from './video_index_item';
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
+
 
 class VideoIndex extends React.Component {
     constructor(props) {
@@ -18,16 +17,12 @@ class VideoIndex extends React.Component {
     render() {
         const videos = this.props.videos.map(video => {
           const user = this.props.users[video.creatorId];
-          // TimeAgo.addLocale(en);
-          // const timeAgo = new TimeAgo('en-US');
-          // const date = video.createdTimeAgo
-          // debugger
+        
           return (
               <VideoIndexItem
                   key={video.id}
                   video={video}
                   user={user}
-                  // date={date}
               />
           )
         })
@@ -60,6 +55,7 @@ class VideoIndex extends React.Component {
                 </div>
               </div>
             </ul>
+            
             <ul className='row-wrapper'>
               <div className='outer-cont.'>
                 <div className='title-splash'>Recently Uploaded</div>

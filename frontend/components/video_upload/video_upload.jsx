@@ -1,5 +1,6 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container'
+import { withRouter } from 'react-router-dom'
 
 class VideoUpload extends React.Component {
 
@@ -74,7 +75,9 @@ class VideoUpload extends React.Component {
     test.append('title', this.state.title);
     test.append('description', this.state.description);
     test.append('video', this.state.video);
-    this.props.createVideo(test);
+    this.props.createVideo(test).then(action => {
+      debugger
+      this.props.history.push(`/videos/${Object.keys(action.video)[0]}`)});
   }
 
   render() {
@@ -131,4 +134,4 @@ class VideoUpload extends React.Component {
 
 }
 
-export default VideoUpload;
+export default withRouter(VideoUpload);

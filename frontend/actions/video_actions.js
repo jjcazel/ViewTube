@@ -46,9 +46,9 @@ const receiveVideoErrors = errors => ({
 export const createVideo = data => dispatch => {
     return VideoAPI.createVideo(data).then(
         payload => dispatch(receiveVideo(payload)),
-        errors => dispatch(receiveVideoErrors(errors))).then(
-            payload => dispatch(recentUploadUI(payload))
-        );
+        errors => dispatch(receiveVideoErrors(errors)))
+        // .then(payload => dispatch(recentUploadUI(payload))
+        // );
 };
 
 export const fetchVideos = () => dispatch => {
