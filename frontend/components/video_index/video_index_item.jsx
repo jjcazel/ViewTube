@@ -26,7 +26,10 @@ const VideoIndexItem = (props) => {
             <section className="thumb-info">
                 <h1 className='thumb-title'>{video.title}</h1>
                 <div className='username'>{username}</div>
-                <div className='date-index'>{<LastSeen video={video} />}</div> 
+                <div className='date-index-views-cont'>
+                  <div className='date-index'>{<LastSeen video={video} />}</div> 
+                  <div className='views'># views</div> 
+                </div> 
             </section>
 
         </div>

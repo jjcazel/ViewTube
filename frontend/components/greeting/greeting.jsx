@@ -57,17 +57,17 @@ class Greeting extends React.Component {
     if (this.props.currentUser) {  
       return (
         <div className='navbar-container'>
-        
-          <div className='icon-button'>
-            <img className="hamburger" src={window.hamburgerUrl} />
-          </div>
+          <section className='nav-left'>
+            <div className='icon-button'>
+              <img className="hamburger" src={window.hamburgerUrl} />
+            </div>
 
-          <div className='logo-play-container'>
-            <Link to='/' className='viewtube-index'>
-                <img className="play-button" src={window.playIconUrl} />ViewTube
-              </Link>
+            <div className='logo-play-container'>
+              <Link to='/' className='viewtube-index'>
+                  <img className="play-button" src={window.playIconUrl} />ViewTube
+                </Link>
           </div>
-          
+          </section>
           <div className="search-container">
             <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
           </div>
@@ -89,15 +89,17 @@ class Greeting extends React.Component {
     } else {
       return (
         <div className='navbar-container'>
-          <div className='icon-button'>
-            <img className="hamburger" src={window.hamburgerUrl} />
-          </div>
+          <section className='nav-left'>
+            <div className='icon-button'>
+              <img className="hamburger" src={window.hamburgerUrl} />
+            </div>
 
-          <div className='logo-play-container'>
-            <Link to='/' className='viewtube-index'>
-              <img className="play-button" src={window.playIconUrl} />ViewTube
-            </Link>
-          </div>
+            <div className='logo-play-container'>
+              <Link to='/' className='viewtube-index'>
+                <img className="play-button" src={window.playIconUrl} />ViewTube
+              </Link>
+            </div>
+          </section>
           <div className="search-container">
             <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
           </div>

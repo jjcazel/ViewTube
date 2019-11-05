@@ -26,36 +26,87 @@ class VideoIndex extends React.Component {
               />
           )
         })
-      
-    return (
-      <section>
-        <div className='video-index'>
-          <ul className='row-wrapper'>
-            <div className='outer-cont.'>
-              <div className='title-splash'>Trending</div>
-              <div className='index-container'>
-                  <li className="vid">{videos[0]}</li> 
-                  <li className="vid">{videos[1]}</li> 
-                  <li className="vid">{videos[2]}</li> 
-                  <li className="vid">{videos[3]}</li> 
-                  <li className="vid">{videos[4]}</li> 
-              </div> 
+    if (this.props.currentUser) {
+      return (
+        <section>
+          <div className='video-index'>
+            <ul className='row-wrapper'>
+              <div className='outer-cont.'>
+                <div className='title-splash'>{`Receommended for, ${this.props.currentUser.first_name}`}</div>
+                <div className='index-container'>
+                    <li className="vid">{videos[0]}</li> 
+                    <li className="vid">{videos[1]}</li> 
+                    <li className="vid">{videos[2]}</li> 
+                    <li className="vid">{videos[3]}</li> 
+                    <li className="vid">{videos[4]}</li> 
+                    <li className="vid">{videos[5]}</li> 
+                </div> 
 
+              </div>
+            </ul>
+              <ul className="row-wrapper">
+                <div className='outer-cont.'>
+                  <div className="title-splash"></div>
+                  <div className='index-container'>
+                      <li className="vid">{videos[6]}</li> 
+                      <li className="vid">{videos[7]}</li> 
+                      <li className="vid">{videos[8]}</li>
+                      <li className="vid">{videos[9]}</li>
+                      <li className="vid">{videos[10]}</li>
+                      <li className="vid">{videos[11]}</li>
+                  </div>
+                </div>
+              </ul>
+              
+              <ul className='row-wrapper'>
+                <div className='outer-cont.'>
+                  <div className='title-splash'>Recently Uploaded</div>
+                  <div className='index-container'>
+                    <li className="vid">{videos[videos.length - 1]}</li>
+                    <li className="vid">{videos[videos.length - 2]}</li>
+                    <li className="vid">{videos[videos.length - 3]}</li>
+                    <li className="vid">{videos[videos.length - 4]}</li>
+                    <li className="vid">{videos[videos.length - 5]}</li>
+                    <li className="vid">{videos[videos.length - 6]}</li>
+                  </div>
+
+                </div>
+              </ul>
             </div>
-          </ul>
+        </section>
+      )
+    } else {
+      return (
+        <section>
+          <div className='video-index'>
+            <ul className='row-wrapper'>
+              <div className='outer-cont.'>
+                <div className='title-splash'>Trending</div>
+                <div className='index-container'>
+                  <li className="vid">{videos[0]}</li>
+                  <li className="vid">{videos[1]}</li>
+                  <li className="vid">{videos[2]}</li>
+                  <li className="vid">{videos[3]}</li>
+                  <li className="vid">{videos[4]}</li>
+                  <li className="vid">{videos[5]}</li>
+                </div>
+
+              </div>
+            </ul>
             <ul className="row-wrapper">
               <div className='outer-cont.'>
                 <div className="title-splash"></div>
                 <div className='index-container'>
-                    <li className="vid">{videos[5]}</li> 
-                    <li className="vid">{videos[6]}</li> 
-                    <li className="vid">{videos[7]}</li>
-                    <li className="vid">{videos[8]}</li>
-                    <li className="vid">{videos[9]}</li>
+                  <li className="vid">{videos[6]}</li>
+                  <li className="vid">{videos[7]}</li>
+                  <li className="vid">{videos[8]}</li>
+                  <li className="vid">{videos[9]}</li>
+                  <li className="vid">{videos[10]}</li>
+                  <li className="vid">{videos[11]}</li>
                 </div>
               </div>
             </ul>
-            
+
             <ul className='row-wrapper'>
               <div className='outer-cont.'>
                 <div className='title-splash'>Recently Uploaded</div>
@@ -65,16 +116,17 @@ class VideoIndex extends React.Component {
                   <li className="vid">{videos[videos.length - 3]}</li>
                   <li className="vid">{videos[videos.length - 4]}</li>
                   <li className="vid">{videos[videos.length - 5]}</li>
+                  <li className="vid">{videos[videos.length - 6]}</li>
                 </div>
 
               </div>
             </ul>
           </div>
-      </section>
-    )
+        </section>
+      )
+    }
   }
-
 }
 
 
-export default VideoIndex
+export default VideoIndex;

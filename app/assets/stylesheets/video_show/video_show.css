@@ -87,15 +87,15 @@
  }
 
  .thumb-title{
-    display: flex;
-    flex-direction: row;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-    max-height: 3.2rem;
-    color: #0d0d0d;
-    text-decoration: none;
-    margin-bottom: 4px;
+   display: flex;
+   flex-direction: row;
+   font-family: 'Roboto', sans-serif;
+   font-size: 0.9rem;
+   line-height: 1.2rem;
+   max-height: 3.2rem;
+   color: #0d0d0d;
+   text-decoration: none;
+   padding-bottom: 7px;
  }
 
  .username{
@@ -103,7 +103,7 @@
    font-size: 13px;
    color: #606060;
    font-weight: 400;
-   padding-bottom: 15px;
+   padding-bottom: 6px;
    vertical-align: text-top;
  }
 
@@ -158,4 +158,32 @@
     justify-content: space-between;
     padding-bottom: 20px;
     border-bottom: 1px solid #dbdbdd;
+ }
+
+ .date-index-views-cont{
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: flex-end;
+ }
+
+ .date-index{
+   display: flex;
+   flex-direction: row-reverse;
+   font-family: 'Roboto', sans-serif;
+   font-size: 13px;
+   color: #606060;
+   font-weight: 400;
+ }
+
+ .views{
+   font-family: 'Roboto', sans-serif;
+   font-size: 13px;
+   color: #606060;
+   font-weight: 400;
+   padding-right: 3px;
+ }
+
+ .views::after{
+   content: '•';
+   padding-left: 3px;
  }

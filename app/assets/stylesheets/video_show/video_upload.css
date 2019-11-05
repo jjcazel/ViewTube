@@ -1,9 +1,8 @@
 .video-upload-main{
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100% !important;
+  min-height: -webkit-fill-available;
   background: transparent;
   font-family: 'Roboto', arial, sans-serif;
   background-color: hsla(0, 0%, 93.3%, .4);
