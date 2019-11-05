@@ -60,11 +60,11 @@ class VideoIndex extends React.Component {
               <div className='outer-cont.'>
                 <div className='title-splash'>Recently Uploaded</div>
                 <div className='index-container'>
-                  <li className="vid">{videos[9]}</li>
-                  <li className="vid">{videos[8]}</li>
-                  <li className="vid">{videos[7]}</li>
-                  <li className="vid">{videos[6]}</li>
-                  <li className="vid">{videos[5]}</li>
+                  <li className="vid">{videos[videos.length - 1]}</li>
+                  <li className="vid">{videos[videos.length - 2]}</li>
+                  <li className="vid">{videos[videos.length - 3]}</li>
+                  <li className="vid">{videos[videos.length - 4]}</li>
+                  <li className="vid">{videos[videos.length - 5]}</li>
                 </div>
 
               </div>

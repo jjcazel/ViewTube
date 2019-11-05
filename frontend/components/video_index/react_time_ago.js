@@ -4,10 +4,8 @@ import ReactTimeAgo from 'react-time-ago'
 
 
 export default function LastSeen({video}) {
-  debugger
-  console.log(video)
   return (
-    <div>
+    <div className='date-index'>
       <ReactTimeAgo date={new Date(video.created_at)} />
     </div>
   )

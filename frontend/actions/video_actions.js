@@ -3,8 +3,8 @@ import * as VideoAPI from '../util/video_api_util';
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 export const RECEIVE_VIDEO_ERRORS = 'RECEIVE_VIDEO_ERRORS';
-export const RECENT_UPLOAD_UI = "RECENT_UPLOAD_UI";
-export const RECEIVE_UPLOADED_VIDEO = "RECEIVE_UPLOADED_VIDEO"
+// export const RECENT_UPLOAD_UI = "RECENT_UPLOAD_UI";
+// export const RECEIVE_UPLOADED_VIDEO = "RECEIVE_UPLOADED_VIDEO"
 
 export const recentUploadUI = payload => {
     return {
@@ -24,12 +24,12 @@ const receiveVideo = (video) => ({
     video
 });
 
-const receiveUploadedVideo = (video) => {
-    return {
-        type: RECEIVE_UPLOADED_VIDEO,
-        video
-    };
-};
+// const receiveUploadedVideo = (video) => {
+//     return {
+//         type: RECEIVE_UPLOADED_VIDEO,
+//         video
+//     };
+// };
 
 export const addUploadErrors = errors => {
     return {
@@ -47,8 +47,6 @@ export const createVideo = data => dispatch => {
     return VideoAPI.createVideo(data).then(
         payload => dispatch(receiveVideo(payload)),
         errors => dispatch(receiveVideoErrors(errors)))
-        // .then(payload => dispatch(recentUploadUI(payload))
-        // );
 };
 
 export const fetchVideos = () => dispatch => {
@@ -65,12 +63,12 @@ export const fetchVideo = id => dispatch => {
         errors => dispatch(receiveVideoErrors(errors)));
 };
 
-export const fetchUploadedVideos = id => dispatch => {
-    return VideoAPI.fetchUploadedVideos(id).then(
-        files => dispatch(receiveVideos(files)),
-        errors => dispatch(receiveVideoErrors(errors))
-    );
-};
+// export const fetchUploadedVideos = id => dispatch => {
+//     return VideoAPI.fetchUploadedVideos(id).then(
+//         files => dispatch(receiveVideos(files)),
+//         errors => dispatch(receiveVideoErrors(errors))
+//     );
+// };
 
 // export const fetchUploadedVideo = id => dispatch => {
 //     return VideoAPI.fetchUploadedVideo(id).then(

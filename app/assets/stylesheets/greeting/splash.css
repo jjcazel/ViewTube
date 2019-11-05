@@ -229,3 +229,12 @@
   color: black;
 }
 
+.date-index{
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #606060;
+  font-weight: 400;
+  padding-bottom: 15px;
+  vertical-align: text-top;
+}
+

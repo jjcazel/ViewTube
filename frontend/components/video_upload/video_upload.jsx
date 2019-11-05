@@ -61,15 +61,13 @@ class VideoUpload extends React.Component {
 
   submit(e) {
     e.preventDefault();
-    // debugger
     if (this.state.title === '' ||
       this.state.description === '' ||
       this.state.file === null ||
       this.state.loading) {
 
-      return;
+      return <div>Uploading...</div>;
     }
-    // debugger
     this.setState({ loading: true });
     let test = new FormData();
     test.append('title', this.state.title);
