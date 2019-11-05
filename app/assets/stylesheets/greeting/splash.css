@@ -39,9 +39,11 @@
   outline: none;
   max-width: 300px;
   max-height: 500px;
-  border: 1px solid var(--yt-spec-10-percent-layer);
+  border: 1px solid 
+    var(--yt-spec-10-percent-layer);
   border-top: none;
-  background: var(--yt-spec-brand-background-solid);
+  background: 
+    var(--yt-spec-brand-background-solid);
 
 }
 
@@ -126,7 +128,8 @@
   border: 1px solid #dbdbdd;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color:
+   rgba(255, 255, 255, 0.98);
   z-index: 1;
 }
 
@@ -170,6 +173,8 @@
   background-color: hsla(0, 0%, 93.3%, .4);
   height: auto;
   border-bottom: 1px solid #dbdbdd;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .drop-email{
@@ -193,7 +198,6 @@
   justify-content: center;
   width: 100%;
   padding-top: 10px;
-  
   padding-bottom: 10px;
   font-size: 16px;
 }
@@ -219,3 +223,9 @@
   padding: 8px;
   margin-right: 16px;
 }
+
+.viewtube-index{
+  text-decoration: none;
+  color: black;
+}
+

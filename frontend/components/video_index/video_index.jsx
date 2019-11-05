@@ -9,7 +9,7 @@ class VideoIndex extends React.Component {
     }
 
     componentDidMount() {
-      debugger
+      // debugger
         this.props.fetchVideos().then(() => {
           this.props.fetchUsers()
         })
@@ -21,7 +21,7 @@ class VideoIndex extends React.Component {
           // TimeAgo.addLocale(en);
           // const timeAgo = new TimeAgo('en-US');
           // const date = video.createdTimeAgo
-          debugger
+          // debugger
           return (
               <VideoIndexItem
                   key={video.id}

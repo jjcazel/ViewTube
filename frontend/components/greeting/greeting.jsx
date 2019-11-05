@@ -63,9 +63,9 @@ class Greeting extends React.Component {
           </div>
 
           <div className='logo-play-container'>
-              <Link to='/'>
-                <img className="play-button" src={window.playIconUrl}/>
-              </Link>ViewTube
+            <Link to='/' className='viewtube-index'>
+                <img className="play-button" src={window.playIconUrl} />ViewTube
+              </Link>
           </div>
           
           <div className="search-container">
@@ -94,9 +94,9 @@ class Greeting extends React.Component {
           </div>
 
           <div className='logo-play-container'>
-            <Link to='/'>
-              <img className="play-button" src={window.playIconUrl} />
-            </Link>ViewTube
+            <Link to='/' className='viewtube-index'>
+              <img className="play-button" src={window.playIconUrl} />ViewTube
+            </Link>
           </div>
           <div className="search-container">
             <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
