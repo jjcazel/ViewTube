@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import LastSeen from '../video_index/react_time_ago'
 import {withRouter} from 'react-router'
 
 const RightSidebarItem = (props) => {
@@ -24,8 +24,8 @@ const RightSidebarItem = (props) => {
 
         <section className="thumb-info">
             <h1 className='thumb-title'>{video.title}</h1>
-                <br/>
             <div className='username'>{username}</div> 
+            <div className='date-index'>{<LastSeen video={video} />}</div>
         </section>
 
       </div>
