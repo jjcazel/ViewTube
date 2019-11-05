@@ -26,7 +26,7 @@ const VideoIndexItem = (props) => {
                 <h1 className='thumb-title'>{video.title}</h1>
                 <br />
                 <div className='username'>{username}</div>
-                <div className="date">{date}</div>
+                {/* <div className="date">{date}</div> */}
             </section>
 
         </div>

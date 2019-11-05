@@ -20,14 +20,14 @@ class VideoIndex extends React.Component {
           const user = this.props.users[video.creatorId];
           // TimeAgo.addLocale(en);
           // const timeAgo = new TimeAgo('en-US');
-          const date = video.createdTimeAgo
+          // const date = video.createdTimeAgo
           debugger
           return (
               <VideoIndexItem
                   key={video.id}
                   video={video}
                   user={user}
-                  date={date}
+                  // date={date}
               />
           )
         })
