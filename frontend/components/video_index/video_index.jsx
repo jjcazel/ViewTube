@@ -1,5 +1,7 @@
 import React from 'react';
 import VideoIndexItem from './video_index_item';
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
 
 class VideoIndex extends React.Component {
     constructor(props) {
@@ -7,26 +9,32 @@ class VideoIndex extends React.Component {
     }
 
     componentDidMount() {
+      debugger
         this.props.fetchVideos().then(() => {
-            this.props.fetchUsers()
+          this.props.fetchUsers()
         })
     }
 
     render() {
         const videos = this.props.videos.map(video => {
-            const user = this.props.users[video.creatorId];
-
-            return (
-                <VideoIndexItem
-                    key={video.id}
-                    video={video}
-                    user={user}
-                />
-            )
+          const user = this.props.users[video.creatorId];
+          TimeAgo.addLocale(en);
+          // const timeAgo = new TimeAgo('en-US');
+          const date = TimeAgo.format(new Date(video.created_at))
+          debugger
+          return (
+              <VideoIndexItem
+                  key={video.id}
+                  video={video}
+                  user={user}
+                  date={date}
+              />
+          )
         })
+      
     return (
       <section>
-        <div >
+        <div className='video-index'>
           <ul className='row-wrapper'>
             <div className='outer-cont.'>
               <div className='title-splash'>Trending</div>
@@ -67,8 +75,8 @@ class VideoIndex extends React.Component {
             </ul>
           </div>
       </section>
-  )
-}
+    )
+  }
 
 }
 

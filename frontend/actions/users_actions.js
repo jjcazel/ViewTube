@@ -27,7 +27,8 @@ const receiveUserErrors = (errors) => {
 
 export const fetchUsers = () => dispatch => {
     return UserAPI.fetchUsers().then(
-        users => dispatch(receiveUsers(users)))
+        users => {
+            dispatch(receiveUsers(users))})
 }
 
 export const fetchUser = id => dispatch => {

@@ -5,33 +5,32 @@
   align-items: center;
   vertical-align: center;
   font-family: 'Roboto', sans-serif;
- 
   padding-left: 16px;
   padding-right: 16px;
   height: 56px;
 }
 
 .signin {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
-    align-items: center;
-    border-radius: 3px;
-    border: 1px solid rgb(37, 108, 221);
-    color: #065FD4;
-    min-width: 81px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    letter-spacing: .25px;
-    line-height: 20px;
-    text-decoration: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 11px;
-    padding-right: 11px;
-    height: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid rgb(37, 108, 221);
+  color: #065FD4;
+  min-width: 81px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: .25px;
+  line-height: 20px;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 11px;
+  padding-right: 11px;
+  height: 28px;
 }
 
 .menu{
@@ -49,11 +48,11 @@
 .logo-play-container{
   display: inline-flex;
   font-family: 'roboto', Arial, sans-serif;
-  
   height: 24px;
   cursor: pointer;
   font-weight: 500;
   align-items: center;
+  padding-right: 130px;
 }
 
 .title-splash{
@@ -88,7 +87,6 @@
 .nav-logo {
   cursor: pointer;
   font-family: 'roboto', Arial, sans-serif;
-  /* align-items: baseline; */
   font-weight: 500;
   font-size: 10vw;
   
@@ -108,13 +106,12 @@
 }
 
 .index-item{
-    /* display: inline-block; */
-    justify-content: end;
-    align-items: center;
-    padding-bottom: 8px;
-    width: 210px;
-    cursor: pointer;
-    height: 45%;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 8px;
+  width: 210px;
+  cursor: pointer;
+  height: 45%;
 }
 
 .dropdown{
@@ -134,44 +131,45 @@
 }
 
 .signout:hover {
-    background-color: #ebebf0;
-    opacity: 0.8;
-    cursor: pointer;
+  background-color: #ebebf0;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .signin-cont{
-    position: relative;
-    border: 1px solid #dbdbdd;
+  position: relative;
+  border: 1px solid #dbdbdd;
 }
 
 .leftside{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
 }
 
 .vids{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .vid {
-    padding-right: 4px;
+  padding-right: 4px;
 }
 
 .row-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    width: 100%;
-    background-color: hsla(0, 0%, 93.3%, .4);
-    height: auto;
-    border-bottom: 1px solid #dbdbdd;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 30px;
+  width: 100%;
+  background-color: hsla(0, 0%, 93.3%, .4);
+  height: auto;
+  border-bottom: 1px solid #dbdbdd;
 }
 
 .drop-email{
@@ -195,7 +193,7 @@
   justify-content: center;
   width: 100%;
   padding-top: 10px;
-  /* padding-left: 16px; */
+  
   padding-bottom: 10px;
   font-size: 16px;
 }
@@ -203,6 +201,7 @@
 .upload-right{
   height: 14px;
   max-width: auto;
+  padding-right: 8px;
 }
 
 .hamburger{

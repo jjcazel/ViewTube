@@ -130,19 +130,19 @@
  }
 
  .next{
-    display: flex;
-    justify-content: center;
-    background-color: #1a73e8;
-    border-radius: 5px;
-	border: 1px solid rgb(37, 108, 221);
-    color: white;
-    height: 36px;
-    min-width: 88px;
-    font-weight: 500;
-    font-size: 14px;
-    cursor: pointer;
-    letter-spacing: .25px;
-    line-height: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #1a73e8;
+  border-radius: 5px;
+  border: 1px solid rgb(37, 108, 221);
+  color: white;
+  height: 36px;
+  min-width: 88px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: .25px;
+  line-height: 20px;
  }
 
  .create-link{

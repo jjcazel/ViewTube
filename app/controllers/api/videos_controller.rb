@@ -47,7 +47,6 @@ class Api::VideosController < ApplicationController
   def uploaded
     @user = User.find_by(id: params[:user_id])
     @videos = @user.videos.order(created_at: :desc).limit(5)
-
     render 'api/videos/uploaded.json.jbuilder'
   end
 

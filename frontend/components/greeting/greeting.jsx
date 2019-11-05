@@ -57,6 +57,7 @@ class Greeting extends React.Component {
     if (this.props.currentUser) {  
       return (
         <div className='navbar-container'>
+        
           <div className='icon-button'>
             <img className="hamburger" src={window.hamburgerUrl} />
           </div>
@@ -66,10 +67,11 @@ class Greeting extends React.Component {
                 <img className="play-button" src={window.playIconUrl}/>
               </Link>ViewTube
           </div>
+          
           <div className="search-container">
             <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
           </div>
-        
+  
           <div id='title-right'>
               <Link to='/upload'>
                   <div className='highlight-circle'>
@@ -77,12 +79,12 @@ class Greeting extends React.Component {
                   </div>
               </Link>
           </div>
-          
-          <section >
-              <DropdownContainer />
-          </section>    
-        
-        </ div>
+              
+            <section >
+                <DropdownContainer />
+            </section>    
+  
+      </div>
       )         
     } else {
       return (
@@ -99,13 +101,13 @@ class Greeting extends React.Component {
           <div className="search-container">
             <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
           </div>
-          <div id='title-right'>
+          
             <Link to='/signin'>
               <div className='highlight-circle'>
                 <img className='upload-right' src={window.uploadUrl} />
               </div>
             </Link>
-          </div>
+         
 
           <Link className='signin' to='/signin'>SIGN IN</Link>
 

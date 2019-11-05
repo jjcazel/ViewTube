@@ -79,15 +79,22 @@ class VideoUpload extends React.Component {
 
   render() {
     return (
+      <>
+      <div className='nav'>
+        <GreetingContainer />
+      </div>
+      {/* <> */}
       <div className="video-upload-main">
-        <div className='nav'>
-          <GreetingContainer />
-        </div>
-        <form id='upload'>
+        <div className="upload-form-details">
+
+        <form id='upload' className="post-file-form">
+          <label for='file-upload' class='custom-file-upload'>SELECT FILE</label>
           <input
+            id='file-upload'
             autoComplete='false'
             type='file' 
-            onChange={this.handleFile}/>
+            onChange={this.handleFile}
+            className="choose-file-upload"/>
           <input type='text'
             placeholder='Title'
             onChange={this.changeField('title')}
@@ -103,16 +110,22 @@ class VideoUpload extends React.Component {
             value={this.state.description}
             rows='4'>
           </textarea>
-
-          <div>
+        
+  
+          <div className="upload-buttons">
             <button className="next"
-              onClick={this.submit}>SUBMIT</button>
+              onClick={this.submit}
+              className="upload-submit">SUBMIT</button>
             <button onClick={this.cancelUpload}
               id='cancel'
               className="cancel">CANCEL</button>
           </div>
         </form>
-      </div>
+        </div>
+        
+        </div>
+        </>
+      // </>
     )
   }
 

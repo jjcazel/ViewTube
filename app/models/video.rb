@@ -19,4 +19,8 @@ class Video < ApplicationRecord
         foreign_key: :creator_id,
         class_name: :User
 
+    def created_at
+        attributes['created_at'].strftime("%m/%d/%Y")
+    end
+
 end
