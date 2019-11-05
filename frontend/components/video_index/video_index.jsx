@@ -18,9 +18,9 @@ class VideoIndex extends React.Component {
     render() {
         const videos = this.props.videos.map(video => {
           const user = this.props.users[video.creatorId];
-          TimeAgo.addLocale(en);
+          // TimeAgo.addLocale(en);
           // const timeAgo = new TimeAgo('en-US');
-          const date = TimeAgo.format(new Date(video.created_at))
+          const date = video.createdTimeAgo
           debugger
           return (
               <VideoIndexItem
