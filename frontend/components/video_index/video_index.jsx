@@ -30,20 +30,20 @@ class VideoIndex extends React.Component {
       return (
         <section>
           <div className='video-index'>
-            <ul className='row-wrapper'>
-              <div className='outer-cont.'>
-                <div className='title-splash'>{`Receommended for ${this.props.currentUser.first_name}`}</div>
-                <div className='index-container'>
+              <div className='outer-cont'>
+                <div className='title-splash-top'>{`Recommended for ${this.props.currentUser.first_name}`}</div>
+                  <div className='index-container'>
+                  <ul className='row-wrapper'>
                     <li className="vid">{videos[0]}</li> 
                     <li className="vid">{videos[1]}</li> 
                     <li className="vid">{videos[2]}</li> 
                     <li className="vid">{videos[3]}</li> 
                     <li className="vid">{videos[4]}</li> 
                     <li className="vid">{videos[5]}</li> 
+                  </ul>
                 </div> 
 
               </div>
-            </ul>
               <ul className="row-wrapper">
                 <div className='outer-cont.'>
                   <div className="title-splash"></div>
@@ -59,7 +59,7 @@ class VideoIndex extends React.Component {
               </ul>
               
               <ul className='row-wrapper'>
-                <div className='outer-cont.'>
+                <div className='outer-cont'>
                   <div className='title-splash'>Recently Uploaded</div>
                   <div className='index-container'>
                     <li className="vid">{videos[videos.length - 1]}</li>
@@ -79,20 +79,19 @@ class VideoIndex extends React.Component {
       return (
         <section>
           <div className='video-index'>
-            <ul className='row-wrapper'>
-              <div className='outer-cont.'>
-                <div className='title-splash'>Trending</div>
+            <div className='outer-cont'>
+              <div className='title-splash-top'>Trending</div>
                 <div className='index-container'>
+                <ul className='row-wrapper'>
                   <li className="vid">{videos[0]}</li>
                   <li className="vid">{videos[1]}</li>
                   <li className="vid">{videos[2]}</li>
                   <li className="vid">{videos[3]}</li>
                   <li className="vid">{videos[4]}</li>
                   <li className="vid">{videos[5]}</li>
+                </ul>
                 </div>
-
               </div>
-            </ul>
             <ul className="row-wrapper">
               <div className='outer-cont.'>
                 <div className="title-splash"></div>

@@ -63,24 +63,36 @@
  }
 
  .video {
-    display: block;
-    object-fit: contain;
-    width: 100%;
-    object-fit: fill;
-    height: auto;
-    max-height: 69vh;
-    margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  object-fit: fill;
+  height: auto;
+  max-height: 69vh;
+  margin: 0 auto;
  }
 
  .thumb-info{
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   font-size: 14px;
-   font-weight: bold;
-   font-family: 'Roboto', sans-serif;
-   cursor: pointer;
-   width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  width: 70%;
+ }
+
+ .thumb-info-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  width: 70%;
+  padding-left: 6px;
  }
 
  .thumb-title{

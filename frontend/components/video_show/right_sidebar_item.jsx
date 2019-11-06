@@ -22,7 +22,7 @@ const RightSidebarItem = (props) => {
             Your browser does not support the video tag. 
         </video>
 
-        <section className="thumb-info">
+        <section className="thumb-info-right">
           <h1 className='thumb-title'>{video.title}</h1>
           
           <div className='username'>{username}</div> 
