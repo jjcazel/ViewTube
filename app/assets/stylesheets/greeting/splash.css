@@ -69,6 +69,8 @@
   font-weight: 500;
   max-height: 20px;
   padding-top: 30px;
+  padding-left: 20px;
+  background-color: hsla(0, 0%, 93.3%, .4);
 }
 
 .title-splash-top{
@@ -118,6 +120,8 @@
   padding-top: 30px;
   width: 100%;
   height: auto;
+  min-width: 700px;
+  background-color: hsla(0, 0%, 93.3%, .4);
 }
 
 .thumbnail-2{
@@ -288,5 +292,9 @@
 }
 
 .outer-cont{
+  background-color: hsla(0, 0%, 93.3%, .4);
+}
+
+.video-index{
   background-color: hsla(0, 0%, 93.3%, .4);
 }
