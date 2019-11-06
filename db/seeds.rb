@@ -8,7 +8,7 @@
 require 'open-uri'
 
 User.destroy_all
-user = User.create!(email: 'user@gmail.com', password: 'password1', first_name: "Bill", last_name: "Thornton" )
+Demo = User.create!(email: 'Demo@gmail.com', password: 'password1', first_name: "Demo", last_name: "User" )
 fred = User.create!(email: 'freddy@gmail.com', password: 'password', first_name: "Fred", last_name: "Armisen" )
 Bob = User.create!(email: 'bobby@gmail.com', password: 'password2', first_name: "Robert", last_name: "Deniro" )
 Casey = User.create!(email: 'casey@gmail.com', password: 'password5', first_name: "Casey", last_name: "Neistat" )
