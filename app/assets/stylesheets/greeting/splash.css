@@ -74,7 +74,7 @@
   max-height: 20px;
   padding-top: 30px;
   padding-left: 20px;
-  background-color: hsla(0, 0%, 93.3%, .4);
+  background-color: hsla(0, 0%, 92.3%, .1);
 }
 
 .title-splash-top{
@@ -89,6 +89,7 @@
   max-height: 20px;
   padding-left: 20px;
   padding-top: 80px;
+  background-color: hsla(0, 0%, 92.3%, .1);
 }
 
 .search{
@@ -125,7 +126,7 @@
   width: 100%;
   height: auto;
   min-width: 700px;
-  background-color: hsla(0, 0%, 93.3%, .4);
+  background-color: hsla(0, 0%, 92.3%, .1);
 }
 
 .thumbnail-2{
@@ -194,7 +195,7 @@
   flex-wrap: wrap;
   padding-top: 10px;
   width: 100%;
-  background-color: hsla(0, 0%, 93.3%, .4);
+  background-color: hsla(0, 0%, 92.3%, .1);
   height: auto;
   border-bottom: 1px solid #dbdbdd;
   padding-left: 20px;
