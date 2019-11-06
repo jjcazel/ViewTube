@@ -15,13 +15,12 @@
 class User < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  # VALID_PHONE_NUMBER_REGEX = /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
+  
 
   validates :first_name, :last_name, :email, :password_digest, :session_token, presence: true
   validates :email, :password_digest, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
   validates :email, format: { with: VALID_EMAIL_REGEX, message: 'not a valid email' }
-  # validates :phone, format: { with: VALID_PHONE_NUMBER_REGEX, message: 'not a valid phone number' }
 
   attr_reader :password
   after_initialize :ensure_session_token
@@ -29,6 +28,11 @@ class User < ApplicationRecord
   has_many :videos,
     foreign_key: :creator_id,
     class_name: :Video
+  
+  has_many :likes,
+    class_name: :Like,
+    foreign_key: :creator_id,
+    dependent: :destroy
 
 
   def self.find_by_credentials(identifier, password) # refactor to check the email and/or phone as well

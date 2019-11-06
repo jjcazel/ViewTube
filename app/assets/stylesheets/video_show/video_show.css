@@ -15,20 +15,21 @@
    padding-right: 24px;
    min-height: 1000px;
    background-color: hsla(0, 0%, 92.3%, .1);
-   margin-top: 60px;
+   margin-top: 56px;
 }
 
 .rightsidebar{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 24px;
-    padding-right: 24px;
-    width: 30%;
-    background: transparent;
-    flex-wrap: wrap;
-    margin-top: 60px;
-    background-color: hsla(0, 0%, 92.3%, .1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 24px;
+  padding-right: 24px;
+  min-width: 300px;
+  max-width: 430px;
+  background: transparent;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  background-color: hsla(0, 0%, 92.3%, .1);
 }
 
 .rightsidebar-top-vid{
@@ -65,18 +66,15 @@
 
  .title{
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
     color: #0d0d0d;
     border-bottom: 1px solid #dbdbdd;
  }
 
  .video {
-  display: block;
-  object-fit: contain;
-  width: 100%;
   object-fit: fill;
+  width: 100%;
   height: auto;
-  max-height: 69vh;
   margin: 0 auto;
  }
 
@@ -101,6 +99,7 @@
   cursor: pointer;
   width: 70%;
   padding-left: 6px;
+  padding-right: 6px;
  }
 
  .thumb-title{
@@ -136,7 +135,7 @@
    font-size: 16px;
    margin-bottom: 12px;
    color: #0d0d0d;
-   font-weight: 500;
+   font-weight: 400;
  }
 
  .date{
@@ -196,6 +195,8 @@
    display: flex;
    flex-direction: row;
    padding-top: 20px;
+   justify-content: space-between;
+   align-items: center;
  }
 
  .views{
@@ -229,4 +230,38 @@
  .views-show::after{
    content: '•';
    padding-left: 3px;
+ }
+
+ .thumbs-gray{
+  height: 20px;
+  padding: 8px;
+ }
+
+ .single-like-cont{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ }
+
+ .like-text{
+  color: #909090;
+  padding-right: 8px;
+ }
+
+ .like-shares-span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.007px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-right: 8px;
+ }
+
+ .left-title-span{
+   display: flex;
+   flex-direction: row;
+
  }
