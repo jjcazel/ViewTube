@@ -1,7 +1,7 @@
 import {
     RECEIVE_VIDEO,
     RECEIVE_VIDEOS,
-    RECEIVE_UPLOADED_VIDEO,
+    // RECEIVE_UPLOADED_VIDEO,
 
 } from '../../actions/video_actions';
 
@@ -18,8 +18,8 @@ const videosReducer = (state = {}, action) => {
         case RECEIVE_VIDEOS:
             return merge(newState, action.videos);
             
-        case RECEIVE_UPLOADED_VIDEO:
-            return merge(newState.action.video)
+        // case RECEIVE_UPLOADED_VIDEO:
+        //     return merge(newState.action.video)
         default:
             return newState;
     }

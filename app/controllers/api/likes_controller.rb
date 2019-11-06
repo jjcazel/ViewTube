@@ -4,16 +4,13 @@ class Api::LikesController < ApplicationController
     return false unless authorized_user?
 
     process_video_like if params[:video_id]
-    process_comment_like if params[:comment_id]
   end
 
   def process_video_like
     @json_string = 'api/videos/like.json.jbuilder'
     @poly_entity = Video.find_by(id: params[:video_id])
     @like = Like.find_by(
-      likeable_id: @poly_entity.id,
-      likeable_type: 'Video',
-      user_id: current_user.id
+      creator_id: current_user.id
     )
 
     unless @like

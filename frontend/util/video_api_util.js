@@ -12,10 +12,24 @@ export const fetchVideo = id => (
     })
 )
 
-export const fetchUploadedVideos = id => {
+// export const fetchUploadedVideos = id => {
+//     return $.ajax({
+//         method: 'GET',
+//         url: `/api/users/${id}/uploaded`
+//     });
+// };
+
+export const addLikeOrDislike = data => {
+
+    const id = data.videoId;
+    const is_dislike = {
+        like: { is_dislike: data.isDislike }
+    };
+
     return $.ajax({
-        method: 'GET',
-        url: `/api/users/${id}/uploaded`
+        method: 'POST',
+        url: `/api/videos/${id}/likes`,
+        data: is_dislike,
     });
 };
 

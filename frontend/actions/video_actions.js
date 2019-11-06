@@ -4,7 +4,7 @@ export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 export const RECEIVE_VIDEO_ERRORS = 'RECEIVE_VIDEO_ERRORS';
 // export const RECENT_UPLOAD_UI = "RECENT_UPLOAD_UI";
-export const RECEIVE_UPLOADED_VIDEO = "RECEIVE_UPLOADED_VIDEO"
+// export const RECEIVE_UPLOADED_VIDEO = "RECEIVE_UPLOADED_VIDEO"
 
 export const recentUploadUI = payload => {
     return {
@@ -24,12 +24,12 @@ const receiveVideo = (video) => ({
     video
 });
 
-const receiveUploadedVideo = (video) => {
-    return {
-        type: RECEIVE_UPLOADED_VIDEO,
-        video
-    };
-};
+// const receiveUploadedVideo = (video) => {
+//     return {
+//         type: RECEIVE_UPLOADED_VIDEO,
+//         video
+//     };
+// };
 
 export const addUploadErrors = errors => {
     return {
@@ -61,6 +61,13 @@ export const fetchVideo = id => dispatch => {
     return VideoAPI.fetchVideo(id).then(
         video => dispatch(receiveVideo(video)),
         errors => dispatch(receiveVideoErrors(errors)));
+};
+
+export const addLikeOrDislike = data => dispatch => {
+    return VideoAPI.addLikeOrDislike(data).then(
+        payload => dispatch(receiveVideo(payload)),
+        errors => dispatch(receiveVideoErrors(errors))
+    );
 };
 
 // export const fetchUploadedVideos = id => dispatch => {
