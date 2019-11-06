@@ -41,7 +41,7 @@ class VideoShow extends React.Component {
           <div className="nav">
               <GreetingContainer />
           </div>
-          
+          <>
           <section className="show-form">
               <div className="video-show">
 
@@ -68,6 +68,7 @@ class VideoShow extends React.Component {
               <br/>
           </section>
         </>
+      </>
     )
   }
 }

@@ -32,7 +32,10 @@ class RightSidebar extends React.Component {
         return (
             <div>
                 <ul>
-                    {videos}
+                  <div className='rightsidebar-top-vid'>
+                    <li>{videos[0]}</li>
+                  </div>
+                    <li>{videos.slice(1)}</li> 
                 </ul>
             </div>
         )

@@ -14,7 +14,8 @@
    padding-top: 24px;
    padding-right: 24px;
    min-height: 1000px;
-   background-color: hsla(0, 0%, 93.3%, .4);
+   background-color: hsla(0, 0%, 92.3%, .1);
+   margin-top: 60px;
 }
 
 .rightsidebar{
@@ -26,7 +27,14 @@
     width: 30%;
     background: transparent;
     flex-wrap: wrap;
-    background-color: hsla(0, 0%, 93.3%, .4);
+    margin-top: 60px;
+    background-color: hsla(0, 0%, 92.3%, .1);
+}
+
+.rightsidebar-top-vid{
+  border-bottom: 1px solid #dbdbdd;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .rightsidebar-item{
@@ -96,15 +104,15 @@
  }
 
  .thumb-title{
-   display: flex;
-   flex-direction: row;
-   font-family: 'Roboto', sans-serif;
-   font-size: 0.9rem;
-   line-height: 1.2rem;
-   max-height: 3.2rem;
-   color: #0d0d0d;
-   text-decoration: none;
-   padding-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.2rem;
+  max-height: 3.2rem;
+  color: #0d0d0d;
+  text-decoration: none;
+  padding-bottom: 7px;
+  font-weight: 500;
  }
 
  .username{
