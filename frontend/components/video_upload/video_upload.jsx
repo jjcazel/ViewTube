@@ -74,7 +74,6 @@ class VideoUpload extends React.Component {
     test.append('description', this.state.description);
     test.append('video', this.state.video);
     this.props.createVideo(test).then(action => {
-      debugger
       this.props.history.push(`/videos/${Object.keys(action.video)[0]}`)});
   }
 

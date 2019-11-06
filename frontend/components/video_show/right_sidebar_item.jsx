@@ -23,9 +23,10 @@ const RightSidebarItem = (props) => {
         </video>
 
         <section className="thumb-info">
-            <h1 className='thumb-title'>{video.title}</h1>
-            <div className='username'>{username}</div> 
-            <div className='date-index'>{<LastSeen video={video} />}</div>
+          <h1 className='thumb-title'>{video.title}</h1>
+          
+          <div className='username'>{username}</div> 
+          <div className='views-right'># views</div> 
         </section>
 
       </div>

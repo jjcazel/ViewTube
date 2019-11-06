@@ -32,41 +32,44 @@ class VideoShow extends React.Component {
     }
 
     render() {
-        const video = this.props.video
-        if(!video){
-            return null
-        }
-        return (
-            <>
-                <div className='nav'>
-                    <GreetingContainer />
-                </div>
-                
-                <section className="show-form">
-                    <div className='video-show'>
+      const video = this.props.video
+      if(!video){
+          return null
+      }
+      return (
+        <>
+          <div className="nav">
+              <GreetingContainer />
+          </div>
+          
+          <section className="show-form">
+              <div className="video-show">
 
-                        {this.renderVideo(video)}
-                    
-                        <div className="title">{video.title}
-                            <p className='date'>Oct 9, 2019</p> 
-                        </div>
-                        <section className='content'>
-                            <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
-                            <div className="description">{video.description}</div>
-
-                        </section>
-
+                  {this.renderVideo(video)}
+              
+                  <div className="title">{video.title}
+                    <div className="video-show-cont">
+                      <p className="views-show"># views</p>
+                      <p className="date">{video.created_at}</p> 
                     </div>
+                  </div>
+                  <section className='content'>
+                      <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
+                      <div className="description">{video.description}</div>
 
-                    <div className='rightsidebar'>
-                        <h2 className='up-next'>Up next</h2>
-                        <RightSidebarContainer />
-                    </div>
-                    <br/>
-                </section>
-            </>
-        )
-    }
+                  </section>
+
+              </div>
+
+              <div className='rightsidebar'>
+                  <h2 className='up-next'>Up next</h2>
+                  <RightSidebarContainer />
+              </div>
+              <br/>
+          </section>
+        </>
+    )
+  }
 }
 
 export default VideoShow

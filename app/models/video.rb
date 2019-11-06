@@ -20,7 +20,7 @@ class Video < ApplicationRecord
         class_name: :User
 
     def created_at
-        attributes['created_at'].strftime("%m/%d/%Y")
+        attributes['created_at'].strftime("%b %e, %Y")
     end
 
 end
