@@ -31,29 +31,29 @@ class Dropdown extends React.Component {
   render() {
     return (
         
-      <div >
-          <div className='signin-cont' onClick={this.showDropdownMenu} > 
-            <div className="signin">{this.props.currentUser.email}</div> 
+      <div>
+        <div className='signin-cont' onClick={this.showDropdownMenu} > 
           
-          {this.state.displayMenu ? (
-            <ul className='dropdown'>
-              <div className="drop-top">
-                <li className="drop-email">{this.props.currentUser.email}</li>
-              </div>
-              
-              <li className="signout" onClick={this.logout}>Sign out</li>
-
-            </ul>
-          ) :
-              (
-                null
-              )
-          }
-          </div>
-      </div>
-
-    );
+          <div className="signin">{this.props.currentUser.email}</div> 
         
+        {this.state.displayMenu ? (
+          <ul className='dropdown'>
+            <div className="drop-top">
+              <li className="drop-name">{this.props.currentUser.first_name} {this.props.currentUser.last_name}</li>
+              <li className="drop-email">{this.props.currentUser.email}</li>
+            </div>
+              <li className="signout"><a  className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/" >LinkedIn</a></li>
+              <li className="signout"><a  className="git" target="_blank" href="https://github.com/jjcazel" >GitHub</a></li> 
+            <li className="signout" onClick={this.logout}>Sign out</li>
+          </ul>
+        ) :
+            (
+              null
+            )
+        }
+        </div>
+      </div>
+    );    
   }
 }
 

@@ -68,22 +68,24 @@ class Greeting extends React.Component {
                 </Link>
           </div>
           </section>
+
           <div className="search-container">
             <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch'/>
           </div>
-  
-          <div id='title-right'>
-              <Link to='/upload'>
-                  <div className='highlight-circle'>
-                      <img className='upload-right' src={window.uploadUrl} />
-                  </div>
-              </Link>
-          </div>
-              
+
+          <section className='nav-right'>
+            <div id='title-right'>
+                <Link to='/upload'>
+                    <div className='highlight-circle'>
+                        <img className='upload-right' src={window.uploadUrl} />
+                    </div>
+                </Link>
+            </div>
+                
             <section >
                 <DropdownContainer />
             </section>    
-  
+          </section>
       </div>
       )         
     } else {
@@ -100,18 +102,20 @@ class Greeting extends React.Component {
               </Link>
             </div>
           </section>
+
           <div className="search-container">
             <input className='search' onChange={this.handleChange} type="search" placeholder='Search' q='googlesearch' />
           </div>
-          
+
+          <section className='nav-right'>
             <Link to='/signin'>
               <div className='highlight-circle'>
                 <img className='upload-right' src={window.uploadUrl} />
               </div>
             </Link>
          
-
-          <Link className='signin' to='/signin'>SIGN IN</Link>
+            <Link className='signin' to='/signin'>SIGN IN</Link>
+          </section>
 
         </div >
       )

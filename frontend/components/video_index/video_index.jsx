@@ -32,7 +32,7 @@ class VideoIndex extends React.Component {
           <div className='video-index'>
             <ul className='row-wrapper'>
               <div className='outer-cont.'>
-                <div className='title-splash'>{`Receommended for, ${this.props.currentUser.first_name}`}</div>
+                <div className='title-splash'>{`Receommended for ${this.props.currentUser.first_name}`}</div>
                 <div className='index-container'>
                     <li className="vid">{videos[0]}</li> 
                     <li className="vid">{videos[1]}</li> 
