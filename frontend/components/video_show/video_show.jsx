@@ -5,10 +5,10 @@ import GreetingContainer from '../greeting/greeting_container'
 class VideoShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      likes: 0,
-      dislikes: 0
-    }
+
+    this.ensureLoggedIn = this.ensureLoggedIn.bind(this);
+    this.like = this.like.bind(this);
+    this.dislike = this.dislike.bind(this);
   
   }
 
@@ -26,6 +26,34 @@ class VideoShow extends React.Component {
     }
   }
 
+  ensureLoggedIn() {
+    // TODO: Nice menu to ask user to log in
+    if (!this.props.currentUser) {
+      createHistory().push('/login');
+    }
+  }
+
+  like() {
+    this.ensureLoggedIn();
+
+    const data = {
+      videoId: this.props.videoId,
+      isDislike: false,
+    };
+    this.props.addLikeOrDislike(data);
+  }
+
+  dislike() {
+    this.ensureLoggedIn();
+
+    const data = {
+      videoId: this.props.videoId,
+      isDislike: true,
+    };
+    this.props.addLikeOrDislike(data);
+  }
+
+
   renderVideo(video){
     return (
       <video key={video.videoUrl} width="520" height="400" controls autoPlay className='video'>
@@ -37,42 +65,58 @@ class VideoShow extends React.Component {
 
   render() {
     const video = this.props.video
+    let thumbsUp;
+    let thumbsDown;
+
     if(!video){
-        return null
+      return null
     }
+
+    if (video.currentUserDislikes === true) {
+      thumbsDown = window.thumbsDownBlueUrl;
+    } else {
+      thumbsDown = window.thumbsDownUrl
+    }
+    if (video.currentUserDislikes === false) {
+      thumbsUp = window.thumbsUpBlueUrl;
+    } else {
+      thumbsUp = window.thumbsUpUrl
+    }
+
     return (
       <>
         <div className="nav">
             <GreetingContainer />
         </div>
         <>
+
         <section className="show-form">
           <div className="video-show">
 
-            {this.renderVideo(video)}
-        
-            <div className="title">{video.title}
-              <div className="video-show-cont">
-                <span className='left-title-span'>
-                  <p className="views-show"># views</p>
-                  <p className="date">{video.created_at}</p> 
-                </span>
-                <span className='like-shares-span'>
-                  <div className='single-like-cont'>
-                    <img className="thumbs-gray"src={window.thumbsUpUrl}></img>
-                    <div className='like-text'>1</div>
-                  </div>
-                  <div className='single-like-cont'>
-                    <img className="thumbs-gray"src={window.thumbsDownUrl}></img>
-                    <div className='like-text'>0</div>
-                  </div>
-                </span>
-              </div>
+          {this.renderVideo(video)}
+      
+          <div className="title">{video.title}
+            <div className="video-show-cont">
+              <span className='left-title-span'>
+                <p className="views-show"># views</p>
+                <p className="date">{video.created_at}</p> 
+              </span>
+              <span className='like-shares-span'>
+                <div className='single-like-cont'>
+                  <img className="thumbs-gray"src={thumbsUp} onClick={this.like}></img>
+                  <div className='like-text'>{video.likes}</div>
+                </div>
+                <div className='single-like-cont'>
+                  <img className="thumbs-gray"src={thumbsDown} onClick={this.dislike}></img>
+                  <div className='like-text'>{video.dislikes}</div>
+                </div>
+              </span>
             </div>
-            <section className='content'>
-              <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
-              <div className="description">{video.description}</div>
-            </section>
+          </div>
+          <section className='content'>
+            <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
+            <div className="description">{video.description}</div>
+          </section>
           </div>
 
           <div className='rightsidebar'>

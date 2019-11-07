@@ -6,16 +6,16 @@
 }
 
 .video-show{
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   width: 65%;
-   margin-left: 24px;
-   padding-top: 24px;
-   padding-right: 24px;
-   min-height: 1000px;
-   background-color: hsla(0, 0%, 92.3%, .1);
-   margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 65%;
+  margin-left: 24px;
+  padding-top: 24px;
+  padding-right: 24px;
+  min-height: 1000px;
+  background-color: hsla(0, 0%, 92.3%, .1);
+  margin-top: 56px;
 }
 
 .rightsidebar{
@@ -235,6 +235,7 @@
  .thumbs-gray{
   height: 20px;
   padding: 8px;
+  cursor: pointer;
  }
 
  .single-like-cont{
@@ -256,7 +257,7 @@
   font-weight: 500;
   letter-spacing: 0.007px;
   text-transform: uppercase;
-  cursor: pointer;
+  
   padding-right: 8px;
  }
 

@@ -11,15 +11,15 @@
 
 class Like < ApplicationRecord
 
-  validates :user_id, uniqueness: true
+  validates :creator_id, :video_id, presence: true
 
   belongs_to :creator,
-    foreign_key: :creator_id
-    class_name: :User,
+    foreign_key: :creator_id,
+    class_name: :User
 
   belongs_to :video,
     foreign_key: :video_id,
     class_name: :Video
-    polymorphic: true
+    # polymorphic: true
 
 end
