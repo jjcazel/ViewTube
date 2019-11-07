@@ -47,7 +47,10 @@ export const signup = formUser => dispatch => {
 }
 
 export const logout = () => dispatch => {
-    return APIUtil.logout().then(() => dispatch(logoutCurrentUser()));
+    debugger
+    return APIUtil.logout().then(() => {
+        debugger
+        dispatch(logoutCurrentUser())});
 }
 
 export const demoLogin = () => dispatch => {

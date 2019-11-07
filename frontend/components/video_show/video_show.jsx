@@ -27,9 +27,8 @@ class VideoShow extends React.Component {
   }
 
   ensureLoggedIn() {
-    // TODO: Nice menu to ask user to log in
     if (!this.props.currentUser) {
-      createHistory().push('/login');
+      createHistory().push('/signin');
     }
   }
 
@@ -72,12 +71,12 @@ class VideoShow extends React.Component {
       return null
     }
 
-    if (video.currentUserDislikes === true) {
+    if (video.currentUserDislikes === "true") {
       thumbsDown = window.thumbsDownBlueUrl;
     } else {
       thumbsDown = window.thumbsDownUrl
     }
-    if (video.currentUserDislikes === false) {
+    if (video.currentUserDislikes === "false") {
       thumbsUp = window.thumbsUpBlueUrl;
     } else {
       thumbsUp = window.thumbsUpUrl
