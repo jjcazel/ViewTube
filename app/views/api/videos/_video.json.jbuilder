@@ -7,6 +7,7 @@ json.set! video.id do
     json.creatorId video.creator_id
     json.created_at video.created_at
     json.videoUrl url_for(video.video)
+
     
     if video.likes.where("is_dislike = FALSE").pluck("creator_id").include?(current_user.id)
         json.currentUserDislikes "false"

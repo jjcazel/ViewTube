@@ -6,8 +6,6 @@
         json.creatorId video.creator_id
         json.created_at video.created_at
         json.videoUrl url_for(video.video)
-
-        
        
     end 
 end

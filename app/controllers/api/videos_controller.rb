@@ -8,7 +8,7 @@ class Api::VideosController < ApplicationController
 
   def show 
       @video = Video.find_by(id: params[:id])
-      
+      @current_user = @current_user
       if @video
         # @users = [@video.creator] + @video.commenters
         # @comments = @video.comments
@@ -22,7 +22,7 @@ class Api::VideosController < ApplicationController
   def create
     return false unless logged_in?
     # debugger
-    @user = current_user
+    @user = @current_user
     @video = Video.new(video_params)
     @video.creator_id = @user.id
     # debugger

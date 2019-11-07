@@ -66,7 +66,6 @@ export const fetchVideo = id => dispatch => {
 export const addLikeOrDislike = data => dispatch => {
     return VideoAPI.addLikeOrDislike(data).then(
         payload => {
-            debugger
             dispatch(receiveVideo(payload))},
         errors => dispatch(receiveVideoErrors(errors))
     );

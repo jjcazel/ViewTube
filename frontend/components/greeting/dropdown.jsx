@@ -23,7 +23,6 @@ class Dropdown extends React.Component {
     this.setState({ displayMenu: false })
   }
   logout(e){
-    debugger
     e.stopPropagation();
       this.props.logout().then(() => this.props.history.push('/'))
   }
