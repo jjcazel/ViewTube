@@ -25,9 +25,7 @@ class Dropdown extends React.Component {
   }
   logout(e){
     e.stopPropagation();
-      this.props.logout().then(() => {
-      debugger
-      this.props.history.push('/')})
+      this.props.logout().then(() => this.props.history.push('/'))
   }
 
   render() {

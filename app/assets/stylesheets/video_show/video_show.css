@@ -72,10 +72,10 @@
  }
 
  .video {
-  object-fit: fill;
+  object-fit: contain;
   width: 100%;
-  height: auto;
-  margin: 0 auto;
+  height: fit-content;
+  max-height: 69vh;
  }
 
  .thumb-info{
