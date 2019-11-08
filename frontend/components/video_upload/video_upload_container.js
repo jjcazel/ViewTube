@@ -6,12 +6,9 @@ import {
 import VideoUpload from './video_upload';
 
 const msp = state => {
-  // debugger
-  // const lastVideoUploadId = state.entities.videos.id;
   const uploadErrors = state.errors.videos;
 
   return {
-    // lastVideoUploadId,
     uploadErrors,
   };
 };

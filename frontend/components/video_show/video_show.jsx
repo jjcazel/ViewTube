@@ -1,6 +1,7 @@
 import React from 'react'
 import RightSidebarContainer from '../video_show/right_sidebar_container';
 import GreetingContainer from '../greeting/greeting_container'
+require("history").createHashHistory;
 
 class VideoShow extends React.Component {
   constructor(props) {
