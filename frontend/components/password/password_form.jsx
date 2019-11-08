@@ -3,16 +3,26 @@ import { login, receiveErrors, receiveUserEmail, demoLogin, clearErrors } from '
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const msp = state => ({
-    email: state.userEmail.email,
-    errors: state.errors.session
+const msp = state => {
+    
+    let errors;
+    if (state.errors.session) {
+        errors = state.errors.session;
+    } else {
+        errors = [];
+    }
 
-})
+    return {
+        errors,
+        email: state.userEmail.email
+    }
+
+}
 
 const mdp = dispatch => ({
     receiveUserEmail: (email) => dispatch(receiveUserEmail(email)),
     action: (user) => dispatch(login(user)),
-    receiveErrors: (error) => dispatch(receiveErrors(error)),
+    receiveErrors: (errors) => dispatch(receiveErrors(errors)),
     demoLogin: () => dispatch(demoLogin()),
     clearErrors: () => dispatch(clearErrors())
 })
@@ -64,18 +74,20 @@ class PasswordForm extends React.Component {
     }
 
     renderErrors() {
-        // debugger
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        <div className='error'>
-                            {error}
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        )
+      debugger
+      return (
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li className='error'
+              key={`error-${i}`}>
+              <div className='error'>
+                {/* <i class="fad fa-exclamation-circle"></i> */}
+                {error}
+              </div>
+            </li>
+          ))}
+        </ul>
+      )
     }
 
     render() {

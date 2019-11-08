@@ -6,8 +6,8 @@ export default (state = _nullErrors, action) => {
     Object.freeze(state)
     switch (action.type) {
         case RECEIVE_ERRORS:
-            // return Object.assign({}, { errors: action.errors });
-            return [action.error];
+            // return Object.assign({errors: action.errors });
+            return [action.errors];
         case RECEIVE_CURRENT_USER:
             return _nullErrors;
         case CLEAR_ERRORS:

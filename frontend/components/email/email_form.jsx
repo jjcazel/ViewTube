@@ -3,13 +3,24 @@ import { acct_validation, receiveErrors, demoLogin, clearErrors } from '../../ac
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const msp = state => ({
-    errors: state.errors.session
-})
+const msp = state => {
+  let errors;
+  debugger
+  if(state.errors.session){
+    errors = state.errors.session;
+  } else {
+  errors = [];
+  }
+
+  return {
+    errors
+  }
+  
+}
 
 const mdp = dispatch => ({
     action: (id) => dispatch(acct_validation(id)),
-    receiveErrors: (error) => dispatch(receiveErrors(error)),
+    receiveErrors: (errors) => dispatch(receiveErrors(errors)),
     demoLogin: () => dispatch(demoLogin()),
     clearErrors: () => dispatch(clearErrors())
 })
@@ -45,18 +56,17 @@ class EmailForm extends React.Component {
     }
 
     handleSubmit(e){
-        e.preventDefault();
-        this.props.action(this.state).then(({ identifier }) => {
-            if (identifier){
-                this.props.history.push({
-                    pathname: '/login',
-                    state: this.state.identifier
-                })
-                // debugger
-            } else {
-                this.props.receiveErrors('Couldn\'t find your Viewtube Account')
-            }
-        })
+      e.preventDefault();
+      this.props.action(this.state).then(({ identifier }) => {
+        if (identifier){
+          this.props.history.push({
+            pathname: '/login',
+            state: this.state.identifier
+          })
+        } else {
+          this.props.receiveErrors( ['Couldn\'t find your Viewtube Account'])
+        }
+      })
     }
 
     handleEnterPress(e) {
@@ -67,24 +77,22 @@ class EmailForm extends React.Component {
     }
 
     renderErrors() {
-        // debugger
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li className='error'
-                        key={`error-${i}`}>
-                        <div className='error'>
-                        {/* <i class="fad fa-exclamation-circle"></i> */}
-                            {error}
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        )
+      return (
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li className='error'
+              key={`error-${i}`}>
+              <div className='error'>
+                {/* <i class="fad fa-exclamation-circle"></i> */}
+                {error}
+              </div>
+            </li>
+          ))}
+        </ul>
+      )
     }
 
     render() {
-        // debugger
         return (
             <div className='email-form'>
                 <form className='email-form-container' onSubmit={this.handleSubmit}>
