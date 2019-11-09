@@ -4,12 +4,15 @@ import { signup, receiveErrors } from '../../actions/session_actions'
 
 const msp = (state, ownProps) => {
     let errors;
+    let fNameError;
     if (state.errors.session){
         errors = state.errors.session;
+        fNameError = errors[0];
+
     } else {
         errors = [];
     }
-    // const formType = 'create account';
+    const formType = 'SignUp';
     // const user = {
     //     firstName: '',
     //     LastName: '',
@@ -19,7 +22,8 @@ const msp = (state, ownProps) => {
 
     return { 
         errors, 
-        // user 
+        fNameError,
+        formType 
     }
 }
 

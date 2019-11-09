@@ -36,7 +36,7 @@ export const acct_validation = id => dispatch => {
 export const login = user => dispatch => {
     return APIUtil.login(user)
         .then(user => dispatch(receiveCurrentUser(user)), error => {
-            debugger
+            
             dispatch(receiveErrors( error.responseJSON[0]))})
 }
 
@@ -44,7 +44,7 @@ export const login = user => dispatch => {
 export const signup = formUser => dispatch => {
     return APIUtil.signup(formUser)
         .then(user => dispatch(receiveCurrentUser(user)), errors => {
-            debugger
+            
             dispatch(receiveErrors(Object.values(errors.responseJSON)))
         });
 }
