@@ -3,28 +3,16 @@ import  SignUp  from './signup_form';
 import { signup, receiveErrors } from '../../actions/session_actions'
 
 const msp = (state, ownProps) => {
-    let errors;
-    let fNameError;
-    if (state.errors.session){
-        errors = state.errors.session;
-        fNameError = errors[0];
+  let errors;
+  if (state.errors.session){
+    errors = state.errors.session;
+  } else {
+    errors = [];
+  }
 
-    } else {
-        errors = [];
-    }
-    const formType = 'SignUp';
-    // const user = {
-    //     firstName: '',
-    //     LastName: '',
-    //     email: '',
-    //     password: ''
-    // };
-
-    return { 
-        errors, 
-        fNameError,
-        formType 
-    }
+  return { 
+      errors, 
+  }
 }
 
 const mdp = dispatch => ({
