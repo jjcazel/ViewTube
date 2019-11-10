@@ -30,4 +30,4 @@ I made great effort to clone the Google sign-in and account creation forms as cl
 ![Google signin](/app/assets/images/Google_sign_450p.png)
 
 ## More Features!
-I also implemented the ability for a logged-in user to comment on videos, as well as like/dislike a video. A logged-in user can also upload your own videos! Any user can use the search bar to search for any videos in that are hosted on the site. All this includes meticulous CSS styling creating a clean and pristine design for my completed site! Enjoy!
+I also implemented the ability for a logged-in user to comment on videos, as well as like/dislike a video. A logged-in user can also upload their own videos! Any user can use the search bar to search for any videos that are hosted on the site. All this includes meticulous CSS styling creating a clean and pristine design for my completed site! Enjoy!
