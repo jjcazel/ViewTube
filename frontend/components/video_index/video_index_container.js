@@ -7,12 +7,13 @@ const msp = state => {
     return {
         videos: Object.values(state.entities.videos),
         users: state.entities.users,
-        currentUser: state.entities.users[state.session.id]
+        currentUser: state.entities.users[state.session.id],
+        // search: state.ui.search
     }
 }
 
 const mdp = dispatch => ({
-    fetchVideos: () => dispatch(fetchVideos()),
+    fetchVideos: search => dispatch(fetchVideos(search)),
     fetchUsers: () => dispatch(fetchUsers())
 })
 

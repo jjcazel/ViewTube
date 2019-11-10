@@ -95,7 +95,7 @@
 .search{
   position: static;
   width: 90%;
-  min-height: 26px; 
+  min-height: 24px; 
   padding-left: 8px;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -106,9 +106,10 @@
 
 .search-container{
   display: flex;
+  max-width: 640px;
   flex-direction: row;
   justify-content: center;
-  width: 50%;
+  width: 100%;
 }
 
 .nav-logo {

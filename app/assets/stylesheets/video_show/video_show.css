@@ -9,9 +9,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 65%;
+  width: 72%;
   margin-left: 24px;
-  padding-top: 24px;
+  padding-top: 22px;
   padding-right: 24px;
   min-height: 1000px;
   background-color: hsla(0, 0%, 92.3%, .1);
@@ -74,8 +74,8 @@
  .video {
   object-fit: contain;
   width: 100%;
-  height: fit-content;
-  max-height: 69vh;
+  height: auto;
+  max-height: 72vh;
  }
 
  .thumb-info{
@@ -194,7 +194,7 @@
  .video-show-cont{
    display: flex;
    flex-direction: row;
-   padding-top: 20px;
+   padding-top: 4px;
    justify-content: space-between;
    align-items: center;
  }

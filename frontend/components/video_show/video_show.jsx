@@ -10,7 +10,6 @@ class VideoShow extends React.Component {
     this.ensureLoggedIn = this.ensureLoggedIn.bind(this);
     this.like = this.like.bind(this);
     this.dislike = this.dislike.bind(this);
-  
   }
 
   componentDidMount(){
@@ -35,7 +34,6 @@ class VideoShow extends React.Component {
 
   like() {
     this.ensureLoggedIn();
-
     const data = {
       videoId: this.props.videoId,
       isDislike: false,
@@ -45,14 +43,12 @@ class VideoShow extends React.Component {
 
   dislike() {
     this.ensureLoggedIn();
-
     const data = {
       videoId: this.props.videoId,
       isDislike: true,
     };
     this.props.addLikeOrDislike(data);
   }
-
 
   renderVideo(video){
     return (
