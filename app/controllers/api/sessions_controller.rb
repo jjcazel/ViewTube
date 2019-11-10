@@ -5,12 +5,11 @@ class Api::SessionsController < ApplicationController
   def create
     @user = User.find_by_credentials(
       params[:user][:email],
-       params[:user][:password]
+      params[:user][:password]
       )
     if @user
       login!(@user)
       render :show
-      # debugger
     else
       render json: ['Password is invalid. You changed your password today!'], status: 404
     end

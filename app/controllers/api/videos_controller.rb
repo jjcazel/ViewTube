@@ -1,17 +1,14 @@
 class Api::VideosController < ApplicationController
 
   def index
-      @videos = Video.all.with_attached_video.includes!(:creator)
-
-      render :index
+    @videos = Video.all.with_attached_video.includes!(:creator)
+    render :index
   end
 
   def show 
       @video = Video.find_by(id: params[:id])
       @current_user = @current_user
       if @video
-        # @users = [@video.creator] + @video.commenters
-        # @comments = @video.comments
         render :show
       else
         render json: ['Video not found'], status: 404
@@ -21,13 +18,10 @@ class Api::VideosController < ApplicationController
 
   def create
     return false unless logged_in?
-    # debugger
     @user = @current_user
     @video = Video.new(video_params)
     @video.creator_id = @user.id
-    # debugger
     if @video.save
-      # @comments = @video.comments
       render 'api/videos/show.json.jbuilder'
     else
       render json: @video.errors.full_messages, status: 422

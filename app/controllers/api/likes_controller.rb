@@ -20,10 +20,8 @@ class Api::LikesController < ApplicationController
       new_like
     else
       unless @like.is_dislike == true?(like_params[:is_dislike])
-        # debugger
         update_like
       else
-        # debugger
         destroy_like
       end
     end
