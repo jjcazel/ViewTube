@@ -18,6 +18,13 @@ export const fetchVideos = search => {
   });
 };
 
+export const getVideosComments = () => {
+  return $.ajax({
+    type: `GET`,
+    url: `/api/videos`,
+  });
+}
+
 export const fetchVideo = id => (
   $.ajax({
     method: 'GET',

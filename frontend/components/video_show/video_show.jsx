@@ -1,6 +1,8 @@
 import React from 'react'
 import RightSidebarContainer from '../video_show/right_sidebar_container';
 import GreetingContainer from '../greeting/greeting_container'
+import CommentFormContainer from './comment_form_container';
+import CommentIndexContainer from './video_comment_container';
 require("history").createHashHistory;
 
 class VideoShow extends React.Component {
@@ -113,6 +115,17 @@ class VideoShow extends React.Component {
             <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
             <div className="description">{video.description}</div>
           </section>
+
+              {/* Comments section  */}
+              <CommentFormContainer
+                videoId={this.props.video.id}
+                // currentUser={currentUser}
+              />
+
+              <CommentIndexContainer
+                videoId={this.props.video.id}
+                // currentUser={currentUser}
+              />
           </div>
 
           <div className='rightsidebar'>

@@ -31,7 +31,6 @@ class Greeting extends React.Component {
   }
 
   search(e) {
-    // debugger
     e.preventDefault()
     this.props.fetchVideos(this.state);
     createHistory().push('/');

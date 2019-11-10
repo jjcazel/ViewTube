@@ -49,6 +49,15 @@ export const createVideo = data => dispatch => {
         errors => dispatch(receiveVideoErrors(errors)))
 };
 
+export const getVideosComments = () => {
+    return (dispatch) => {
+        return VideoAPIUtil.getVideosComments().then(
+            (payload) => dispatch({ type: RECEIVE_VIDEOS, payload }),
+            (err) => dispatch(receiveVideoErrors(err.responseJSON))
+        );
+    };
+};
+
 // export const fetchVideos = () => dispatch => {
 //     return VideoAPI.fetchVideos().then((videos) => {
 //         dispatch(receiveVideos(videos))
