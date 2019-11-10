@@ -29,6 +29,10 @@ class User < ApplicationRecord
     foreign_key: :creator_id,
     class_name: :Video
   
+  has_many :comments,
+    foreign_key: :user_id,
+    class_name: :Comment
+  
   has_many :likes,
     class_name: :Like,
     foreign_key: :creator_id,

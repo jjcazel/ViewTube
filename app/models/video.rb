@@ -11,7 +11,8 @@
 #
 
 class Video < ApplicationRecord
-    validates :title, :creator_id, presence: true
+    validates :title, :description, :creator_id, presence: true
+    validates :title, uniqueness: true
     
     has_one_attached :video
 
@@ -23,6 +24,10 @@ class Video < ApplicationRecord
         foreign_key: :video_id,
         class_name: :Like,
         dependent: :destroy
+
+    has_many :comments,
+        foreign_key: :video_id,
+        class_name: :Comment
 
     def created_at
         attributes['created_at'].strftime("%b %e, %Y")
