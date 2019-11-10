@@ -3,8 +3,7 @@ import * as VideoAPI from '../util/video_api_util';
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 export const RECEIVE_VIDEO_ERRORS = 'RECEIVE_VIDEO_ERRORS';
-// export const RECENT_UPLOAD_UI = "RECENT_UPLOAD_UI";
-// export const RECEIVE_UPLOADED_VIDEO = "RECEIVE_UPLOADED_VIDEO"
+export const RECEIVE_SEARCH_VIDEOS = 'RECEIVE_SEARCH_VIDEOS';
 
 export const recentUploadUI = payload => {
     return {
@@ -24,12 +23,13 @@ const receiveVideo = (video) => ({
     video
 });
 
-// const receiveUploadedVideo = (video) => {
-//     return {
-//         type: RECEIVE_UPLOADED_VIDEO,
-//         video
-//     };
-// };
+const receiveSearchVideos = ({ users, videos }) => {
+  return {
+    type: RECEIVE_SEARCH_VIDEOS,
+    users,
+    videos,
+  };
+};
 
 export const addUploadErrors = errors => {
     return {
@@ -49,12 +49,31 @@ export const createVideo = data => dispatch => {
         errors => dispatch(receiveVideoErrors(errors)))
 };
 
-export const fetchVideos = () => dispatch => {
-    return VideoAPI.fetchVideos().then((videos) => {
-        dispatch(receiveVideos(videos))
-    }, response => { 
-        console.log(response)
-    })
+// export const fetchVideos = () => dispatch => {
+//     return VideoAPI.fetchVideos().then((videos) => {
+//         dispatch(receiveVideos(videos))
+//     }, response => { 
+//         console.log(response)
+//     })
+// }
+
+export const fetchVideos = search => dispatch => {
+
+    if (search && search.search) {
+
+        return VideoAPI.fetchVideos(search).then(
+            payload => dispatch(receiveSearchVideos(payload)),
+            errors => dispatch(receiveVideoErrors(errors))
+        );
+
+    } else {
+
+        return VideoAPI.fetchVideos(search).then(
+            payload => dispatch(receiveVideos(payload)),
+            errors => dispatch(receiveVideoErrors(errors))
+        );
+
+    }
 }
 
 export const fetchVideo = id => dispatch => {

@@ -4,11 +4,12 @@ import { fetchVideos } from '../../actions/video_actions';
 import { fetchUsers } from '../../actions/users_actions';
 
 const msp = state => {
+    debugger
     return {
         videos: Object.values(state.entities.videos),
         users: state.entities.users,
         currentUser: state.entities.users[state.session.id],
-        // search: state.ui.search
+        search: state.ui.search
     }
 }
 

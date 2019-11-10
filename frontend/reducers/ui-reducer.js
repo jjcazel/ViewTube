@@ -1,7 +1,7 @@
 import {
   UPDATE_SEARCH_FIELD,
   SPACE_TO_PLAY,
-} from '../../actions/ui_actions';
+} from '../actions/ui_actions';
 import { merge } from 'lodash';
 
 const uiReducer = (state, action) => {

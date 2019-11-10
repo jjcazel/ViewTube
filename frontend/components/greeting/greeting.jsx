@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DropdownContainer from './dropdown_container';
 import createHistory from 'history/createHashHistory';
-// require("history").createHashHistory;
+require("history").createHashHistory;
 
 // lets refactor this as the navbar!
 
@@ -31,6 +31,7 @@ class Greeting extends React.Component {
   }
 
   search(e) {
+    debugger
     e.preventDefault();
     this.props.fetchVideos(this.state);
     createHistory().push('/');
@@ -101,7 +102,7 @@ render() {
         </section>
 
         <div className="search-container">
-          <form onSubmit={this.search}>
+          <form className="search-container" onSubmit={this.search}>
             <input className='search'
               type="search"
               placeholder='Search'
