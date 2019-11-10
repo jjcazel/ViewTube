@@ -4,7 +4,7 @@ import { fetchVideos } from '../../actions/video_actions';
 import { fetchUsers } from '../../actions/users_actions';
 
 const msp = state => {
-    debugger
+    // debugger
     return {
         videos: Object.values(state.entities.videos),
         users: state.entities.users,

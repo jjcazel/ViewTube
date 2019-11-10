@@ -5,7 +5,7 @@ import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const msp = state => {
-    
+  // debugger
   let errors;
   if (state.errors.session) {
     errors = state.errors.session;
@@ -15,7 +15,7 @@ const msp = state => {
 
   return {
     errors,
-    email: state.userEmail.email
+    // email: state.userEmail.email
   }
 }
 
