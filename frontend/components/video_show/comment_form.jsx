@@ -29,7 +29,7 @@ class CommentForm extends React.Component {
 
   render() {
     let currentUser = this.props.currentUser;
-    debugger
+    // debugger
     const commentButton = this.state.newCommentBody.length > 0 ?
       <button
         className='comment-comment-btn-blue'

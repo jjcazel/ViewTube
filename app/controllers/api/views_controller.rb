@@ -19,7 +19,7 @@ class Api::ViewsController < ApplicationController
 
     # always update the video views
     @video = Video.find_by(id: params[:video_id])
-    debugger
+    # debugger
     @video.views = @video.views + 1
 
     if @video.save

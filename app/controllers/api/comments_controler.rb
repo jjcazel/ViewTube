@@ -1,7 +1,7 @@
 class Api::CommentsController < ApplicationController
     
   def create
-    debugger
+    # debugger
     @comment = Comment.new(
       body: params[:body],
     )
@@ -9,11 +9,11 @@ class Api::CommentsController < ApplicationController
     @comment.video_id = params[:video_id]
 
     if @comment.save
-      debugger
+      # debugger
       render :show
       # render 'api/videos/_video'
     else
-      debugger
+      # debugger
       render json: @comment.errors.full_messages, status: 422
     end
   end
