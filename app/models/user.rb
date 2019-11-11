@@ -3,13 +3,14 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
-#  username        :string           not null
 #  email           :string           not null
-#  image_url       :string           not null
+#  image_url       :string
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  first_name      :string           not null
+#  last_name       :string           not null
 #
 
 class User < ApplicationRecord
@@ -37,6 +38,10 @@ class User < ApplicationRecord
     class_name: :Like,
     foreign_key: :creator_id,
     dependent: :destroy
+
+  has_many :views,
+    foreign_key: :user_id,
+    class_name: :View
 
 
   def self.find_by_credentials(identifier, password) # refactor to check the email and/or phone as well

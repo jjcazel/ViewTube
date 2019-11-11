@@ -49,14 +49,14 @@ export const createVideo = data => dispatch => {
         errors => dispatch(receiveVideoErrors(errors)))
 };
 
-export const getVideosComments = () => {
-    return (dispatch) => {
-        return VideoAPIUtil.getVideosComments().then(
-            (payload) => dispatch({ type: RECEIVE_VIDEOS, payload }),
-            (err) => dispatch(receiveVideoErrors(err.responseJSON))
-        );
-    };
-};
+// export const getVideosComments = () => {
+//     return (dispatch) => {
+//         return VideoAPIUtil.getVideosComments().then(
+//             (payload) => dispatch({ type: RECEIVE_VIDEOS, payload }),
+//             (err) => dispatch(receiveVideoErrors(err.responseJSON))
+//         );
+//     };
+// };
 
 // export const fetchVideos = () => dispatch => {
 //     return VideoAPI.fetchVideos().then((videos) => {
@@ -95,6 +95,13 @@ export const addLikeOrDislike = data => dispatch => {
     return VideoAPI.addLikeOrDislike(data).then(
         payload => {
             dispatch(receiveVideo(payload))},
+        errors => dispatch(receiveVideoErrors(errors))
+    );
+};
+
+export const addView = id => dispatch => {
+    return VideoAPI.addView(id).then(
+        payload => dispatch(receiveVideo(payload)),
         errors => dispatch(receiveVideoErrors(errors))
     );
 };

@@ -18,12 +18,12 @@ export const fetchVideos = search => {
   });
 };
 
-export const getVideosComments = () => {
-  return $.ajax({
-    type: `GET`,
-    url: `/api/videos`,
-  });
-}
+// export const getVideosComments = () => {
+//   return $.ajax({
+//     type: `GET`,
+//     url: `/api/videos`,
+//   });
+// }
 
 export const fetchVideo = id => (
   $.ajax({
@@ -31,6 +31,13 @@ export const fetchVideo = id => (
     url: `/api/videos/${id}`
   })
 )
+
+export const addView = (id) => {
+  return $.ajax({
+    method: 'POST',
+    url: `/api/videos/${id}/views`,
+  });
+};
 
 export const addLikeOrDislike = data => {
 

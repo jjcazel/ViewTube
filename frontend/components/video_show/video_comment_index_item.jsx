@@ -5,14 +5,13 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
   // comment: {
   //   id: 2,
   //   body: 'this is comment body',
-  //   author_id: 14,
-  //   video_id: 9,
-  //   username: "test-author-2"
+  //   user_id: 14,
+  //   video_id: 9
   // }
 
 
   const deleteButton = currentUser ?
-    currentUser.id === comment.author_id ?
+    currentUser.id === comment.user_id ?
       <button
         className="comment-delete-btn"
         onClick={() => { deleteComment(comment.id) }}
@@ -27,12 +26,12 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
   return (
     <div className="comment-item">
       <div className="comment-item-icon">
-        <p>{comment.username[0]}</p>
+        <p>{comment.firstame[0]}</p>
       </div>
       <div className="comment-username-body">
         <div className="comment-username">
-          {/* comment username */}
-          {comment.username}
+          {/* commenter name */}
+          {comment.user_id} {/* need to make this the user's first and last name */}
         </div>
         <div className="comment-body">
           {/* comment body */}

@@ -15,6 +15,7 @@ class VideoShow extends React.Component {
   }
 
   componentDidMount(){
+    if (this.props.video) { this.props.addView(this.props.videoId); }
     const videoId = this.props.match.params.videoId
     this.props.fetchVideo(videoId).then(response => {
       this.props.fetchUser(response.video[videoId].creatorId)})
@@ -23,7 +24,10 @@ class VideoShow extends React.Component {
   componentDidUpdate(prevProps){
     if (prevProps.match.params.videoId !== this.props.match.params.videoId ){
       this.props.fetchVideo(this.props.match.params.videoId).then(response => {
-        this.props.fetchUser(response.video[this.props.match.params.videoId].creatorId)
+        this.props.fetchUser(response.video[this.props.match.params.videoId].creatorId).then( () => {
+          this.props.addView(this.props.match.params.videoId)
+
+        })
       })
     }
   }
@@ -96,7 +100,7 @@ class VideoShow extends React.Component {
           <div className="title">{video.title}
             <div className="video-show-cont">
               <span className='left-title-span'>
-                <p className="views-show"># views</p>
+                <p className="views-show">{video.views}</p>
                 <p className="date">{video.created_at}</p> 
               </span>
               <span className='like-shares-span'>

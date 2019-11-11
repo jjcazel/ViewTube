@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import VideoShow from './video_show';
 
-import { fetchVideo, addLikeOrDislike } from '../../actions/video_actions';
+import { fetchVideo, addLikeOrDislike, addView, } from '../../actions/video_actions';
 import { fetchUser } from '../../actions/users_actions';
 
 const msp = (state, ownProps) => {
@@ -15,7 +15,8 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => ({
     fetchVideo: (video) => dispatch(fetchVideo(video)),
     fetchUser: (id) => dispatch(fetchUser(id)),
-    addLikeOrDislike: data => dispatch(addLikeOrDislike(data))
+    addLikeOrDislike: data => dispatch(addLikeOrDislike(data)),
+    addView: id => dispatch(addView(id)),
 })
 
 export default connect(msp, mdp)(VideoShow);

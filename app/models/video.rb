@@ -29,6 +29,10 @@ class Video < ApplicationRecord
         foreign_key: :video_id,
         class_name: :Comment
 
+    has_many :views,
+        foreign_key: :video_id,
+        class_name: :View
+
     def created_at
         attributes['created_at'].strftime("%b %e, %Y")
     end

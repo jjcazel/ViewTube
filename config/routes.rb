@@ -11,9 +11,10 @@ Rails.application.routes.draw do
 
     resource :session, only: [:create, :destroy]
 
-    resources :videos, only: [:create, :show, :destroy] do
+    resources :videos, only: [:index, :create, :show, :destroy] do
       resources :comments, only: [:create]
       resources :likes, only: [:create]
+      resources :views, only: [:create]
     end
     resources :comments, only: [:destroy]
   end
