@@ -1,11 +1,10 @@
 import React from 'react';
 import CommentIndexItem from './video_comment_index_item';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class CommentIndex extends React.Component {
 
   constructor(props) {
-    // debugger
     super(props);
     this.state = {
       comments: this.props.comments,

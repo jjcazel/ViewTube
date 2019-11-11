@@ -16,8 +16,8 @@ json.set! video.id do
     json.comments do
       json.set! comment.id do
       json.extract! comment, :id, :body, :video_id, :user_id
-      json.firstName comment.user.firstName
-      json.lastName comment.user.lastName
+      json.firstName comment.user.first_name
+      json.lastName comment.user.last_name
       end
     end
   end

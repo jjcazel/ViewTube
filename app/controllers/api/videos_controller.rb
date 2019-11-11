@@ -16,6 +16,8 @@ class Api::VideosController < ApplicationController
   def show 
       @video = Video.find_by(id: params[:id])
       @current_user = @current_user
+      # @video.comments 
+
       if @video
         render :show
       else

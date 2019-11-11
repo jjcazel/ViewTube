@@ -20,9 +20,10 @@ class Api::ViewsController < ApplicationController
     # always update the video views
     @video = Video.find_by(id: params[:video_id])
     # debugger
-    @video.views = @video.views + 1
+    @video.views.count
 
     if @video.save
+      # debugger
       render 'api/videos/view.json.jbuilder'
     else
       render json: @video.errors.full_messages, status: 422

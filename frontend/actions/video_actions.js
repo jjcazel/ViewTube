@@ -18,9 +18,9 @@ const receiveVideos = ( videos ) => {
     }
 };
 
-const receiveVideo = (video) => ({
+const receiveVideo = (payload) => ({
     type: RECEIVE_VIDEO,
-    video
+    payload
 });
 
 const receiveSearchVideos = ({ users, videos }) => {
@@ -81,7 +81,6 @@ export const fetchVideos = search => dispatch => {
             payload => dispatch(receiveVideos(payload)),
             errors => dispatch(receiveVideoErrors(errors))
         );
-
     }
 }
 

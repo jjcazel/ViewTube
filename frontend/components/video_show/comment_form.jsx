@@ -29,7 +29,6 @@ class CommentForm extends React.Component {
 
   render() {
     let currentUser = this.props.currentUser;
-    // debugger
     const commentButton = this.state.newCommentBody.length > 0 ?
       <button
         className='comment-comment-btn-blue'
@@ -70,7 +69,7 @@ class CommentForm extends React.Component {
     return (
       <div className='comment-form'>
         <div className='comments-count'>
-          <p>{this.state.comments.length} Comments</p>
+          <p>{this.props.comments.length} Comments</p>
         </div>
         <div className='comment-input'>
           {commentIcon}

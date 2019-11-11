@@ -6,6 +6,7 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
   //   id: 2,
   //   body: 'this is comment body',
   //   user_id: 14,
+  //   username: 'user's first and last name'
   //   video_id: 9
   // }
 
@@ -21,17 +22,15 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
       : <div></div>
     : <div></div>;
 
-
-  // debugger
   return (
     <div className="comment-item">
       <div className="comment-item-icon">
-        <p>{comment.firstame[0]}</p>
+        <p>{comment.firstName}</p>
       </div>
       <div className="comment-username-body">
         <div className="comment-username">
           {/* commenter name */}
-          {comment.user_id} {/* need to make this the user's first and last name */}
+          {comment.username} {/* need to make this the user's first and last name */}
         </div>
         <div className="comment-body">
           {/* comment body */}

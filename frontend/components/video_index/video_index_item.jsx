@@ -24,7 +24,8 @@ const VideoIndexItem = (props) => {
             </video>
 
             <section className="thumb-info">
-                <h1 className='thumb-title'>{video.title.slice(0, 51)}</h1>
+                <h1 className='thumb-title'>{video.title}
+                </h1>
                 <div className='username'>{username}</div>
                 <div className='date-index-views-cont'>
                   <div className='date-index'>{<LastSeen video={video} />}</div> 

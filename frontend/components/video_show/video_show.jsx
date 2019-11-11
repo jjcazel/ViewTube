@@ -15,20 +15,17 @@ class VideoShow extends React.Component {
   }
 
   componentDidMount(){
-    if (this.props.video) { this.props.addView(this.props.videoId); }
-    const videoId = this.props.match.params.videoId
-    this.props.fetchVideo(videoId).then(response => {
-      this.props.fetchUser(response.video[videoId].creatorId)})
+    this.props.fetchVideo(this.props.match.params.videoId);
+    // if (this.props.video){ 
+    //   this.props.addView(this.props.match.params.videoId); 
+    // }
   }
 
   componentDidUpdate(prevProps){
-    if (prevProps.match.params.videoId !== this.props.match.params.videoId ){
-      this.props.fetchVideo(this.props.match.params.videoId).then(response => {
-        this.props.fetchUser(response.video[this.props.match.params.videoId].creatorId).then( () => {
-          this.props.addView(this.props.match.params.videoId)
-
-        })
-      })
+    if (parseInt(prevProps.match.params.videoId) !== parseInt(this.props.match.params.videoId)) {
+      console.log("video updating")
+      this.props.fetchVideo(this.props.match.params.videoId);
+      // this.props.addView(this.props.match.params.videoId);
     }
   }
 
@@ -84,7 +81,7 @@ class VideoShow extends React.Component {
     } else {
       thumbsUp = window.thumbsUpUrl
     }
-
+    // debugger
     return (
       <>
         <div className="nav">
