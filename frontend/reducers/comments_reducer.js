@@ -21,7 +21,7 @@ const commentsReducer = (oldState = {}, action) => {
     //   debugger
     //   return action.payload.comments ? action.payload.comments : newState;
     case RECEIVE_VIDEO:
-      return action.payload.comments;
+      return action.comments;
     case RECEIVE_COMMENT:
       newState[action.comment.id] = action.comment;
       return newState;

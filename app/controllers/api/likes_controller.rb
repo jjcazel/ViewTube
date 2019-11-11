@@ -5,7 +5,7 @@ class Api::LikesController < ApplicationController
   def create
     return false unless authorized_user?
     
-    process_video_like if params[:video_id]
+    process_video_like if params[:video_id] 
   end
 
   def process_video_like

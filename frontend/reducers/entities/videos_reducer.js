@@ -1,7 +1,6 @@
 import {
     RECEIVE_VIDEO,
     RECEIVE_VIDEOS,
-    // RECEIVE_UPLOADED_VIDEO,
 
 } from '../../actions/video_actions';
 
@@ -10,16 +9,13 @@ import { merge } from 'lodash'
 const videosReducer = (state = {}, action) => {
     Object.freeze(state);
     const newState = merge({}, state);
-
+    // debugger
     switch (action.type) {
         case RECEIVE_VIDEO:
             return merge(newState, action.video);
 
         case RECEIVE_VIDEOS:
             return merge(newState, action.videos);
-            
-        // case RECEIVE_UPLOADED_VIDEO:
-        //     return merge(newState.action.video)
         default:
             return newState;
     }
@@ -36,6 +32,6 @@ export default videosReducer;
 //       likes: 432786,
 //       dislikes: 1,
 //       videoURL: "?",
-//       commentsId: [33, 55, 9],
+//       comments: [{}, {}, {}],
 //       created?: "2 Days"
 //    },

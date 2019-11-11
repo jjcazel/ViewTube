@@ -18,10 +18,15 @@ const receiveVideos = ( videos ) => {
     }
 };
 
-const receiveVideo = (payload) => ({
+const receiveVideo = ({video, comments, views}) => {
+  debugger
+  return {
     type: RECEIVE_VIDEO,
-    payload
-});
+    video: video || {},
+    comments: comments || {},
+    views: views || {},
+  }
+};
 
 const receiveSearchVideos = ({ users, videos }) => {
   return {
@@ -32,22 +37,71 @@ const receiveSearchVideos = ({ users, videos }) => {
 };
 
 export const addUploadErrors = errors => {
-    return {
-        type: RECEIVE_VIDEO_ERRORS,
-        errors,
-    }
+  return {
+    type: RECEIVE_VIDEO_ERRORS,
+    errors,
+  }
 }
 
 const receiveVideoErrors = errors => ({ 
-    type: RECEIVE_VIDEO_ERRORS,
-    errors
+  type: RECEIVE_VIDEO_ERRORS,
+  errors
 });
 
 export const createVideo = data => dispatch => {
-    return VideoAPI.createVideo(data).then(
-        payload => dispatch(receiveVideo(payload)),
-        errors => dispatch(receiveVideoErrors(errors)))
+  return VideoAPI.createVideo(data).then(
+    payload => dispatch(receiveVideo(payload)),
+    errors => dispatch(receiveVideoErrors(errors)))
 };
+
+
+export const fetchVideos = search => dispatch => {
+  if (search && search.search) {
+      
+  return VideoAPI.fetchVideos(search).then(
+    payload => dispatch(receiveSearchVideos(payload)),
+    errors => dispatch(receiveVideoErrors(errors)));
+      
+  } else {
+      
+    return VideoAPI.fetchVideos(search).then(
+      payload => dispatch(receiveVideos(payload)),
+      errors => dispatch(receiveVideoErrors(errors)));
+  }
+}
+      
+export const fetchVideo = id => dispatch => {
+  return VideoAPI.fetchVideo(id).then(
+    video => dispatch(receiveVideo(video)),
+    errors => dispatch(receiveVideoErrors(errors)));
+};
+            
+export const addLikeOrDislike = data => dispatch => {
+  return VideoAPI.addLikeOrDislike(data).then(
+    payload => {
+      dispatch(receiveVideo(payload))},
+      errors => dispatch(receiveVideoErrors(errors)));
+};
+                    
+export const addView = id => dispatch => {
+  return VideoAPI.addView(id).then(
+    payload => dispatch(receiveVideo(payload)),
+    errors => dispatch(receiveVideoErrors(errors)));
+};
+                        
+// export const fetchUploadedVideos = id => dispatch => {
+    //     return VideoAPI.fetchUploadedVideos(id).then(
+        //         files => dispatch(receiveVideos(files)),
+        //         errors => dispatch(receiveVideoErrors(errors))
+        //     );
+        // };
+                                
+// export const fetchUploadedVideo = id => dispatch => {
+    //     return VideoAPI.fetchUploadedVideo(id).then(
+        //         video => dispatch(receiveUploadedVideo(video)),
+        //         errors => dispatch(receiveVideoErrors(errors))
+        //     );
+        // };
 
 // export const getVideosComments = () => {
 //     return (dispatch) => {
@@ -57,64 +111,11 @@ export const createVideo = data => dispatch => {
 //         );
 //     };
 // };
-
-// export const fetchVideos = () => dispatch => {
-//     return VideoAPI.fetchVideos().then((videos) => {
-//         dispatch(receiveVideos(videos))
-//     }, response => { 
-//         console.log(response)
-//     })
-// }
-
-export const fetchVideos = search => dispatch => {
-
-    if (search && search.search) {
-
-        return VideoAPI.fetchVideos(search).then(
-            payload => dispatch(receiveSearchVideos(payload)),
-            errors => dispatch(receiveVideoErrors(errors))
-        );
-
-    } else {
-
-        return VideoAPI.fetchVideos(search).then(
-            payload => dispatch(receiveVideos(payload)),
-            errors => dispatch(receiveVideoErrors(errors))
-        );
-    }
-}
-
-export const fetchVideo = id => dispatch => {
-    return VideoAPI.fetchVideo(id).then(
-        video => dispatch(receiveVideo(video)),
-        errors => dispatch(receiveVideoErrors(errors)));
-};
-
-export const addLikeOrDislike = data => dispatch => {
-    return VideoAPI.addLikeOrDislike(data).then(
-        payload => {
-            dispatch(receiveVideo(payload))},
-        errors => dispatch(receiveVideoErrors(errors))
-    );
-};
-
-export const addView = id => dispatch => {
-    return VideoAPI.addView(id).then(
-        payload => dispatch(receiveVideo(payload)),
-        errors => dispatch(receiveVideoErrors(errors))
-    );
-};
-
-// export const fetchUploadedVideos = id => dispatch => {
-//     return VideoAPI.fetchUploadedVideos(id).then(
-//         files => dispatch(receiveVideos(files)),
-//         errors => dispatch(receiveVideoErrors(errors))
-//     );
-// };
-
-// export const fetchUploadedVideo = id => dispatch => {
-//     return VideoAPI.fetchUploadedVideo(id).then(
-//         video => dispatch(receiveUploadedVideo(video)),
-//         errors => dispatch(receiveVideoErrors(errors))
-//     );
-// };
+                                                        
+                                                        // export const fetchVideos = () => dispatch => {
+                                                        //     return VideoAPI.fetchVideos().then((videos) => {
+                                                        //         dispatch(receiveVideos(videos))
+                                                        //     }, response => { 
+                                                        //         console.log(response)
+                                                        //     })
+                                                        // }

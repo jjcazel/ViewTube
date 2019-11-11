@@ -4,6 +4,7 @@ import GreetingContainer from '../greeting/greeting_container'
 import CommentFormContainer from './comment_form_container';
 import CommentIndexContainer from './video_comment_container';
 require("history").createHashHistory;
+import createHistory from 'history/createHashHistory';
 
 class VideoShow extends React.Component {
   constructor(props) {
