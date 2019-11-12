@@ -13,6 +13,6 @@
   #   # TODO: N+1
   # end
 
-  json.extract! @current_vid, :creator_id, :video_id 
+  json.extract! @current_vid, :creator_id, :video 
 
    

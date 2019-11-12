@@ -6,7 +6,7 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
   //   id: 2,
   //   body: 'this is comment body',
   //   user_id: 14,
-  //   username: 'user's first and last name'
+  //   username: 'user's first and last name' ?
   //   video_id: 9
   // }
 

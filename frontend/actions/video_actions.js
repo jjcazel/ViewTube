@@ -6,16 +6,16 @@ export const RECEIVE_VIDEO_ERRORS = 'RECEIVE_VIDEO_ERRORS';
 export const RECEIVE_SEARCH_VIDEOS = 'RECEIVE_SEARCH_VIDEOS';
 
 export const recentUploadUI = payload => {
-    return {
-        type: RECENT_UPLOAD_UI,
-        videoId: Object.keys(payload.videos)[0],
-    };
+  return {
+    type: RECENT_UPLOAD_UI,
+    videoId: Object.keys(payload.videos)[0],
+  };
 };
 const receiveVideos = ( videos ) => {
-    return {
-        type: RECEIVE_VIDEOS,
-        videos
-    }
+  return {
+    type: RECEIVE_VIDEOS,
+    videos
+  }
 };
 
 const receiveVideo = ({video, comments, views}) => {
@@ -64,9 +64,9 @@ export const fetchVideos = search => dispatch => {
       
   } else {
       
-    return VideoAPI.fetchVideos(search).then(
-      payload => dispatch(receiveVideos(payload)),
-      errors => dispatch(receiveVideoErrors(errors)));
+  return VideoAPI.fetchVideos(search).then(
+    payload => dispatch(receiveVideos(payload)),
+    errors => dispatch(receiveVideoErrors(errors)));
   }
 }
       
@@ -112,10 +112,10 @@ export const addView = id => dispatch => {
 //     };
 // };
                                                         
-                                                        // export const fetchVideos = () => dispatch => {
-                                                        //     return VideoAPI.fetchVideos().then((videos) => {
-                                                        //         dispatch(receiveVideos(videos))
-                                                        //     }, response => { 
-                                                        //         console.log(response)
-                                                        //     })
-                                                        // }
+// export const fetchVideos = () => dispatch => {
+//     return VideoAPI.fetchVideos().then((videos) => {
+//         dispatch(receiveVideos(videos))
+//     }, response => { 
+//         console.log(response)
+//     })
+// }
