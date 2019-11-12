@@ -111,6 +111,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #ffffff;
+}
+
+p, .comment-intial{
+  color: #ffffff !important;
 }
 
 i {

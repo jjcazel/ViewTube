@@ -1,6 +1,5 @@
 // post a comment
 export const postComment = (video_id, body) => {
-  // debugger
   return $.ajax({
     type: `POST`,
     url: `/api/videos/${video_id}/comments`,

@@ -1,6 +1,5 @@
 import React from 'react';
 import CommentIndexItem from './video_comment_index_item';
-// import { Link } from 'react-router-dom';
 
 class CommentIndex extends React.Component {
 
@@ -18,7 +17,7 @@ class CommentIndex extends React.Component {
       return <CommentIndexItem
         key={i}
         comment={comment}
-        currentUser={currentUser}
+        currentUser={currentUser} 
         deleteComment={this.props.deleteComment}
       />;
     })

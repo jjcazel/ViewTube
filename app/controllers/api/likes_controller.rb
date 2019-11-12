@@ -13,10 +13,10 @@ class Api::LikesController < ApplicationController
   end
 
   def process_video_like
-    @json_string = 'api/videos/like.json.jbuilder'
-    @current_vid = Video.find_by(id: params[:video_id])
+    @json_string = 'api/videos/show.json.jbuilder'
+    @video = Video.find_by(id: params[:video_id])
     @like = Like.find_by(
-      video_id: @current_vid.id,
+      video_id: @video.id,
       creator_id: current_user.id
     )
     
@@ -33,7 +33,7 @@ class Api::LikesController < ApplicationController
 
   def new_like
    
-    @like = @current_vid.likes.new
+    @like = @video.likes.new
     @like.creator = current_user
     @like.is_dislike = true?(like_params[:is_dislike])
 

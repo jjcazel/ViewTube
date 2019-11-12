@@ -3,7 +3,7 @@ import RightSidebarContainer from '../video_show/right_sidebar_container';
 import GreetingContainer from '../greeting/greeting_container'
 import CommentFormContainer from './comment_form_container';
 import CommentIndexContainer from './video_comment_container';
-require("history").createHashHistory;
+// require("history").createHashHistory;
 import createHistory from 'history/createHashHistory';
 
 class VideoShow extends React.Component {
@@ -17,16 +17,16 @@ class VideoShow extends React.Component {
 
   componentDidMount(){
     this.props.fetchVideo(this.props.match.params.videoId);
-    // if (this.props.video){ 
-    //   this.props.addView(this.props.match.params.videoId); 
-    // }
+    if (this.props.video){ 
+      this.props.addView(this.props.match.params.videoId); 
+    }
   }
 
   componentDidUpdate(prevProps){
     if (parseInt(prevProps.match.params.videoId) !== parseInt(this.props.match.params.videoId)) {
       console.log("video updating")
       this.props.fetchVideo(this.props.match.params.videoId);
-      // this.props.addView(this.props.match.params.videoId);
+      this.props.addView(this.props.match.params.videoId);
     }
   }
 
@@ -82,7 +82,7 @@ class VideoShow extends React.Component {
     } else {
       thumbsUp = window.thumbsUpUrl
     }
-    // debugger
+  
     return (
       <>
         <div className="nav">
@@ -98,7 +98,7 @@ class VideoShow extends React.Component {
           <div className="title">{video.title}
             <div className="video-show-cont">
               <span className='left-title-span'>
-                <p className="views-show">{video.views}</p>
+                <p className="views-show">{this.props.views} views</p>
                 <p className="date">{video.created_at}</p> 
               </span>
               <span className='like-shares-span'>

@@ -19,7 +19,6 @@ const receiveVideos = ( videos ) => {
 };
 
 const receiveVideo = ({video, comments, views}) => {
-  debugger
   return {
     type: RECEIVE_VIDEO,
     video: video || {},

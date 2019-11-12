@@ -5,11 +5,14 @@ import { fetchVideo, addLikeOrDislike, addView, } from '../../actions/video_acti
 import { fetchUser } from '../../actions/users_actions';
 
 const msp = (state, ownProps) => {
+
     const videoId = ownProps.match.params.videoId;
     const video = state.entities.videos[ownProps.match.params.videoId] 
     let creator = !video || !state.entities.users[video.creatorId]  ? { first_name: '', last_name: '' } : state.entities.users[video.creatorId]
-    const currentUser = state.entities.users[state.session.id];    
-    return {  videoId, video, creator, currentUser }
+    const currentUser = state.entities.users[state.session.id];
+    const views = video ? video.views : 0;
+
+    return {  videoId, video, creator, currentUser, views }
 }
 
 const mdp = dispatch => ({

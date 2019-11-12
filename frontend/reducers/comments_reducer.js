@@ -6,22 +6,15 @@ import {
   RECEIVE_VIDEOS,
   RECEIVE_VIDEO,
 } from '../actions/video_actions';
-// import {
-//   RECEIVE_SEARCH
-// } from '../actions/search_actions';
+
+import { merge } from 'lodash'
 
 const commentsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let newState = Object.assign({}, oldState);
-  // debugger
   switch (action.type) {
-    // case RECEIVE_SEARCH:
-    //   return action.payload.comments ? action.payload.comments : newState;
-    // case RECEIVE_VIDEOS:
-    //   debugger
-    //   return action.payload.comments ? action.payload.comments : newState;
     case RECEIVE_VIDEO:
-      return action.comments;
+      return merge(newState, action.comments);
     case RECEIVE_COMMENT:
       newState[action.comment.id] = action.comment;
       return newState;

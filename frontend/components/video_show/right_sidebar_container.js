@@ -6,11 +6,13 @@ import { fetchUsers } from '../../actions/users_actions'
 
 const msp = (state, ownProps) => {
     return {
+        // videoId: ownProps.match.params.videoId,
         videos: Object.values(state.entities.videos).filter(video => {
             return video.id !== Number(ownProps.match.params.videoId)
         }),
         users: state.entities.users,
-        currentUserId: state.session.id
+        currentUserId: state.session.id,
+        // views: state ? state.entities.videos.views : 0
     }
 }
 

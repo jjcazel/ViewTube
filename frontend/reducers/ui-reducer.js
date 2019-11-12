@@ -1,6 +1,8 @@
 import {
   UPDATE_SEARCH_FIELD,
   SPACE_TO_PLAY,
+  // COLLAPSE_SIDEBAR,
+  // EXPAND_SIDEBAR,
 } from '../actions/ui_actions';
 import { merge } from 'lodash';
 
@@ -9,6 +11,13 @@ const uiReducer = (state, action) => {
   const newState = merge({}, state);
 
   switch (action.type) {
+    // case EXPAND_SIDEBAR:
+    //   newState.expand = true;
+    //   return newState;
+
+    // case COLLAPSE_SIDEBAR:
+    //   newState.expand = false;
+    //   return newState;
 
     case UPDATE_SEARCH_FIELD:
       return merge(newState, { search: action.search });

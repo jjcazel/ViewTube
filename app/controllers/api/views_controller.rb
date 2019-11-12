@@ -1,7 +1,7 @@
 class Api::ViewsController < ApplicationController
 
   def create
-    if logged_in?
+    # if logged_in?
       @view = View.find_by(
         video_id: params[:video_id],
         user_id: current_user.id)
@@ -15,16 +15,14 @@ class Api::ViewsController < ApplicationController
       end
 
       @view.save
-    end
+    # end
 
     # always update the video views
     @video = Video.find_by(id: params[:video_id])
-    # debugger
     @video.views.count
 
     if @video.save
-      # debugger
-      render 'api/videos/view.json.jbuilder'
+      render 'api/videos/show.json.jbuilder'
     else
       render json: @video.errors.full_messages, status: 422
     end

@@ -60,7 +60,7 @@ class CommentForm extends React.Component {
 
     const commentIcon = currentUser ?
       <div className="comment-input-icon">
-        <p>{currentUser[0]}</p> {/* first letter of first name */}
+        <p className='comment-initial'>{currentUser.first_name[0]}</p> {/* first letter of first name */}
       </div>
       : <div className="comment-input-icon">
         <i className="fas fa-user-circle"></i>

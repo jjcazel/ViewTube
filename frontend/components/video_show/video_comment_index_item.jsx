@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
   // comment is pojo like below
-  // comment: {
+  // comments: {
   //   id: 2,
   //   body: 'this is comment body',
   //   user_id: 14,
@@ -21,11 +21,11 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
       </button>
       : <div></div>
     : <div></div>;
-
+  
   return (
     <div className="comment-item">
       <div className="comment-item-icon">
-        <p>{comment.firstName}</p>
+        <p>{comment.first_name}</p>
       </div>
       <div className="comment-username-body">
         <div className="comment-username">

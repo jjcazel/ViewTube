@@ -9,12 +9,16 @@ import { merge } from 'lodash'
 const videosReducer = (state = {}, action) => {
     Object.freeze(state);
     const newState = merge({}, state);
-    // debugger
     switch (action.type) {
         case RECEIVE_VIDEO:
+            let views = action.views ? Object.keys(action.views).length : 0;
+            let videoId = Object.keys(action.video)[0]
+            action.video[videoId].views = views;
             return merge(newState, action.video);
 
         case RECEIVE_VIDEOS:
+            // views = action.views ? Object.keys(action.views).length : 0;
+            // action.views = views;
             return merge(newState, action.videos);
         default:
             return newState;
@@ -32,6 +36,7 @@ export default videosReducer;
 //       likes: 432786,
 //       dislikes: 1,
 //       videoURL: "?",
-//       comments: [{}, {}, {}],
-//       created?: "2 Days"
+//       comment_ids: [1, 2, 3],
+//       comments_count: 3,
+//       created_at: "Nov 6, 2019"
 //    },

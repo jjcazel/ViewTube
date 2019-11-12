@@ -4,12 +4,12 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new(
       body: params[:body],
     )
+    render 'no current user logged in' if !current_user
     @comment.user_id = current_user.id
     @comment.video_id = params[:video_id]
 
     if @comment.save
       render :show
-      # render 'app/views/api/videos/show.json.jbuilder'
     else
       render json: @comment.errors.full_messages, status: 422
     end
