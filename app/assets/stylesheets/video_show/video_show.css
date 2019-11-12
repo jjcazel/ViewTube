@@ -1,8 +1,8 @@
 .show-form{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    background-color: hsla(0, 0%, 93.3%, .4);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  background-color: hsla(0, 0%, 93.3%, .4);
 }
 
 .video-show{
@@ -211,7 +211,6 @@ max-height: 72vh;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   color: #606060;
-  /* font-weight: 400; */
   padding-right: 3px;
 }
 

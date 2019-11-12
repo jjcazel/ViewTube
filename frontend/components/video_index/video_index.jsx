@@ -33,8 +33,8 @@ class VideoIndex extends React.Component {
                 <li className="vid">{videos[0]}</li> 
                 <li className="vid">{videos[1]}</li> 
                 <li className="vid">{videos[2]}</li> 
-                <li className="vid">{videos[3]}</li> 
-                <li className="vid">{videos[4]}</li> 
+                <li className="vid">{videos[8]}</li> 
+                <li className="vid">{videos[10]}</li> 
                 <li className="vid">{videos[5]}</li> 
               </ul>
             </div> 
@@ -46,9 +46,9 @@ class VideoIndex extends React.Component {
                   <ul className="row-wrapper">
                     <li className="vid">{videos[6]}</li> 
                     <li className="vid">{videos[7]}</li> 
-                    <li className="vid">{videos[8]}</li>
+                    <li className="vid">{videos[3]}</li>
                     <li className="vid">{videos[9]}</li>
-                    <li className="vid">{videos[10]}</li>
+                    <li className="vid">{videos[4]}</li>
                     <li className="vid">{videos[11]}</li>
                   </ul>
                 </div>
@@ -81,8 +81,8 @@ class VideoIndex extends React.Component {
                 <li className="vid">{videos[0]}</li>
                 <li className="vid">{videos[1]}</li>
                 <li className="vid">{videos[2]}</li>
-                <li className="vid">{videos[3]}</li>
-                <li className="vid">{videos[4]}</li>
+                <li className="vid">{videos[8]}</li>
+                <li className="vid">{videos[10]}</li>
                 <li className="vid">{videos[5]}</li>
               </ul>
               </div>
@@ -93,9 +93,9 @@ class VideoIndex extends React.Component {
               <ul className="row-wrapper">
                 <li className="vid">{videos[6]}</li>
                 <li className="vid">{videos[7]}</li>
-                <li className="vid">{videos[8]}</li>
+                <li className="vid">{videos[3]}</li>
                 <li className="vid">{videos[9]}</li>
-                <li className="vid">{videos[10]}</li>
+                <li className="vid">{videos[4]}</li>
                 <li className="vid">{videos[11]}</li>
               </ul>
               </div>
