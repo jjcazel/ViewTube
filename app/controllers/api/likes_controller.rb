@@ -8,6 +8,10 @@ class Api::LikesController < ApplicationController
     process_video_like if params[:video_id] 
   end
 
+  def show
+    render :show
+  end
+
   def process_video_like
     @json_string = 'api/videos/like.json.jbuilder'
     @current_vid = Video.find_by(id: params[:video_id])
