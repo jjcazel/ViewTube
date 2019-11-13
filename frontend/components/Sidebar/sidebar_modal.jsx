@@ -106,7 +106,6 @@ const SideBarModal = (props) => {
     </aside>;
 
   // const closeModalFunc = props.closeModal;
-  // debugger
   return (
     <div className={`modal-background ${modalStatus}`}>
       <div

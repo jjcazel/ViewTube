@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router'
+import { faLinkedinIn } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Dropdown extends React.Component {
   constructor(props) {
@@ -42,7 +44,8 @@ class Dropdown extends React.Component {
               <li className="drop-name">{this.props.currentUser.first_name} {this.props.currentUser.last_name}</li>
               <li className="drop-email">{this.props.currentUser.email}</li>
             </div>
-              <li className="signout"><a className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/" onClick='https://www.linkedin.com/in/jared-cazel-ab84a695/'>Jared's LinkedIn</a></li>
+              <li className="signout"><a className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/" onClick='https://www.linkedin.com/in/jared-cazel-ab84a695/'>Jared's LinkedIn</a><FontAwesomeIcon
+                icon={faLinkedinIn} /></li>
               <li className="signout"><a className="git" target="_blank" href="https://github.com/jjcazel" onClick='https://github.com/jjcazel' >Jared's GitHub</a></li> 
               <li className="signout"><a className="git" target="_blank" href="https://jaredcazel.com" onClick='https://jaredcazel.com'>Jared's Site</a></li> 
               <li className="signout" onClick={this.logout}>Sign out</li>

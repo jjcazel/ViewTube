@@ -11,7 +11,6 @@ require("history").createHashHistory;
 
 class Greeting extends React.Component {
   constructor(props) {
-    debugger
     super(props);
     
     this.state = { search: this.props.search ? this.props.search : '' };
@@ -43,7 +42,6 @@ class Greeting extends React.Component {
    
 
 render() {
-  debugger
   if (this.props.currentUser) {  
     return (
       <div>
