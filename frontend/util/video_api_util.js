@@ -1,9 +1,4 @@
-// export const fetchVideos = () => (
-//   $.ajax({
-//     method: 'GET',
-//     url: '/api/videos'
-//   })
-// )
+
 export const fetchVideos = search => {
 
   const data = {};
@@ -17,13 +12,6 @@ export const fetchVideos = search => {
     data,
   });
 };
-
-// export const getVideosComments = () => {
-//   return $.ajax({
-//     type: `GET`,
-//     url: `/api/videos`,
-//   });
-// }
 
 export const fetchVideo = id => (
   $.ajax({

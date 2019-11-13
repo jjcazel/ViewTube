@@ -1,7 +1,7 @@
 import {
     RECEIVE_VIDEO,
     RECEIVE_VIDEOS,
-
+    RECEIVE_SEARCH_VIDEOS,
 } from '../../actions/video_actions';
 
 import { merge } from 'lodash'
@@ -20,6 +20,10 @@ const videosReducer = (state = {}, action) => {
             // views = action.views ? Object.keys(action.views).length : 0;
             // action.views = views;
             return merge(newState, action.videos);
+
+        case RECEIVE_SEARCH_VIDEOS:
+            return merge({}, action.videos)
+            
         default:
             return newState;
     }

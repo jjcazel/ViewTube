@@ -17,4 +17,5 @@ const mdp = dispatch => ({
     fetchUsers: () => dispatch(fetchUsers())
 })
 
-export default connect(msp, mdp)(VideoIndex)
+export const VideoIndexContainer = connect(msp, mdp)(VideoIndex)
+export const VideoSearchIndexContainer = connect(msp, mdp)(VideoSearchIndex)

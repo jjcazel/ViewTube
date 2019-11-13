@@ -1,6 +1,6 @@
 import React from "react";
 import GreetingContainer from "./greeting/greeting_container";
-import VideoIndexContainer from './video_index/video_index_container'
+import {VideoIndexContainer, VideoSearchIndexConstainer } from './video_index/video_index_container'
 import SignupFormContainer from './Session/signup_form_container';
 import { Route } from 'react-router-dom';
 import EmailForm from '../components/email/email_form';

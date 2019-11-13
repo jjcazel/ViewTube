@@ -14,7 +14,7 @@ const msp = state => ({
 
 const mdp = dispatch => ({
     logout: () => dispatch(logout()),
-    fetchVideos: () => dispatch(fetchVideos()),
+    fetchVideos: (search) => dispatch(fetchVideos(search)),
     updateSearchField: search => dispatch(updateSearchField(search)),
     spaceToPlay: boolean => dispatch(spaceToPlay(boolean)),
 })

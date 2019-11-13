@@ -8,7 +8,6 @@ class Api::VideosController < ApplicationController
       @videos = @videos.select { |video| scores[video.id] > 0 }
     end
 
-
     render 'api/videos/index.json.jbuilder'
 
   end
@@ -57,7 +56,6 @@ class Api::VideosController < ApplicationController
   end
 
   def search_scores(search_params)
-
     search_words = search_params.downcase.split(' ')
     scores = {}
 

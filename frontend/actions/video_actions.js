@@ -27,11 +27,10 @@ const receiveVideo = ({video, comments, views}) => {
   }
 };
 
-const receiveSearchVideos = ({ users, videos }) => {
+const receiveSearchVideos = (videos) => {
   return {
     type: RECEIVE_SEARCH_VIDEOS,
-    users,
-    videos,
+    videos
   };
 };
 
@@ -56,7 +55,6 @@ export const createVideo = data => dispatch => {
 
 export const fetchVideos = search => dispatch => {
   if (search && search.search) {
-      
   return VideoAPI.fetchVideos(search).then(
     payload => dispatch(receiveSearchVideos(payload)),
     errors => dispatch(receiveVideoErrors(errors)));
