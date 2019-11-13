@@ -2,14 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DropdownContainer from './dropdown_container';
 import createHistory from 'history/createHashHistory';
+import SidebarContainer from '../Sidebar/sidebar_container'
+import SideBarModalContainer from '../Sidebar/sidebar_modal_container'
+
 require("history").createHashHistory;
 
 // lets refactor this as the navbar!
 
 class Greeting extends React.Component {
   constructor(props) {
+    debugger
     super(props);
-    this.state = { search: '' };
+    
+    this.state = { search: this.props.search ? this.props.search : '' };
     this.search = this.search.bind(this);
     this.deactivateSpaceToPlay = this.deactivateSpaceToPlay.bind(this);
     this.reactivateSpaceToPlay = this.reactivateSpaceToPlay.bind(this);
@@ -38,14 +43,16 @@ class Greeting extends React.Component {
    
 
 render() {
+  debugger
   if (this.props.currentUser) {  
     return (
+      <div>
+        {/* <SidebarContainer/> */}
       <div className='navbar-container'>
         <section className='nav-left'>
           <div className='icon-button'>
-            <img className="hamburger" src={window.hamburgerUrl} />
+            <img className="hamburger" src={window.hamburgerUrl}/>
           </div>
-
           <div className='logo-play-container'>
             <Link to='/' className='viewtube-index'>
               <img className="play-button" src={window.playIconUrl} />ViewTube
@@ -84,6 +91,7 @@ render() {
           </section>    
         </section>
     </div>
+  </div>
     )         
   } else {
     return (

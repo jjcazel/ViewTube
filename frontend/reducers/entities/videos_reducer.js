@@ -1,7 +1,7 @@
 import {
     RECEIVE_VIDEO,
     RECEIVE_VIDEOS,
-    RECEIVE_SEARCH_VIDEOS,
+    RECEIVE_SEARCH_VIDEOS
 } from '../../actions/video_actions';
 
 import { merge } from 'lodash'

@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoIndexItem from './video_index_item';
-
+import SidebarContainer from '../Sidebar/sidebar_container';
+// import SideBarModalContainer from '../Sidebar/sidebar_modal_container';
 
 class VideoIndex extends React.Component {
   constructor(props) {
@@ -25,8 +26,10 @@ class VideoIndex extends React.Component {
   if (this.props.currentUser) {
     return (
       <section>
+        {/* <SidebarContainer/> */}
         <div className='video-index'>
           <div className='outer-cont'>
+
             <div className='title-splash-top'>{`Recommended for ${this.props.currentUser.first_name}`}</div>
               <div className='index-container'>
               <ul className='row-wrapper'>

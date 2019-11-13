@@ -11,6 +11,7 @@ export const recentUploadUI = payload => {
     videoId: Object.keys(payload.videos)[0],
   };
 };
+
 const receiveVideos = ( videos ) => {
   return {
     type: RECEIVE_VIDEOS,
@@ -51,7 +52,6 @@ export const createVideo = data => dispatch => {
     payload => dispatch(receiveVideo(payload)),
     errors => dispatch(receiveVideoErrors(errors)))
 };
-
 
 export const fetchVideos = search => dispatch => {
   if (search && search.search) {

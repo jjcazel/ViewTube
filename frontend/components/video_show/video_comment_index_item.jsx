@@ -25,12 +25,12 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
   return (
     <div className="comment-item">
       <div className="comment-item-icon">
-        <p>{comment.first_name}</p>
+        <p>{comment.first_name[0]}</p>
       </div>
       <div className="comment-username-body">
         <div className="comment-username">
           {/* commenter name */}
-          {comment.username} {/* need to make this the user's first and last name */}
+          {`${comment.first_name} ${comment.last_name}`} {/* need to make this the user's first and last name */}
         </div>
         <div className="comment-body">
           {/* comment body */}

@@ -17,6 +17,7 @@ class CommentIndex extends React.Component {
   render() {
     let currentUser = this.props.currentUser;
     let comments = this.props.comments.map((comment, i) => {
+    
       return <CommentIndexItem
         key={i}
         comment={comment}

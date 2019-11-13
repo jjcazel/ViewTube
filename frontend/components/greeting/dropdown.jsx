@@ -42,9 +42,10 @@ class Dropdown extends React.Component {
               <li className="drop-name">{this.props.currentUser.first_name} {this.props.currentUser.last_name}</li>
               <li className="drop-email">{this.props.currentUser.email}</li>
             </div>
-              <li className="signout"><a className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/">LinkedIn</a></li>
-              <li className="signout"><a  className="git" target="_blank" href="https://github.com/jjcazel" >GitHub</a></li> 
-            <li className="signout" onClick={this.logout}>Sign out</li>
+              <li className="signout"><a className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/">Jared's LinkedIn</a></li>
+              <li className="signout"><a  className="git" target="_blank" href="https://github.com/jjcazel" >Jared's GitHub</a></li> 
+              <li className="signout"><a  className="git" target="_blank" href="https://jaredcazel.com" >Jared's Site</a></li> 
+              <li className="signout" onClick={this.logout}>Sign out</li>
           </ul>
         ) :
             (

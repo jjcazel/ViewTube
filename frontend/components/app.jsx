@@ -8,11 +8,13 @@ import PasswordForm from '../components/password/password_form';
 import { AuthRoute } from '../util/route_util';
 import  VideoShowContainer  from './video_show/video_show_container';
 import VideoUploadForm from './video_upload/video_upload_container';
+import SideBarModalContainer from '../components/Sidebar/sidebar_modal_container';
 
 const App = () => (
     <div>
         
         <Route exact path='/' component={GreetingContainer} />
+        {/* <Route exact path='/' component={SideBarModalContainer} /> */}
         <Route exact path='/' component={VideoIndexContainer} />
         <Route exact path='/search' component={GreetingContainer} />
         <Route exact path='/search' component={VideoSearchIndexContainer} />

@@ -9,7 +9,8 @@ import { fetchVideos } from '../../actions/video_actions'
 
 const msp = state => ({
     currentUser: state.entities.users[state.session.id],
-    videos: state.entities.videos
+    videos: state.entities.videos,
+    search: state.ui.search
 })
 
 const mdp = dispatch => ({
