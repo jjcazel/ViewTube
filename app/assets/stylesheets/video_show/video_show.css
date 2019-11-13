@@ -16,6 +16,7 @@
   min-height: 1000px;
   background-color: hsla(0, 0%, 92.3%, .1);
   margin-top: 56px;
+  min-width: 600px;
 }
 
 .rightsidebar{
@@ -71,11 +72,11 @@
   border-bottom: 1px solid #dbdbdd;
 }
 
-.video {
-object-fit: contain;
-width: 100%;
-height: auto;
-max-height: 72vh;
+.video-big {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 72vh;
 }
 
 .thumb-info{
@@ -189,6 +190,7 @@ max-height: 72vh;
   font-size: 13px;
   color: #606060;
   font-weight: 400;
+  /* margin-left: 6px; */
 }
 
 .video-show-cont{

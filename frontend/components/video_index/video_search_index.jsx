@@ -8,7 +8,10 @@ class VideoSearchIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchVideos({ search: this.props.search });
+    this.props.fetchVideos({ search: this.props.search }).then(() => {
+      this.props.fetchUsers()
+      // .then(this.props.history.push('/'))
+    });
   }
 
   render() {

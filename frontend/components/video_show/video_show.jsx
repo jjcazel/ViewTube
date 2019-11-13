@@ -56,7 +56,7 @@ class VideoShow extends React.Component {
 
   renderVideo(video){
     return (
-      <video key={video.videoUrl} width="520" height="400" controls autoPlay className='video'>
+      <video key={video.videoUrl} width="520" height="400" controls autoPlay className='video-big'>
         <source src={video.videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

@@ -10,6 +10,10 @@ class CommentIndex extends React.Component {
     };
   };
 
+  componentDidMount() {
+    this.props.fetchUsers();
+  }
+
 
   render() {
     let currentUser = this.props.currentUser;

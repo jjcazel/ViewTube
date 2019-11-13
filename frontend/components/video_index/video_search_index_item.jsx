@@ -12,7 +12,7 @@ const VideoSearchIndexItem = (props) => {
 
   let username;
   if (user) {
-    username = <h2>{user.first_name} {user.last_name}</h2>
+    username = <h2 className='username-search'>{user.first_name} {user.last_name}</h2>
   }
 
   return (
@@ -21,15 +21,16 @@ const VideoSearchIndexItem = (props) => {
       <video width="246" height="137" className='thumbnail-2-search' >
         <source src={video.videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
-            </video>
+      </video>
 
       <section className="thumb-info-search">
         <h1 className='thumb-title-search'>{video.title}
         </h1>
-        <div className='username-search'>{username}</div>
         <div className='date-index-views-cont-search'>
-          <div className='date-index-search'>{<LastSeen video={video} />}</div>
+          <div >{username}</div>
+          <br/>
           <div className='views-search'># views</div>
+          <div className='date-index-search'>{<LastSeen video={video} />}</div>
         </div>
       </section>
 
