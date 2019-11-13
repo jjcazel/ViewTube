@@ -33,7 +33,7 @@ class Greeting extends React.Component {
   search(e) {
     e.preventDefault()
     this.props.fetchVideos(this.state);
-    createHistory().push('/');
+    createHistory().push('/search');
   }
    
 
@@ -48,8 +48,8 @@ render() {
 
           <div className='logo-play-container'>
             <Link to='/' className='viewtube-index'>
-                <img className="play-button" src={window.playIconUrl} />ViewTube
-              </Link>
+              <img className="play-button" src={window.playIconUrl} />ViewTube
+            </Link>
         </div>
         </section>
 
@@ -72,15 +72,15 @@ render() {
 
         <section className='nav-right'>
           <div id='title-right'>
-              <Link to='/upload'>
-                  <div className='highlight-circle'>
-                      <img className='upload-right' src={window.uploadUrl} />
-                  </div>
-              </Link>
+            <Link to='/upload'>
+              <div className='highlight-circle'>
+                <img className='upload-right' src={window.uploadUrl} />
+              </div>
+            </Link>
           </div>
               
           <section >
-              <DropdownContainer />
+            <DropdownContainer />
           </section>    
         </section>
     </div>

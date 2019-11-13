@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import VideoIndex from  './video_index';
+import VideoSearchIndex from  './video_search_index';
 import { fetchVideos } from '../../actions/video_actions';
 import { fetchUsers } from '../../actions/users_actions';
 

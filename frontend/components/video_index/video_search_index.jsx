@@ -26,22 +26,24 @@ class VideoSearchIndex extends React.Component {
       <section>
         <div className='video-index'>
           <div className='outer-cont'>
-            <div className='title-splash-top'>{`Recommended for ${this.props.currentUser.first_name}`}</div>
-            <div className='index-container'>
-              <ul className='row-wrapper'>
-                <li className="vid">{videos[0]}</li>
-                <li className="vid">{videos[1]}</li>
-                <li className="vid">{videos[2]}</li>
-                <li className="vid">{videos[8]}</li>
-                <li className="vid">{videos[10]}</li>
-                <li className="vid">{videos[5]}</li>
+            <div className='title-splash-top'></div>
+            <div className='index-container-search'>
+              <ul className='row-wrapper-search'>
+                <li className="vid-search">{videos[0]}</li>
+                <li className="vid-search">{videos[1]}</li>
+                <li className="vid-search">{videos[2]}</li>
+                <li className="vid-search">{videos[3]}</li>
+                <li className="vid-search">{videos[4]}</li>
+                <li className="vid-search">{videos[5]}</li>
+                <li className="vid-search">{videos[6]}</li>
               </ul>
             </div> 
           </div>
         </div>
       </section>
     )
-
+  }
+}
 
 
 export default VideoSearchIndex;
