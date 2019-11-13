@@ -14,7 +14,6 @@ class CommentIndex extends React.Component {
     this.props.fetchUsers();
   }
 
-
   render() {
     let currentUser = this.props.currentUser;
     let comments = this.props.comments.map((comment, i) => {
