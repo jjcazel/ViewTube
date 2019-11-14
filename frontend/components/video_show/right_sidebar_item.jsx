@@ -26,7 +26,7 @@ const RightSidebarItem = (props) => {
           <h1 className='thumb-title'>{video.title}</h1>
           
           <div className='username'>{username}</div> 
-          <div className='views-right'># views</div> 
+          <div className='views-right'>{video.views} views</div> 
         </section>
 
       </div>
