@@ -6,12 +6,13 @@
         json.creatorId video.creator_id
         json.created_at video.created_at
         json.videoUrl url_for(video.video)
-        json.views do 
-            video.views.each do |view|
-                json.set! view.id do
-                json.extract! view, :id, :video_id, :user_id
-            end
-        end
-    end 
+        json.views video.views.count
+    #     json.views do 
+    #         video.views.each do |view|
+    #             json.set! view.id do
+    #             json.extract! view, :id, :video_id, :user_id
+    #         end
+    #     end
+    # end 
     end
 end

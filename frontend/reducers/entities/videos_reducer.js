@@ -17,10 +17,10 @@ const videosReducer = (state = {}, action) => {
             return merge(newState, action.video);
 
         case RECEIVE_VIDEOS:
-            Object.keys(action.videos).forEach(video => {
-                let views = action.videos[video].views ? Object.keys(action.videos[video].views).length : 0;
-                action.videos[video].views = views;
-            })
+            // Object.keys(action.videos).forEach(video => {
+            //     let views = action.videos[video].views ? Object.keys(action.videos[video].views).length : 0;
+            //     action.videos[video].views = views;
+            // })
             return merge(newState, action.videos);
 
         case RECEIVE_SEARCH_VIDEOS:
