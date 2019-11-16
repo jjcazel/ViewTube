@@ -10,7 +10,6 @@ const msp = state => {
         users: state.entities.users,
         currentUser: state.entities.users[state.session.id],
         search: state.ui.search
-        
     }
 }
 
