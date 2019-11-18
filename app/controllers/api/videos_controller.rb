@@ -62,7 +62,8 @@ class Api::VideosController < ApplicationController
     @videos.map do |video|
       score = 0
       title = video.title.downcase
-      desc = video.title.downcase
+      desc = video.description.downcase
+
 
       search_words.each { |word| score += 1 if title.include?("#{word}") || desc.include?("#{word}") }
 
