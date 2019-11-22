@@ -100,11 +100,12 @@
   height: auto;
   border-bottom: 1px solid #dbdbdd;
   border-top: 1px solid #dbdbdd;
+  padding-left: 20px;
 }
 
 .index-container-search{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   padding-top: 10px;
   width: 100%;
@@ -112,3 +113,19 @@
   min-width: 700px;
   background-color: hsla(0, 0%, 92.3%, .1);
 }
+
+.search-splash-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-size: 16px;
+  color: #0d0d0d;
+  font-weight: 500;
+  max-height: 20px;
+  padding-left: 20px;
+  padding-top: 80px;
+  background-color: hsla(0, 0%, 92.3%, .1);
+}
+ 

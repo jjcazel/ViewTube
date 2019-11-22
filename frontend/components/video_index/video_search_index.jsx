@@ -16,7 +16,7 @@ class VideoSearchIndex extends React.Component {
 
   render() {
     const videos = this.props.videos.map(video => {
-      const user = this.props.users[video.creatorId];
+    const user = this.props.users[video.creatorId];
 
     return (
       <VideoSearchIndexItem
@@ -29,8 +29,8 @@ class VideoSearchIndex extends React.Component {
       <section>
         <div className='video-index'>
           <div className='outer-cont'>
-            <div className='title-splash-top'></div>
             <div className='index-container-search'>
+            <div className='search-splash-top'>{`Search Results for "${this.props.search}"`}</div>
               <ul className='row-wrapper-search'>
                 <li className="vid-search">{videos[0]}</li>
                 <li className="vid-search">{videos[1]}</li>
