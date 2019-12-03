@@ -33,9 +33,9 @@ const SideBar = (props) => {
             <div className="side-bar-icon">
               <i className="fas fa-home"></i>
             </div>
-            <div className="side-bar-text">
+            {/* <div className="side-bar-text">
               <span>Home</span>
-            </div>
+            </div> */}
           </div>
         </Link>
 
@@ -44,9 +44,9 @@ const SideBar = (props) => {
             <div className="side-bar-icon">
               <i className="fas fa-video"></i>
             </div>
-            <div className="side-bar-text">
+            {/* <div className="side-bar-text">
               <span>Upload</span>
-            </div>
+            </div> */}
           </div>
         </Link>
 
@@ -57,9 +57,9 @@ const SideBar = (props) => {
             <div className="side-bar-icon">
               <i className="fab fa-github"></i>
             </div>
-            <div className="side-bar-text">
+            {/* <div className="side-bar-text">
               <span>Github</span>
-            </div>
+            </div> */}
           </div>
         </a>
 
@@ -70,9 +70,9 @@ const SideBar = (props) => {
             <div className="side-bar-icon">
               <i className="fab fa-linkedin"></i>
             </div>
-            <div className="side-bar-text">
+            {/* <div className="side-bar-text">
               <span>LinkedIn</span>
-            </div>
+            </div> */}
           </div>
         </a>
 
@@ -83,14 +83,14 @@ const SideBar = (props) => {
             <div className="side-bar-icon">
               <i className="fas fa-user-circle"></i>
             </div>
-            <div className="side-bar-text">
+            {/* <div className="side-bar-text">
               <span>Author's site</span>
-            </div>
+            </div> */}
           </div>
         </a>
       </div>
 
-      {loginSection}
+      {/* {loginSection} */}
     </aside>;
 
   return sideBarWhole;

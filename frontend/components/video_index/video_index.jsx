@@ -27,7 +27,7 @@ class VideoIndex extends React.Component {
     return (
       <section>
         {/* <SidebarContainer/> */}
-        <div className='video-index'>
+        <div className='video-index-splash'>
           <div className='outer-cont'>
 
             <div className='title-splash-top'>{`Recommended for ${this.props.currentUser.first_name}`}</div>
@@ -76,7 +76,7 @@ class VideoIndex extends React.Component {
   } else {
     return (
       <section>
-        <div className='video-index'>
+        <div className='video-index-splash'>
           <div className='outer-cont'>
             <div className='title-splash-top'>Trending</div>
               <div className='index-container'>
