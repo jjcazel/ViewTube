@@ -231,7 +231,7 @@
 
 .signout{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100% !important;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -304,4 +304,25 @@
 
 .video-index{
   background-color: hsla(0, 0%, 93.3%, .4);
+}
+
+.fa-linkedin:before {
+    content: "\f08c";
+    color: steelblue;
+}
+
+.fa-github-square:before {
+    content: "\f092";
+    color: black;
+    padding-right: 5px;
+}
+
+.fa-folder-open:before {
+    content: "\f07c";
+    color: burlywood;
+    padding-right: 7px;
+}
+
+.strong{
+  font-weight: 500 !important;
 }

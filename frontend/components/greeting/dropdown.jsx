@@ -44,12 +44,13 @@ class Dropdown extends React.Component {
               <li className="drop-name">{this.props.currentUser.first_name} {this.props.currentUser.last_name}</li>
               <li className="drop-email">{this.props.currentUser.email}</li>
             </div>
-              <li className="signout"><a className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/" onClick='https://www.linkedin.com/in/jared-cazel-ab84a695/'>Jared's LinkedIn</a>
-              {/* <FontAwesomeIcon icon={faLinkedIn} /> */}
-                </li>
-              <li className="signout"><a className="git" target="_blank" href="https://github.com/jjcazel" onClick='https://github.com/jjcazel' >Jared's GitHub</a></li> 
-              <li className="signout"><a className="git" target="_blank" href="https://jaredcazel.com" onClick='https://jaredcazel.com'>Jared's Site</a></li> 
-              <li className="signout" onClick={this.logout}>Sign out</li>
+              <li className="signout"><i class="fab fa-linkedin"></i><a className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/" 
+                onClick='https://www.linkedin.com/in/jared-cazel-ab84a695/'>Jared's LinkedIn</a></li>
+              <li className="signout"><i class="fab fa-github-square"></i><a className="git" target="_blank" href="https://github.com/jjcazel" 
+                onClick='https://github.com/jjcazel' >Jared's GitHub</a></li> 
+              <li className="signout"><i class="fas fa-folder-open"></i><a className="git" target="_blank" href="https://jaredcazel.com" 
+                onClick='https://jaredcazel.com'>Jared's Site</a></li> 
+              <li className="signout" onClick={this.logout}><strong>Sign out</strong></li>
           </ul>
         ) :
             (
