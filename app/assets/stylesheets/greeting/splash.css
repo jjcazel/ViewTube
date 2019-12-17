@@ -136,12 +136,7 @@
 }
 
 .index-item{
-  justify-content: end;
-  align-items: center;
-  padding-bottom: 8px;
-  width: 210px;
   cursor: pointer;
-  height: 45%;
 }
 
 .dropdown{
