@@ -9,7 +9,7 @@ class VideoIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchVideos(this.props.videos);
+    this.props.fetchVideos(this.props.videos).then(this.props.fetchUsers());
   }
 
   render() {
@@ -25,57 +25,46 @@ class VideoIndex extends React.Component {
     })
   if (this.props.currentUser) {
     return (
-      <section>
-        {/* <SidebarContainer/> */}
         <div className='video-index-splash'>
           <div className='outer-cont'>
-
-            <div className='title-splash-top'>{`Recommended for ${this.props.currentUser.first_name}`}</div>
-              <div className='index-container'>
+            <div className='title-splash'></div>
+              {/* <div className='index-container'> */}
+            <span className='title-splash'>{`Recommended 
+            for ${this.props.currentUser.first_name}`}</span>
               <ul className='row-wrapper'>
                 <li className="vid">{videos[0]}</li> 
                 <li className="vid">{videos[1]}</li> 
                 <li className="vid">{videos[2]}</li> 
                 <li className="vid">{videos[8]}</li> 
-                <li className="vid">{videos[10]}</li> 
+                {/* <li className="vid">{videos[10]}</li>  */}
                 <li className="vid">{videos[5]}</li> 
+                <li className="vid">{videos[6]}</li>
+                <li className="vid">{videos[7]}</li>
+                {/* <li className="vid">{videos[3]}</li> */}
+                <li className="vid">{videos[9]}</li>
+                <li className="vid">{videos[4]}</li>
+                <li className="vid">{videos[11]}</li>
               </ul>
-            </div> 
-
             </div>
-              <div className='outer-cont'>
-                <div className="title-splash"></div>
-                  <div className='index-container'>
-                  <ul className="row-wrapper">
-                    <li className="vid">{videos[6]}</li> 
-                    <li className="vid">{videos[7]}</li> 
-                    <li className="vid">{videos[3]}</li>
-                    <li className="vid">{videos[9]}</li>
-                    <li className="vid">{videos[4]}</li>
-                    <li className="vid">{videos[11]}</li>
-                  </ul>
-                </div>
-              </div>
             
-              <div className='outer-cont'>
-                <div className='title-splash'>Recently Uploaded</div>
-                  <div className='index-container'>
-                  <ul className='row-wrapper'>
-                    <li className="vid">{videos[videos.length - 1]}</li>
-                    <li className="vid">{videos[videos.length - 2]}</li>
-                    <li className="vid">{videos[videos.length - 3]}</li>
-                    <li className="vid">{videos[videos.length - 4]}</li>
-                    <li className="vid">{videos[videos.length - 5]}</li>
-                    <li className="vid">{videos[videos.length - 6]}</li>
-                  </ul>
-                </div>
+            <div className='outer-cont'>
+              {/* <div className='title-splash'>Recently Uploaded</div> */}
+                <div className='index-container'>
+                <ul className='row-wrapper'>
+                  <li className="vid">{videos[videos.length - 1]}</li>
+                  <li className="vid">{videos[videos.length - 2]}</li>
+                  <li className="vid">{videos[videos.length - 3]}</li>
+                  <li className="vid">{videos[videos.length - 4]}</li>
+                  {/* <li className="vid">{videos[videos.length - 5]}</li> */}
+                  {/* <li className="vid">{videos[videos.length - 6]}</li> */}
+                </ul>
               </div>
             </div>
-        </section>
+          </div>
     )
   } else {
     return (
-      <section>
+      // <section>
         <div className='video-index-splash'>
           <div className='outer-cont'>
             <div className='title-splash-top'>Trending</div>
@@ -118,7 +107,7 @@ class VideoIndex extends React.Component {
               </div>
             </div>
           </div>
-        </section>
+        // </section>
       )
     }
   }

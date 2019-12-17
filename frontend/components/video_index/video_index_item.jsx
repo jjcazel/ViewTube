@@ -16,9 +16,9 @@ const VideoIndexItem = (props) => {
     }
     
     return (
-        <div onClick={handleClick} className="index-item">
+        <div onClick={handleClick}>
         
-            <video width="210" height="118" className='thumbnail-2' >
+            <video width="320" height="180" className='thumbnail-2' >
                 <source src={video.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

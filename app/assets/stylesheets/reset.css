@@ -92,7 +92,7 @@ video {
     display: inline-block;
     *display: inline;
     *zoom: 1;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 /**
