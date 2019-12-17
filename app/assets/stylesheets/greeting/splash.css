@@ -300,11 +300,10 @@
 }
 
 .video-index-splash {
-    background-color: hsla(0, 0%, 93.3%, .4);
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    width: 100%;
+  background-color: hsla(0, 0%, 93.3%, .4);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .fa-linkedin:before {
