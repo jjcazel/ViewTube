@@ -7,16 +7,18 @@
     padding: 12px 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     .side-bar-links-wrap {
       text-decoration: none;
       
       .side-bar-link-box {
-        padding: 0 24px;
+        padding: 0 34px;
         height: 80px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         
         cursor: pointer;
 
@@ -46,6 +48,8 @@
           span {
             font-size: 12px;
             padding-top: 16px;
+            text-align: center;
+            padding-left: 10px;
           }
         }
       }
@@ -67,29 +71,34 @@
     content: "\f015";
     color: slategrey;
     font-size: x-large;
+    padding-left: 10px;
   } 
   .fa-video:before {
     content: "\f03d";
     color: slategrey;
     font-size: larger;
+    padding-left: 10px;
   }
 
   .fa-linkedin:before {
     content: "\f08c";
     color: steelblue;
     font-size: x-large;
+    padding-left: 10px;
   }
 
   .fa-github:before {
     content: "\f09b";
     color: slategray;
     font-size: x-large;
+    padding-left: 10px;
   } 
 
   .fa-user-circle:before {
     content: "\f2bd";
     color: slategray;
     font-size: x-large;
+    padding-left: 10px;
   }
 
   .side-bar-login-box {

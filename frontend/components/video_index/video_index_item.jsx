@@ -31,6 +31,7 @@ const VideoIndexItem = (props) => {
                   <div className='views'>{video.views} views</div> 
                 </div> 
             </section>
+
         </div>
     )
 

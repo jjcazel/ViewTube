@@ -90,9 +90,7 @@ const SideBar = (props) => {
         </Link>
       </div>
 
-      
-
-      {loginSection}
+      {/* {loginSection} */}
     </aside>;
 
   return sideBarWhole;

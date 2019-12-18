@@ -1,7 +1,6 @@
 .index-item-search{
   display: flex;
   justify-content: end;
-  align-items: center;
   padding-bottom: 8px;
   width: 210px;
   cursor: pointer;
@@ -15,7 +14,7 @@
 
 .username-search{
   font-family: 'Roboto', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   color: #606060;
   font-weight: 400;
   padding-bottom: 6px;
@@ -49,7 +48,6 @@
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 1.2rem;
-  /* max-height: 3.2rem; */
   color: #0d0d0d;
   text-decoration: none;
   padding-bottom: 7px;
@@ -57,6 +55,12 @@
   width: max-content;
   padding-left: 6px;
 }
+
+.outer-container-2{
+  display: flex;
+  background-color: hsla(0, 0%, 93.3%, .4);
+}
+  
 
 .date-index-views-cont-search{
   display: flex;
@@ -77,10 +81,17 @@
 
 .views-search{
   font-family: 'Roboto', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   color: #606060;
   font-weight: 400;
-  /* padding-right: 3px; */
+  margin-left: 6px;
+}
+
+.views-search-2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #606060;
+  font-weight: 400;
   margin-left: 6px;
 }
 
@@ -95,10 +106,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   padding-top: 10px;
-  width: 80%;
+  width: 100%;
   background-color: hsla(0, 0%, 92.3%, .1);
   height: auto;
-  border-bottom: 1px solid #dbdbdd;
   border-top: 1px solid #dbdbdd;
   padding-left: 20px;
 }
@@ -106,8 +116,6 @@
 .index-container-search{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 10px;
   width: 100%;
   height: auto;
   min-width: 700px;
@@ -119,13 +127,12 @@
   flex-direction: row;
   justify-content: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-size: 16px;
+  font-size: 18px;
   color: #0d0d0d;
   font-weight: 500;
   max-height: 20px;
   padding-left: 20px;
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 6px;
   background-color: hsla(0, 0%, 92.3%, .1);
 }
