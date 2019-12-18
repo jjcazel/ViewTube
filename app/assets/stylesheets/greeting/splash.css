@@ -52,26 +52,20 @@
 }
 
 .logo-play-container{
-  display: inline-flex;
-  font-family: 'roboto', Arial, sans-serif;
-  height: 24px;
+  display: flex;
   cursor: pointer;
   font-weight: 500;
   align-items: center;
   margin-right: 20px;
-  padding-top: 2px;
+  
 }
 
 .title-splash{
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
+  display: block;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  color: #0d0d0d;
+  font-size: 22px;
   font-weight: 500;
-  max-height: 20px;
-  margin: 36px 0 24px 24px;
+  margin: 36px 0 24px 4px;
   padding-left: 4px;
   background-color: hsla(0, 0%, 92.3%, .1);
 }
@@ -104,10 +98,7 @@
 }
 
 .index-container{
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  padding-top: 10px;
   width: 100%;
   height: auto;
   min-width: 700px;
@@ -176,16 +167,7 @@
 }
 
 .row-wrapper{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  min-width: 1200px;
-  width: 100%;
-  background-color: hsla(0, 0%, 92.3%, .1);
-  height: auto;
-  border-bottom: 4px solid #dbdbdd ;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
 }
 
 .drop-email{
@@ -258,7 +240,7 @@
 }
 
 .viewtube-index{
-  display: flex;
+  display: contents;
   text-decoration: none;
   color: black;
   
@@ -274,13 +256,22 @@
   align-items: center;
 }
 
-.outer-cont{
+.outer-container{
+  display: flex;
   background-color: hsla(0, 0%, 93.3%, .4);
+  margin-top: 56px;
+  
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 1000px;
 }
 
 .video-index-splash {
-  background-color: hsla(0, 0%, 93.3%, .4);
-  display: flex;
+  display: flex;  
   flex-direction: column;
   width: 100%;
 }

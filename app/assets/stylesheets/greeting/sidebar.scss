@@ -1,11 +1,11 @@
 .side-bar-whole {
-  width: 240px;
+  width: 76px;
   padding: 12px 0;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 
   .side-bar-links {
     padding: 12px 0;
-    border-bottom: 1px solid #dcdcdc;
+    // border-bottom: 1px solid #dcdcdc;
 
     .side-bar-links-wrap {
       text-decoration: none;
@@ -60,6 +60,24 @@
     }
   }
 
+  .fa-home:before {
+    content: "\f015";
+    color: slategrey;
+  } 
+  .fa-video:before {
+    content: "\f03d";
+    color: slategrey;
+  }
+
+  .fa-github:before {
+    content: "\f09b";
+    color: slategray;
+  } 
+
+  .fa-user-circle:before {
+    content: "\f2bd";
+    color: slategray;
+  }
   .side-bar-login-box {
     width: 240px;
     height: 123px;

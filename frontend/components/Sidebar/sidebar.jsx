@@ -6,7 +6,7 @@ const SideBar = (props) => {
   let currentUser = props.currentUser;
 
   const expand = props.expand ? "" : "collapse";
-  // const modalStatus = props.modal ? "modal-show" : "modal-hide"
+  const modalStatus = props.modal ? "modal-show" : "modal-hide"
 
   const loginSection = props.expand ?
     currentUser ?

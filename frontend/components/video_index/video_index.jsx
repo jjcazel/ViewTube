@@ -22,18 +22,19 @@ class VideoIndex extends React.Component {
         video={video}
         user={user}/>
     )
-    })
+    });
+
     const title = this.props.currentUser ? 'Recommended' : 'Trending';
     return (
       <div className='video-index-splash'>
-        <div className='outer-cont'>
-          <div className='title-splash'></div>
-            <span className='title-splash'>{title}</span>
-            <ul className='row-wrapper'>
-              {videos.slice(0, videos.length - 1)} 
-            </ul>
-          </div>
+        <div className='outer-container'>
+        <SidebarContainer/>
+          <section className='row-wrapper'>
+          <span className='title-splash'>{title}</span>
+            <div className='inner-container'>{videos.slice(0, videos.length - 1)}</div> 
+          </section>
         </div>
+      </div>
     )
   } 
 }
