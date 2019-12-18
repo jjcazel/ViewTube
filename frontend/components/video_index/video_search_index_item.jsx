@@ -32,8 +32,8 @@ const VideoSearchIndexItem = (props) => {
           <div className='views-search'>{video.views} views</div>
           <div className='date-index-search'>{<LastSeen video={video} />}</div>
           <br/>
-          <div className='views-search-2'>{video.description}</div>
         </div>
+          <div className='views-search-2'>{video.description}</div>
       </section>
 
     </div>

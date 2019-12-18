@@ -112,6 +112,7 @@
 .index-item{
   cursor: pointer;
   padding: 0 8px 40px 8px;
+  max-width: min-content;
 }
 
 .dropdown{

@@ -28,7 +28,6 @@
 .username-search::after{
   content: '•';
   padding-left: 5px;
-  /* margin-right: 5px; */
 }
 
 .thumb-info-search{
@@ -61,12 +60,10 @@
   background-color: hsla(0, 0%, 93.3%, .4);
 }
   
-
 .date-index-views-cont-search{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  /* padding-left: 6px; */
   width: max-content;
 }
 
@@ -89,10 +86,13 @@
 
 .views-search-2{
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #606060;
   font-weight: 400;
   margin-left: 6px;
+  padding: 8px 0 0;
+  margin-bottom: 8px;
+  width: 300px;
 }
 
 .views-search::after{
@@ -105,7 +105,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 10px;
+  padding-top: 18px;
   width: 100%;
   background-color: hsla(0, 0%, 92.3%, .1);
   height: auto;
@@ -132,7 +132,7 @@
   font-weight: 500;
   max-height: 20px;
   padding-left: 20px;
-  padding-top: 60px;
+  padding-top: 80px;
   padding-bottom: 6px;
   background-color: hsla(0, 0%, 92.3%, .1);
 }

@@ -114,6 +114,7 @@ class VideoShow extends React.Component {
             </div>
           </div>
           <section className='content'>
+            <i className="fas fa-user-circle"></i>
             <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
             <div className="description">{video.description}</div>
           </section>
