@@ -83,7 +83,6 @@ class VideoUpload extends React.Component {
       <div className='nav'>
         <GreetingContainer />
       </div>
-      {/* <> */}
       <div className="video-upload-main">
         <div className="upload-form-details">
 
@@ -96,7 +95,7 @@ class VideoUpload extends React.Component {
             onChange={this.handleFile}
             className="choose-file-upload"/>
           <input type='text'
-            placeholder='Title'
+            placeholder='Title (required)'
             onChange={this.changeField('title')}
             className='upload-form-field'
             value={this.state.title}
@@ -106,7 +105,7 @@ class VideoUpload extends React.Component {
             id='upload-form-description'
             onChange={this.changeField('description')}
             className='upload-form-field'
-            placeholder='Description'
+            placeholder='Description (required)'
             value={this.state.description}
             rows='4'>
           </textarea>
@@ -124,8 +123,7 @@ class VideoUpload extends React.Component {
         </div>
         
         </div>
-        </>
-      // </>
+      </>
     )
   }
 

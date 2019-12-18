@@ -28,16 +28,16 @@ const SideBar = (props) => {
   const sideBarWhole =
     <aside className={`side-bar-whole ${expand}`}>
       <div className="side-bar-links">
-        <Link className="side-bar-links-wrap" to='/'>
+        {/* <Link className="side-bar-links-wrap" to='/'>
           <div className="side-bar-link-box">
             <div className="side-bar-icon">
               <i className="fas fa-home"></i>
-            </div>
+            </div> */}
             {/* <div className="side-bar-text">
               <span>Home</span>
             </div> */}
-          </div>
-        </Link>
+          {/* </div>
+        </Link> */}
 
         <Link className="side-bar-links-wrap" to='/upload'>
           <div className="side-bar-link-box">
