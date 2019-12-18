@@ -114,9 +114,14 @@ class VideoShow extends React.Component {
             </div>
           </div>
           <section className='content'>
-            <i className="fas fa-user-circle"></i>
-            <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
-            <div className="description">{video.description}</div>
+
+            <div className='creator-box'>
+            <div className="comment-input-icon">
+              <i className="fas fa-user-circle"></i>
+            </div>
+              <div className="creator">{this.props.creator.first_name} {this.props.creator.last_name}</div>
+            </div>
+              <div className="description">{video.description}</div>
           </section>
 
               {/* Comments section  */}

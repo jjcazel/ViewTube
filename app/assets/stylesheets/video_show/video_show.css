@@ -147,6 +147,12 @@
   color: #606060;
 }
 
+.creator-box{
+  display: flex;
+  flex-direction: row;
+  padding-top: 16px;
+}
+
 .description {
   box-sizing: border-box;
   font-size: 16px;
@@ -159,13 +165,12 @@
 .creator{
   box-sizing: border-box;
   display: flex;
-  padding-top: 16px;
-  padding-left: 50px;
+  padding-top: 10px;
   color: rgb(13, 13, 13);
   text-decoration-color: rgb(13, 13, 13);
   text-decoration-style: solid; 
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   color: #0d0d0d;
   font-family: Arial, sans-serif;
   margin-bottom: 12px;

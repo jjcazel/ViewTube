@@ -31,7 +31,7 @@
 }
 
 .comment-username {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: #0d0d0d;
   height: 20px;
@@ -39,7 +39,7 @@
 }
 
 .comment-body {
-  font-size: 14px;
+  font-size: 16px;
   color: #111111;
   height: 30px;
 }

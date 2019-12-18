@@ -28,7 +28,7 @@ class VideoIndex extends React.Component {
     return (
       <div className='video-index-splash'>
         <div className='outer-container'>
-        <SidebarContainer/>
+          <SidebarContainer/>
           <section className='row-wrapper'>
           <span className='title-splash'>{title}</span>
             <div className='inner-container'>{videos.slice(0, videos.length)}</div> 
