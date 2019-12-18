@@ -33,7 +33,7 @@ class VideoSearchIndex extends React.Component {
       <section>
         <div className='video-index'>
           <div className='outer-container-2'>
-            <SidebarContainer />
+            <div className="side-bar-whole-2"><SidebarContainer /></div>
             <div className='index-container-search'>
               <div className='search-splash-top'>{`Search Results for "${this.props.search}"`}</div>
               <ul className='row-wrapper-search'>

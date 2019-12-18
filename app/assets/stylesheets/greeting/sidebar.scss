@@ -1,6 +1,6 @@
 .side-bar-whole {
-  width: 76px;
-  padding: 36px 0;
+  width: 72px;
+  padding: 6px 0;
   background-color: #ffffff;
 
   .side-bar-links {
@@ -13,8 +13,8 @@
       text-decoration: none;
       
       .side-bar-link-box {
-        padding: 0 34px;
-        height: 80px;
+        padding: 16px 0 14px;
+        height: 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -49,7 +49,7 @@
             font-size: 12px;
             padding-top: 16px;
             text-align: center;
-            padding-left: 10px;
+            padding-left: 18px;
           }
         }
       }
@@ -67,38 +67,40 @@
     }
   }
 
+  
+
   .fa-home:before {
     content: "\f015";
     color: slategrey;
     font-size: x-large;
-    padding-left: 10px;
+    padding-left: 18px;
   } 
   .fa-video:before {
     content: "\f03d";
     color: slategrey;
     font-size: larger;
-    padding-left: 10px;
+    padding-left: 18px;
   }
 
   .fa-linkedin:before {
     content: "\f08c";
     color: steelblue;
     font-size: x-large;
-    padding-left: 10px;
+    padding-left: 18px;
   }
 
   .fa-github:before {
     content: "\f09b";
     color: slategray;
     font-size: x-large;
-    padding-left: 10px;
+    padding-left: 18px;
   } 
 
   .fa-user-circle:before {
     content: "\f2bd";
     color: slategray;
     font-size: x-large;
-    padding-left: 10px;
+    padding-left: 18px;
   }
 
   .side-bar-login-box {

@@ -12,6 +12,11 @@
   max-width: none;
 }
 
+.side-bar-whole-2 {
+    background-color: #ffffff;
+    margin-top: 56px;
+}
+
 .username-search{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
