@@ -5,16 +5,19 @@
 
   .side-bar-links {
     padding: 12px 0;
-    // border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    flex-direction: column;
 
     .side-bar-links-wrap {
       text-decoration: none;
       
       .side-bar-link-box {
         padding: 0 24px;
-        height: 40px;
+        height: 80px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
         cursor: pointer;
 
         .side-bar-icon {
@@ -37,12 +40,12 @@
           font-family: 'Roboto', sans-serif;
           color: #0d0d0d;
           margin-right: 24px;
-          // width: 120px;
           height: 21px;
-          // height: 18px; // selected;
+          
 
           span {
-            font-size: 14px;
+            font-size: 12px;
+            padding-top: 16px;
           }
         }
       }
@@ -63,21 +66,32 @@
   .fa-home:before {
     content: "\f015";
     color: slategrey;
+    font-size: x-large;
   } 
   .fa-video:before {
     content: "\f03d";
     color: slategrey;
+    font-size: larger;
+  }
+
+  .fa-linkedin:before {
+    content: "\f08c";
+    color: steelblue;
+    font-size: x-large;
   }
 
   .fa-github:before {
     content: "\f09b";
     color: slategray;
+    font-size: x-large;
   } 
 
   .fa-user-circle:before {
     content: "\f2bd";
     color: slategray;
+    font-size: x-large;
   }
+
   .side-bar-login-box {
     width: 240px;
     height: 123px;
