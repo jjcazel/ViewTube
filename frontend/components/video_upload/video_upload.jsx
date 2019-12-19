@@ -44,7 +44,6 @@ class VideoUpload extends React.Component {
       if (file.kind === 'file') file = file.getAsFile();
 
       if (file.type.slice(0, 5) !== 'video') {
-        debugger
         this.props.addUploadErrors(['Please choose a video file.']);
     } else {
       this.uploadFile(file);
@@ -63,7 +62,7 @@ class VideoUpload extends React.Component {
 
   submit(e) {
     e.preventDefault();
-    if (this.state.title === '' ||
+    if (this.state.title !== '' ||
       this.state.description === '' ||
       this.state.file === null ||
       this.state.loading) {
@@ -75,9 +74,9 @@ class VideoUpload extends React.Component {
     test.append('title', this.state.title);
     test.append('description', this.state.description);
     test.append('video', this.state.video);
-    debugger
+
     this.props.createVideo(test).then(action => {
-      this.props.history.push(`/videos/${Object.keys(action.video)[0]}`)}, error => this.props.addUploadErrors(error));
+      this.props.history.push(`/videos/${Object.keys(action.video)[0]}`)});
   }
 
   render() {
@@ -93,6 +92,7 @@ class VideoUpload extends React.Component {
 
               <form id='upload' className="post-file-form">
                 <label for='file-upload' class='custom-file-upload'>SELECT FILE</label>
+
                 <input
                   id='file-upload'
                   autoComplete='false'
@@ -106,6 +106,7 @@ class VideoUpload extends React.Component {
                   value={this.state.title}
                   id='upload-form-title'>
                 </input>
+
                 <textarea type='text'
                   id='upload-form-description'
                   onChange={this.changeField('description')}
@@ -123,6 +124,9 @@ class VideoUpload extends React.Component {
                   <button onClick={this.cancelUpload}
                     id='cancel'
                     className="cancel">CANCEL</button>
+                <div className='upload-errors'>
+                  {this.props.uploadErrors}
+                </div>
                 </div>
               </form>
             </div>

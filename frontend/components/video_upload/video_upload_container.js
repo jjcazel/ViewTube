@@ -6,7 +6,7 @@ import {
 import VideoUpload from './video_upload';
 
 const msp = state => {
-  const uploadErrors = state.errors.videos;
+  const uploadErrors = state.errors.video;
 
   return {
     uploadErrors,
