@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container'
 import { withRouter } from 'react-router-dom'
+import SidebarContainer from '../Sidebar/sidebar_container';
 
 class VideoUpload extends React.Component {
 
@@ -86,44 +87,47 @@ class VideoUpload extends React.Component {
         <GreetingContainer />
       </div>
       <div className="video-upload-main">
-        <div className="upload-form-details">
+      <div className="side-bar-whole-2"><SidebarContainer /></div>
+        <div className='other-div'>
+            <div className="upload-form-details">
 
-        <form id='upload' className="post-file-form">
-          <label for='file-upload' class='custom-file-upload'>SELECT FILE</label>
-          <input
-            id='file-upload'
-            autoComplete='false'
-            type='file' 
-            onChange={this.handleFile}
-            className="choose-file-upload"/>
-          <input type='text'
-            placeholder='Title (required)'
-            onChange={this.changeField('title')}
-            className='upload-form-field'
-            value={this.state.title}
-            id='upload-form-title'>
-          </input>
-          <textarea type='text'
-            id='upload-form-description'
-            onChange={this.changeField('description')}
-            className='upload-form-field'
-            placeholder='Description (required)'
-            value={this.state.description}
-            rows='4'>
-          </textarea>
-        
-  
-          <div className="upload-buttons">
-            <button className="next"
-              onClick={this.submit}
-              className="upload-submit">SUBMIT</button>
-            <button onClick={this.cancelUpload}
-              id='cancel'
-              className="cancel">CANCEL</button>
-          </div>
-        </form>
+              <form id='upload' className="post-file-form">
+                <label for='file-upload' class='custom-file-upload'>SELECT FILE</label>
+                <input
+                  id='file-upload'
+                  autoComplete='false'
+                  type='file'
+                  onChange={this.handleFile}
+                  className="choose-file-upload" />
+                <input type='text'
+                  placeholder='Title (required)'
+                  onChange={this.changeField('title')}
+                  className='upload-form-field'
+                  value={this.state.title}
+                  id='upload-form-title'>
+                </input>
+                <textarea type='text'
+                  id='upload-form-description'
+                  onChange={this.changeField('description')}
+                  className='upload-form-field'
+                  placeholder='Description (required)'
+                  value={this.state.description}
+                  rows='4'>
+                </textarea>
+
+
+                <div className="upload-buttons">
+                  <button className="next"
+                    onClick={this.submit}
+                    className="upload-submit">SUBMIT</button>
+                  <button onClick={this.cancelUpload}
+                    id='cancel'
+                    className="cancel">CANCEL</button>
+                </div>
+              </form>
+            </div>
         </div>
-        
+          
         </div>
       </>
     )

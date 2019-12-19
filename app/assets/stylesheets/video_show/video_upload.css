@@ -1,6 +1,5 @@
 .video-upload-main{
   display: flex;
-  justify-content: center;
   width: 100%;
   min-height: -webkit-fill-available;
   background: transparent;
@@ -8,11 +7,15 @@
   background-color: hsla(0, 0%, 93.3%, .4);
 }
 
+.other-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .upload-form-details{
   width: 90%;
   height: 385px;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   padding: 15px;
   margin: 14px;
