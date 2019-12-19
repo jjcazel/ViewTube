@@ -19,10 +19,12 @@ class VideoShow extends React.Component {
     this.props.fetchVideo(this.props.match.params.videoId);
     if (this.props.video){ 
       this.props.addView(this.props.match.params.videoId); 
+      window.scrollTo(0, 0);
     }
   }
 
   componentDidUpdate(prevProps){
+    window.scrollTo(0, 0);
     if (parseInt(prevProps.match.params.videoId) !== parseInt(this.props.match.params.videoId)) {
       console.log("video updating")
       this.props.fetchVideo(this.props.match.params.videoId);
