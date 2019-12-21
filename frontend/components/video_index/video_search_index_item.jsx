@@ -16,14 +16,14 @@ const VideoSearchIndexItem = (props) => {
   }
 
   return (
-    <div onClick={handleClick} className="index-item-search">
+    <main onClick={handleClick} className="index-item-search">
 
       <video width="250" height="140" className='thumbnail-2-search' >
         <source src={video.videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <section className="thumb-info-search">
+      <div className="thumb-info-search">
         <h1 className='thumb-title-search'>{video.title}
         </h1>
         <div className='date-index-views-cont-search'>
@@ -34,9 +34,9 @@ const VideoSearchIndexItem = (props) => {
           <br/>
         </div>
           <div className='views-search-2'>{video.description}</div>
-      </section>
+      </div>
 
-    </div>
+    </main>
   )
 
 }

@@ -34,12 +34,12 @@ class VideoSearchIndex extends React.Component {
         <div className='video-index'>
           <div className='outer-container-2'>
             <div className="side-bar-whole-2"><SidebarContainer /></div>
-            <div className='index-container-search'>
-              <div className='search-splash-top'>{`Search Results for "${this.props.search}"`}</div>
               <ul className='row-wrapper-search'>
+                <div className='index-container-search'>
+                <div className='search-splash-top'>{`Search Results for "${this.props.search}"`}</div>
                 <li className="vid-search">{videos.slice(0, videos.length)}</li>
-              </ul>
-            </div> 
+              </div> 
+            </ul>
           </div>
         </div>
       </section>

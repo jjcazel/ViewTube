@@ -41,16 +41,25 @@ class Dropdown extends React.Component {
         {this.state.displayMenu ? (
           <ul className='dropdown'>
             <div className="drop-top">
-              <li className="drop-name">{this.props.currentUser.first_name} {this.props.currentUser.last_name}</li>
-              <li className="drop-email">{this.props.currentUser.email}</li>
+              <div className="comment-input-icon">
+                <i className="fas fa-user-circle"></i>
+              </div>
+              <div className="user-drop-info">
+                <li className="drop-name">{this.props.currentUser.first_name} {this.props.currentUser.last_name}</li>
+                <li className="drop-email">{this.props.currentUser.email}</li>
+              </div>
+              
             </div>
-              <li className="signout"><i class="fab fa-linkedin"></i><a className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/" 
-                onClick='https://www.linkedin.com/in/jared-cazel-ab84a695/'>Jared's LinkedIn</a></li>
-              <li className="signout"><i class="fab fa-github-square"></i><a className="git" target="_blank" href="https://github.com/jjcazel" 
-                onClick='https://github.com/jjcazel' >Jared's GitHub</a></li> 
-              <li className="signout"><i class="fas fa-folder-open"></i><a className="git" target="_blank" href="https://jaredcazel.com" 
-                onClick='https://jaredcazel.com'>Jared's Site</a></li> 
-              <li className="signout" onClick={this.logout}><strong>Sign out</strong></li>
+            <div className="drop-bottom">
+                <li className="signout"><i class="fab fa-linkedin"></i><a className="linked" target="_blank" href="https://www.linkedin.com/in/jared-cazel-ab84a695/"
+                  onClick='https://www.linkedin.com/in/jared-cazel-ab84a695/'>Jared's LinkedIn</a></li>
+                <li className="signout"><i class="fab fa-github-square"></i><a className="git" target="_blank" href="https://github.com/jjcazel"
+                  onClick='https://github.com/jjcazel' >Jared's GitHub</a></li>
+                <li className="signout"><i class="fas fa-folder-open"></i><a className="git" target="_blank" href="https://jaredcazel.com"
+                  onClick='https://jaredcazel.com'>Jared's Site</a></li>
+                <li className="signout" onClick={this.logout}><i class="far fa-sign-out"></i><strong>Sign out</strong></li>
+            </div>
+              
           </ul>
         ) :
             (

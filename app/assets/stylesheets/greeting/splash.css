@@ -16,14 +16,14 @@
 
 .signin {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row;
   justify-content: center;
-  background-color: white;
+  background-color: white; */
   align-items: center;
   border-radius: 3px;
   border: 1px solid rgb(37, 108, 221);
   color: #065FD4;
-  min-width: 81px;
+  /* min-width: 81px; */
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
@@ -97,16 +97,24 @@
   font-size: 10vw;
 }
 
-.index-container{
+/* .index-container{
   justify-content: center;
   width: 100%;
   height: auto;
   min-width: 700px;
   background-color: hsla(0, 0%, 92.3%, .1);
-}
+} */
 
 .thumbnail-2{
   object-fit: fill;
+  
+}
+
+.aspect-ratio-container {
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
 }
 
 .index-item{
@@ -122,7 +130,7 @@
   align-items: center;
   position: absolute;
   right: 40px;
-  width: 250px;
+  width: 300px;
   height: auto;
   border: 1px solid #dbdbdd;
   padding-top: 1px;
@@ -172,37 +180,47 @@
 }
 
 .drop-email{
-  text-align: center;
+  /* text-align: center;
   height: 16px;
   width: 100%;
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 14px; */
 }
 
 .drop-name {
-  text-align: center;
+  /* text-align: center;
   height: 16px;
   width: 100%;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'Roboto', Arial, sans-serif; */
+  font-size: 18px;
   font-weight: 500;
   padding-bottom: 4px;
 }
+
 .drop-top{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  border-bottom: 1px solid #dbdbdd;
+}
+
+.drop-bottom {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 16px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #dbdbdd;
+  padding: 8px 0;
 }
 
 .signout{
   display: flex;
-  justify-content: space-around;
-  width: 100% !important;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  /* width: 100% !important; */
+  align-items: center;
+  height: 40px;
+  padding: 0 36px 0 16px;
   font-size: 16px;
   text-decoration: none;
   color: #222222;
@@ -210,7 +228,7 @@
 
 .git, .linked {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   text-decoration: none;
   color: #222222;
 }
@@ -232,7 +250,7 @@
 .play-button {
   height: 1.1rem;
   max-width: auto;
-  padding-right: 3px;
+  padding: 3px 6px;
 }
 
 .icon-button{
@@ -279,19 +297,22 @@
 
 .fa-linkedin:before {
     content: "\f08c";
-    color: steelblue;
+    color: #909090;
+    padding-right: 5px;
 }
 
 .fa-github-square:before {
     content: "\f092";
-    color: black;
+    color: #909090;
     padding-right: 5px;
+    
 }
 
 .fa-folder-open:before {
     content: "\f07c";
-    color: burlywood;
+    color: #909090;
     padding-right: 7px;
+    
 }
 
 .strong{
