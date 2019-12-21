@@ -15,13 +15,18 @@ class VideoSearchIndex extends React.Component {
     this.props.fetchVideos({ search: this.props.search }).then(() => {
       this.props.fetchUsers()
       // .then(this.props.history.push('/'))
+      window.scrollTo(0, 0);
     });
+  }
+
+  componentDidUpdate(){
+    window.scrollTo(0, 0);
   }
 
   render() {
     const videos = this.props.videos.map(video => {
     const user = this.props.users[video.creatorId];
-
+    
     return (
       <VideoSearchIndexItem
         key={video.id}
@@ -37,7 +42,14 @@ class VideoSearchIndex extends React.Component {
               <ul className='row-wrapper-search'>
                 <div className='index-container-search'>
                 <div className='search-splash-top'>{`Search Results for "${this.props.search}"`}</div>
-                <li className="vid-search">{videos.slice(0, videos.length)}</li>
+                {videos.length > 0 ? (
+                  videos
+                ) : (
+                    <main className="search-index-no-results">
+                      <p className="no-result-message">Sorry! We can't seem to find any videos that match "{this.props.search}"</p>
+                    </main>
+                  )}  
+                
               </div> 
             </ul>
           </div>

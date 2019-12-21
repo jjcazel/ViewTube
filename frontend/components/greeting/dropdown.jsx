@@ -55,9 +55,9 @@ class Dropdown extends React.Component {
                   onClick='https://www.linkedin.com/in/jared-cazel-ab84a695/'>Jared's LinkedIn</a></li>
                 <li className="signout"><i class="fab fa-github-square"></i><a className="git" target="_blank" href="https://github.com/jjcazel"
                   onClick='https://github.com/jjcazel' >Jared's GitHub</a></li>
-                <li className="signout"><i class="fas fa-folder-open"></i><a className="git" target="_blank" href="https://jaredcazel.com"
+                <li className="signout"><i class="fas fa-folder-open"></i><a className="folder" target="_blank" href="https://jaredcazel.com"
                   onClick='https://jaredcazel.com'>Jared's Site</a></li>
-                <li className="signout" onClick={this.logout}><i class="far fa-sign-out"></i><strong>Sign out</strong></li>
+                <li className="signout" onClick={this.logout}><i class="fas fa-sign-out-alt"></i><strong className="git">Sign out</strong></li>
             </div>
               
           </ul>

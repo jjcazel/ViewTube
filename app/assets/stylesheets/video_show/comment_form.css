@@ -1,9 +1,9 @@
 .comment-item {
   padding: 3px 0 0 0;
-  height: 55px;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 13px;
+  margin-bottom: 18px;
 }
 
 .comment-item-icon {
@@ -75,13 +75,11 @@
 
 
 .comment-form {
-  /* border: 1px solid #065fd4; */
   margin: 24px 0 32px;
   height: 116px;
 }
 
 .comments-count {
-  /* border-bottom: 1px solid green; */
   margin: 0 0 24px;
   height: 23px;
 
@@ -90,9 +88,7 @@
 p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  /* color: #0D0D0D; */
 }
-
 
 .comment-input {
   padding: 0 0 8px;
@@ -120,13 +116,6 @@ i {
   color: white;
   transform: scale(2);
 }
-
-/* p {
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-} */
-
 
 .comment-input-text {
   font-family: 'Roboto', sans-serif;

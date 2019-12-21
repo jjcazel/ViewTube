@@ -87,7 +87,7 @@
 }
 
 input[type="file"] {
-    display: none;
+  display: none;
 }
 
 .custom-file-upload{
@@ -99,7 +99,6 @@ input[type="file"] {
   cursor: pointer;
   border-radius: 2px;
   padding: 10px 16px;
-  
   background-color: #1363D1 ;
   color: #ffffff;
 }
