@@ -16,16 +16,16 @@
 
 .signin {
   display: flex;
-  /* flex-direction: row;
+  flex-direction: row;
   justify-content: center;
-  background-color: white; */
+  background-color: white;
   align-items: center;
   border-radius: 3px;
   border: 1px solid rgb(37, 108, 221);
   color: #065FD4;
-  /* min-width: 81px; */
+  min-width: 105px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   letter-spacing: .25px;
   line-height: 20px;
@@ -34,7 +34,7 @@
   padding-bottom: 5px;
   padding-left: 11px;
   padding-right: 11px;
-  height: 28px;
+  height: 40px;
 }
 
 .menu{
@@ -124,10 +124,10 @@
 }
 
 .dropdown{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   position: absolute;
   right: 40px;
   width: 300px;
@@ -137,7 +137,7 @@
   padding-bottom: 1px;
   background-color:
    rgba(255, 255, 255, 0.98);
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .signout:hover {
@@ -208,8 +208,8 @@
 
 .drop-bottom {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   padding: 8px 0;
 }
 

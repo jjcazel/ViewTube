@@ -76,7 +76,8 @@
   object-fit: contain;
   width: 100%;
   height: auto;
-  max-height: 72vh;
+  max-height: 74vh;
+  background-color: black;
 }
 
 .thumb-info{

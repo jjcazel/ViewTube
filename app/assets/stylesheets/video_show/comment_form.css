@@ -3,7 +3,7 @@
   height: 55px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 13px;
 }
 
 .comment-item-icon {
@@ -28,6 +28,7 @@
   font-family: 'Roboto', sans-serif;
   flex: 1;
   padding: 0 0 0 10px;
+  height: fit-content;
 }
 
 .comment-username {
@@ -35,13 +36,15 @@
   font-weight: 700;
   color: #0d0d0d;
   height: 20px;
-  margin-bottom: 2px;
+  margin-bottom: 8px;
 }
 
 .comment-body {
   font-size: 16px;
   color: #111111;
-  height: 30px;
+  height: fit-content;
+  line-height: 20px;
+  font-weight: 400;;
 }
 
 .comment-delete {
