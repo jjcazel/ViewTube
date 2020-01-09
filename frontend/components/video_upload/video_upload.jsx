@@ -24,6 +24,7 @@ class VideoUpload extends React.Component {
     return e => this.setState({ [field]: e.target.value });
   }
 
+
   cancelUpload() {
     this.setState({
       video: null,
@@ -62,7 +63,7 @@ class VideoUpload extends React.Component {
 
   submit(e) {
     e.preventDefault();
-    if (this.state.title !== '' ||
+    if (this.state.title === '' ||
       this.state.description === '' ||
       this.state.file === null ||
       this.state.loading) {
@@ -126,6 +127,8 @@ class VideoUpload extends React.Component {
                     className="cancel">CANCEL</button>
                 <div className='upload-errors'>
                   {this.props.uploadErrors}
+                  {this.props.otherErrors}
+                  {this.submit}
                 </div>
                 </div>
               </form>

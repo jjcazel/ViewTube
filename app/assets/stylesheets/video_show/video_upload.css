@@ -86,6 +86,16 @@
   letter-spacing: .25px;
 }
 
+.upload-submit:visited{
+  background-color: rgb(95, 163, 226);
+  border: 3px solid rgb(37, 108, 221)
+}
+
+.upload-submit:focus{
+  background-color: rgb(95, 163, 226);
+  border: 3px solid rgb(37, 108, 221)
+}
+
 input[type="file"] {
   display: none;
 }
