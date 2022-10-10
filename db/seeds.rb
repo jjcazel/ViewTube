@@ -9,7 +9,7 @@ require 'open-uri'
 
 User.destroy_all
 Demo = User.create!(email: 'Demo@gmail.com', password: 'password1', first_name: "Demo", last_name: "user" )
-fred = User.create!(email: 'freddy@gmail.com', password: 'password', first_name: "Fred", last_name: "Armisen" )
+Fred = User.create!(email: 'freddy@gmail.com', password: 'password', first_name: "Fred", last_name: "Armisen" )
 Bob = User.create!(email: 'bobby@gmail.com', password: 'password2', first_name: "Robert", last_name: "Deniro" )
 Casey = User.create!(email: 'casey@gmail.com', password: 'password5', first_name: "Casey", last_name: "Neistat" )
 Amie = User.create!(email: 'amie@gmail.com', password: 'password3', first_name: "Amie", last_name: "Brehm" )
@@ -21,7 +21,7 @@ v1 = Video.create!(title: "Dah, dah ,dah!!", description: " Dramatic Chipmunk (v
 file = open('https://viewtube2-dev.s3.amazonaws.com/dramatic_chipmunk360p.mp4')
 v1.video.attach(io: file, filename: 'dramatic_chipmunk360p.mp4')
 
-v2 = Video.create!(title: "Developers", description: "Disgusting, sweaty man screaming...", creator_id: fred.id)
+v2 = Video.create!(title: "Developers", description: "Disgusting, sweaty man screaming...", creator_id: Fred.id)
 file = open('https://viewtube2-dev.s3.amazonaws.com/steve_ballmer_developers360p.mp4')
 v2.video.attach(io: file, filename: 'steve_ballmer_developers360p.mp4')
 

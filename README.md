@@ -2,7 +2,7 @@
 
 This is my full-stack application that I created to mirror the functionality of YouTube! It has many great features such as complete user creation and authentication, full video playback and storage using Amazon Web Services, the ability for a user to like or dislike a video, a user can also upload their own video, search the videos or comment on a video.
 
-I started from scratch using Ruby on Rails on the backend and a React-Redux implementation for the front-end routes and setup. I am using a PostGresSQL databse. Please check out some of the features. Check out the live site [here](https://viewtube1.herokuapp.com/#/). Also, check out the wiki for the [schema](https://github.com/jjcazel/ViewTube/wiki/ViewTube-Schema), [sample slice of state](https://github.com/jjcazel/ViewTube/wiki/Sample-State), [frontend routes](https://github.com/jjcazel/ViewTube/wiki/Frontend-Routes), and [backend routes](https://github.com/jjcazel/ViewTube/wiki/Backend-Routes).
+I started from scratch using Ruby on Rails on the backend and a React-Redux implementation for the front-end routes and setup. I am using a PostGresSQL databse. Please check out some of the features. Check out the live site [here](https://viewtube1.herokuapp.com). Also, check out the wiki for the [schema](https://github.com/jjcazel/ViewTube/wiki/ViewTube-Schema), [sample slice of state](https://github.com/jjcazel/ViewTube/wiki/Sample-State), [frontend routes](https://github.com/jjcazel/ViewTube/wiki/Frontend-Routes), and [backend routes](https://github.com/jjcazel/ViewTube/wiki/Backend-Routes).
 
 # Features
 ### User authentication
