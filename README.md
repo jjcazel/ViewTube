@@ -1,4 +1,5 @@
-# ViewTube
+# ▶️ ViewTube
+
 
 ## Introduction
 Welcome to **ViewTube**! This project is a tribute to YouTube, capturing its essence while integrating my enhancements. It stands as the capstone project of my coding boot camp, marking both the culmination of my initial journey into software development and the beginning of a deep-seated passion for building software. Built from the ground up, it demonstrates my evolution as a developer, featuring user authentication, video playback, commenting, and more, utilizing Ruby on Rails, React-Redux, and PostgreSQL.
