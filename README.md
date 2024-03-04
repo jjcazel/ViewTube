@@ -1,57 +1,60 @@
-# Welcome to ViewTube!
+# ▶️ ViewTube
 
-This is my full-stack application that I created to mirror the functionality of YouTube! It has many great features such as complete user creation and authentication, full video playback and storage using Amazon Web Services, the ability for a user to like or dislike a video, a user can also upload their own video, search the videos or comment on a video.
 
-I started from scratch using Ruby on Rails on the backend and a React-Redux implementation for the front-end routes and setup. I am using a PostGresSQL databse. Please check out some of the features. Check out the live site [here](https://viewtube1.herokuapp.com). Also, check out the wiki for the [schema](https://github.com/jjcazel/ViewTube/wiki/ViewTube-Schema), [sample slice of state](https://github.com/jjcazel/ViewTube/wiki/Sample-State), [frontend routes](https://github.com/jjcazel/ViewTube/wiki/Frontend-Routes), and [backend routes](https://github.com/jjcazel/ViewTube/wiki/Backend-Routes).
+## Introduction
+Welcome to **ViewTube**! This project is a tribute to YouTube, capturing its essence while integrating my enhancements. It stands as the capstone project of my coding boot camp, marking both the culmination of my initial journey into software development and the beginning of a deep-seated passion for building software. Built from the ground up, it demonstrates my evolution as a developer, featuring user authentication, video playback, commenting, and more, utilizing Ruby on Rails, React-Redux, and PostgreSQL.
 
-# Features
-### User authentication
-My app features complete user creation and authentication features that use modern Bcrypt technology. It compares password digests and session tokens to ensure secure login by a user and define a logged-in user. I used API requests to send user info to the backend User and Sessions controllers to validate a new session for a user. Once validated, the frontend uses Redux reducers to create the state for my front-end components.
+## Live Demo
+<!--Check out ViewTube live [here](https://viewtube1.herokuapp.com).--> Dive deeper into the architecture and features through our detailed wiki pages:
+- [ViewTube Schema](https://github.com/jjcazel/ViewTube/wiki/ViewTube-Schema)
+- [Sample State](https://github.com/jjcazel/ViewTube/wiki/Sample-State)
+- [Frontend Routes](https://github.com/jjcazel/ViewTube/wiki/Frontend-Routes)
+- [Backend Routes](https://github.com/jjcazel/ViewTube/wiki/Backend-Routes)
 
-### Video Playback
-Going through the process of setting up and using an Amazon Web Services S3 account for video hosting was a valuable learning experience as one can often hit many snags in this process as I did. I had to shape and map the state of my videos in certain way in my Right Sidebar container in order to keep the large video playing in the main show pane from being listed in the video list in the right sidebar.
+## Core Features
 
-``` javascript
-const msp = (state, ownProps) => {
-    return {
-        videos: Object.values(state.entities.videos).filter(video => {
-            return video.id !== Number(ownProps.match.params.videoId)
-        }),
-        users: state.entities.users,
-        currentUserId: state.session.id
-    }
-}
-                          
+### User Authentication
+Implemented robust user creation and authentication, leveraging Bcrypt for secure password handling and session management.
+
+### Video Playback & Storage
+Developed a comprehensive video playback feature, utilizing AWS S3 for video hosting, enabling users to upload, store, and view content seamlessly.
+
+### Interactive User Interface
+Crafted a highly interactive UI, closely mirroring Google's sign-in and account creation forms, to provide a familiar and intuitive user experience.
+
+### Video Search
+Built a dynamic search functionality, allowing users to discover videos by titles or descriptions, enhancing content discoverability.
+
+```ruby
+def search_scores(search_params)
+  search_words = search_params.downcase.split(' ')
+  scores = {}
+
+  @videos.each do |video|
+    score = 0
+    title = video.title.downcase
+    desc = video.description.downcase
+
+    search_words.each { |word| score += 1 if title.include?(word) || desc.include?(word) }
+    scores[video.id] = score
+  end
+
+  scores
+end
+                    
 ```
 ### User Interface
-I made great effort to clone the Google sign-in and account creation forms as close as I could, paying meticulous attention to every detail. My CSS skills greatly improved throughout this project and I feel much more confident styling UIs now. Take a look...
+I made a great effort to clone the Google sign-in and account creation forms as closely as I could, paying meticulous attention to every detail. My CSS skills greatly improved throughout this project and I feel more confident styling UIs now. Take a look!
 
 ![signin](/app/assets/images/ViewTube_signin_450p.png) 
 ![Google signin](/app/assets/images/Google_sign_450p.png)
 
-### Video Search
-I used the score keeping method for searching for videos by title or description. In the Rails controller I wrote the function below to keep track of any video title or description that has a match to the search params that were sent back from the front end.
+## Additional Highlights
 
-```ruby
-    def search_scores(search_params)
-    search_words = search_params.downcase.split(' ')
-    scores = {}
+- Enabled users to **comment on videos** and **express their reactions** through likes/dislikes, fostering a vibrant community interaction.
+- **Optimized CSS styling** to create a clean and modern design, ensuring a pleasant browsing experience.
 
-    @videos.map do |video|
-      score = 0
-      title = video.title.downcase
-      desc = video.description.downcase
+## Conclusion
 
+ViewTube represents a significant milestone in my journey as a developer, encapsulating the skills and knowledge I've gained. It's a platform built with dedication to enhance user engagement and content sharing. I invite you to explore ViewTube and share your feedback!
 
-      search_words.each { |word| score += 1 if title.include?("#{word}") || desc.include?("#{word}") }
-
-      scores[video.id] = score
-    end
-
-    scores
-
-  end
-```
-
-## More Features!
-I also implemented the ability for a logged-in user to comment on videos, as well as like/dislike a video. A logged-in user can also upload their own videos! All this includes meticulous CSS styling creating a clean and pristine design for my completed site! Enjoy!
