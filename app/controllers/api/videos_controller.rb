@@ -8,7 +8,7 @@ class Api::VideosController < ApplicationController
       @videos = @videos.select { |video| scores[video.id] > 0 }
     end
 
-    render 'api/videos/index.json.jbuilder'
+    render 'api/videos/index'
 
   end
 
