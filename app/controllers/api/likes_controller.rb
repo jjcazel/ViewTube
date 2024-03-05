@@ -1,10 +1,8 @@
 class Api::LikesController < ApplicationController
-
   skip_before_action :verify_authenticity_token
 
   def create
     return false unless authorized_user?
-    
     process_video_like if params[:video_id] 
   end
 
@@ -13,7 +11,6 @@ class Api::LikesController < ApplicationController
   end
 
   def process_video_like
-    @json_string = 'api/videos/show.json.jbuilder'
     @video = Video.find_by(id: params[:video_id])
     @like = Like.find_by(
       video_id: @video.id,
@@ -32,26 +29,21 @@ class Api::LikesController < ApplicationController
   end
 
   def new_like
-   
-    @like = @video.likes.new
-    @like.creator = current_user
-    @like.is_dislike = true?(like_params[:is_dislike])
-
+    @like = @video.likes.new(creator: current_user, is_dislike: true?(like_params[:is_dislike]))
     if @like.save
-      render @json_string
+      render 'api/videos/show', status: :created
     else
-      render json: @like.errors.full_messages, status: 422
+      render json: @like.errors.full_messages, status: :unprocessable_entity
     end
   end
 
   def update_like
     # update the record if the user has a like on this record
     ## and the is_dislike param does not match the curent record value
-
     @like.is_dislike = true?(like_params[:is_dislike])
 
     if @like.save
-      render @json_string
+      render 'api/videos/show'
     else
       render json: @like.errors.full_messages, status: 422
     end
@@ -62,7 +54,7 @@ class Api::LikesController < ApplicationController
     ## and the is_dislike param matches the curent record value
 
     if @like.delete  
-      render @json_string
+      render 'api/videos/show'
     else
       render json: @like.errors.full_messages, status: 422
     end

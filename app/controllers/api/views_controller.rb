@@ -22,7 +22,7 @@ class Api::ViewsController < ApplicationController
     @video.views.count
 
     if @video.save
-      render 'api/videos/show.json.jbuilder'
+      render 'api/videos/show'
     else
       render json: @video.errors.full_messages, status: 422
     end

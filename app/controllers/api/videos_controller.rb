@@ -25,7 +25,7 @@ class Api::VideosController < ApplicationController
     @video = Video.new(video_params)
     @video.creator_id = @user.id
     if @video.save
-      render 'api/videos/show.json.jbuilder'
+      render 'api/videos/show'
     else
       render json: @video.errors.full_messages, status: 422
     end
@@ -36,7 +36,7 @@ class Api::VideosController < ApplicationController
     @user = @video.creator
     return false unless logged_in?(@user.id)
     @video.delete
-    render 'api/videos/show.json.jbuilder'
+    render 'api/videos/show'
   end
 
   private
