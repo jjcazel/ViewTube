@@ -30,3 +30,9 @@ node_modules
 bundle.js
 bundle.js.map
 credentials.yml.enc
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

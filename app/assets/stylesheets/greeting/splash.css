@@ -1,17 +1,16 @@
-.navbar-container{
+.navbar-container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  vertical-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding-left: 16px;
   padding-right: 16px;
   height: 56px;
   position: fixed;
   z-index: 3;
   width: 98.1%;
-  background-color: #ffffff;
+  background-color: #000;
 }
 
 .signin {
@@ -22,12 +21,12 @@
   align-items: center;
   border-radius: 3px;
   border: 1px solid rgb(37, 108, 221);
-  color: #065FD4;
+  color: #065fd4;
   min-width: 100px;
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
-  letter-spacing: .25px;
+  letter-spacing: 0.25px;
   line-height: 20px;
   text-decoration: none;
   padding-top: 5px;
@@ -37,52 +36,50 @@
   height: 34px;
 }
 
-.menu{
+.menu {
   display: flex;
   flex-direction: column;
   outline: none;
   max-width: 300px;
   max-height: 500px;
-  border: 1px solid 
-    var(--yt-spec-10-percent-layer);
+  border: 1px solid var(--yt-spec-10-percent-layer);
   border-top: none;
-  background: 
-    var(--yt-spec-brand-background-solid);
-
+  background: var(--yt-spec-brand-background-solid);
 }
 
-.logo-play-container{
+.logo-play-container {
   display: flex;
   cursor: pointer;
   font-weight: 500;
   align-items: center;
-  margin-right: 20px;
-  
+  height: 40px;
 }
 
-.title-splash{
+.title-splash {
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-weight: 500;
   margin: 36px 0 24px 4px;
   padding-left: 4px;
-  background-color: hsla(0, 0%, 92.3%, .1);
+  background-color: #000;
+  color: #fff;
 }
 
-.search{
+.search {
   position: static;
   width: 90%;
-  min-height: 24px; 
+  min-height: 24px;
   padding-left: 8px;
   padding-top: 3px;
   padding-bottom: 3px;
   font-weight: 300;
   border: 1px solid #cccccc;
   border-radius: 2px;
+  background-color: inherit;
 }
 
-.search-container{
+.search-container {
   display: flex;
   max-width: 640px;
   flex-direction: row;
@@ -92,22 +89,22 @@
 
 .nav-logo {
   cursor: pointer;
-  font-family: 'roboto', Arial, sans-serif;
+  font-family: "roboto", Arial, sans-serif;
   font-weight: 500;
   font-size: 10vw;
 }
 
-.thumbnail-2{
+.thumbnail-2 {
   object-fit: fill;
 }
 
-.thumb-title-2{
+.thumb-title-2 {
   display: flex;
   flex-direction: row;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.2rem;
   max-height: 3.2rem;
-  color: #0d0d0d;
+  color: #fff;
   text-decoration: none;
   padding-bottom: 7px;
   padding-top: 14px;
@@ -122,13 +119,13 @@
   position: relative;
 }
 
-.index-item{
+.index-item {
   cursor: pointer;
   padding: 0 8px 40px 8px;
   max-width: min-content;
 }
 
-.dropdown{
+.dropdown {
   position: absolute;
   right: 40px;
   width: 300px;
@@ -136,8 +133,7 @@
   border: 1px solid #dbdbdd;
   padding-top: 1px;
   padding-bottom: 1px;
-  background-color:
-  rgba(255, 255, 255, 0.98);
+  background-color: rgba(255, 255, 255, 0.98);
 }
 
 .signout:hover {
@@ -146,28 +142,28 @@
   cursor: pointer;
 }
 
-.signin-cont{
+.signin-cont {
   position: relative;
   border: 1px solid #dbdbdd;
 }
 
-.leftside{
+.leftside {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   text-align: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.vids{
+.vids {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 20px;
 }
 
-.time{
-  font-size: 16px;;
+.time {
+  font-size: 16px;
 }
 
 .vid {
@@ -175,9 +171,9 @@
   width: 320px;
 }
 
-.row-wrapper{
+.row-wrapper {
   padding-left: 20px;
-  background-color: #f2f2f2;
+  background-color: #000000;
 }
 
 .drop-name {
@@ -186,7 +182,7 @@
   padding-bottom: 4px;
 }
 
-.drop-top{
+.drop-top {
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -200,7 +196,7 @@
   padding: 8px 0;
 }
 
-.signout{
+.signout {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -211,7 +207,8 @@
   color: #222222;
 }
 
-.git, .linked {
+.git,
+.linked {
   display: flex;
   text-decoration: none;
   color: #222222;
@@ -224,49 +221,49 @@
   padding-left: 22px;
 }
 
-.upload-right{
+.upload-right {
   height: 14px;
   max-width: auto;
   padding-right: 30px;
   padding-left: 4px;
 }
 
-.hamburger{
+.hamburger {
   height: 12px;
-  max-width: auto;
   cursor: pointer;
 }
 
 .play-button {
-  height: 1.1rem;
+  height: 1.3rem;
   max-width: auto;
   padding: 3px 6px;
 }
 
-.icon-button{
+.icon-button {
   padding: 8px;
   margin-right: 16px;
 }
 
-.viewtube-index{
-  display: contents;
+.viewtube-index {
+  display: inline-block; /* Required for transform */
+  transform: scaleY(1.2); /* Scale the text vertically */
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
-.nav-left{
+.nav-left {
   display: flex;
   align-items: center;
 }
 
-.nav-right{
+.nav-right {
   display: flex;
   align-items: center;
 }
 
-.outer-container{
+.outer-container {
   display: flex;
-  background-color: hsla(0, 0%, 93.3%, .4);
+  background-color: hsla(0, 0%, 93.3%, 0.4);
   margin-top: 56px;
 }
 
@@ -278,7 +275,7 @@
 }
 
 .video-index-splash {
-  display: flex;  
+  display: flex;
   flex-direction: column;
   width: 100%;
 }
@@ -311,7 +308,7 @@
   font-size: small;
 }
 
-.strong{
+.strong {
   font-weight: 500 !important;
 }
 

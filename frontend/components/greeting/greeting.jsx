@@ -51,8 +51,8 @@ class Greeting extends React.Component {
                 <img className="hamburger" src={window.hamburgerUrl} />
               </div>
               <div className="logo-play-container">
+                <img className="play-button" src={window.playIconUrl} />
                 <Link to="/" className="viewtube-index">
-                  <img className="play-button" src={window.playIconUrl} />
                   ViewTube
                 </Link>
               </div>

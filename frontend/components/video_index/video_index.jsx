@@ -1,7 +1,6 @@
 import React from "react";
 import VideoIndexItem from "./video_index_item";
-import SidebarContainer from "../Sidebar/sidebar_container";
-// import SideBarModalContainer from '../Sidebar/sidebar_modal_container';
+import SidebarContainer from "../Sidebar/sidebar_container";;
 
 class VideoIndex extends React.Component {
   constructor(props) {

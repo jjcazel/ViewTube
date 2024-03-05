@@ -20,12 +20,12 @@
 
 .p {
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
 }
-  
+
 .comment-username-body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   flex: 1;
   padding: 0 0 0 10px;
   height: fit-content;
@@ -44,7 +44,7 @@
   color: #111111;
   height: fit-content;
   line-height: 20px;
-  font-weight: 400;;
+  font-weight: 400;
 }
 
 .comment-delete {
@@ -57,7 +57,7 @@
 }
 
 .comment-delete-btn {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   letter-spacing: 0.2px;
   color: #ffffff;
@@ -73,7 +73,6 @@
   background-color: #3c82de;
 }
 
-
 .comment-form {
   margin: 24px 0 32px;
   height: 116px;
@@ -82,11 +81,10 @@
 .comments-count {
   margin: 0 0 24px;
   height: 23px;
-
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
@@ -108,7 +106,7 @@ p {
   color: #ffffff;
 }
 
-.comment-intial{
+.comment-intial {
   color: #ffffff !important;
 }
 
@@ -118,9 +116,9 @@ i {
 }
 
 .comment-input-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
-  color: #0D0D0D;
+  color: #0d0d0d;
   width: 100%;
   outline: none;
   border: none;
@@ -147,7 +145,7 @@ i {
 }
 
 .comment-cancel-btn {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   width: 86px;
   height: 36px;
@@ -161,7 +159,7 @@ i {
 }
 
 .comment-cancel-btn:active {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   width: 86px;
   height: 36px;
@@ -175,7 +173,7 @@ i {
 }
 
 .comment-comment-btn {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   width: 101px;
   height: 36px;
@@ -188,7 +186,7 @@ i {
 }
 
 .comment-comment-btn-blue {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   width: 101px;
   height: 36px;
