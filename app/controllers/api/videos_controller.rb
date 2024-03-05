@@ -7,21 +7,17 @@ class Api::VideosController < ApplicationController
       scores = search_scores(params[:search])
       @videos = @videos.select { |video| scores[video.id] > 0 }
     end
-
-    render 'api/videos/index.json.jbuilder'
-
+    render 'api/videos/index'
   end
 
   def show 
       @video = Video.find_by(id: params[:id])
       @current_user = @current_user
-
       if @video
         render :show
       else
         render json: ['Video not found'], status: 404
       end
-
   end
 
   def create
@@ -34,20 +30,15 @@ class Api::VideosController < ApplicationController
     else
       render json: @video.errors.full_messages, status: 422
     end
-
   end
 
   def destroy
     @video = Video.find_by(id: params[:id])
     @user = @video.creator
-
     return false unless logged_in?(@user.id)
-
     @video.delete
     render 'api/videos/show.json.jbuilder'
   end
-
-
 
   private
 
@@ -64,15 +55,9 @@ class Api::VideosController < ApplicationController
       title = video.title.downcase
       desc = video.description.downcase
 
-
       search_words.each { |word| score += 1 if title.include?("#{word}") || desc.include?("#{word}") }
-
       scores[video.id] = score
     end
-
     scores
-
   end
-
-
 end
