@@ -1,5 +1,5 @@
-import { connect } from 'react-redux';
-import SideBar from './sidebar';
+import { connect } from "react-redux";
+import SideBar from "./sidebar";
 
 const msp = (state) => {
   let currentUserId = state.session.id;
@@ -9,6 +9,5 @@ const msp = (state) => {
     modal: state.ui.modal,
   };
 };
-
 
 export default connect(msp)(SideBar);

@@ -1,6 +1,6 @@
-import { connect } from 'react-redux';
-import { openModal, closeModal } from '../../actions/ui_actions';
-import SideBarModal from './sidebar_modal';
+import { connect } from "react-redux";
+import { openModal, closeModal } from "../../actions/ui_actions";
+import SideBarModal from "./sidebar_modal";
 
 const msp = (state) => {
   let currentUserId = state.session.id;

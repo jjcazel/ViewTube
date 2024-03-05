@@ -2,8 +2,8 @@ import {
   RECEIVE_VIDEO,
   RECEIVE_VIDEOS,
   RECEIVE_VIDEO_ERRORS,
-} from '../../actions/video_actions';
-import { merge } from 'lodash';
+} from "../../actions/video_actions";
+import { merge } from "lodash";
 
 const videosErrorsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -19,9 +19,7 @@ const videosErrorsReducer = (state = {}, action) => {
 
     default:
       return newState;
-
   }
-
 };
 
 export default videosErrorsReducer;

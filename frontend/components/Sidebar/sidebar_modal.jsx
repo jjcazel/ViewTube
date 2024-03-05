@@ -1,46 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const SideBarModal = (props) => {
   let currentUser = props.currentUser;
 
-  const modalStatus = props.modal ? "modal-show" : "modal-hide"
+  const modalStatus = props.modal ? "modal-show" : "modal-hide";
 
-  const loginSection = props.expand ?
-    currentUser ?
+  const loginSection = props.expand ? (
+    currentUser ? (
       <div></div>
-      :
+    ) : (
       <div className="side-bar-login-box">
         <div className="side-bar-login-text">
           <span>Sign in to like videos, comment, and subscribe.</span>
         </div>
         <div className="nav-sign-in-div">
-          <Link className='nav-sign-in' to='/signin'>
+          <Link className="nav-sign-in" to="/signin">
             <i className="fas fa-user-circle sign-in-icon"></i>
             <p className="sign-in-text">SIGN IN</p>
           </Link>
         </div>
       </div>
-    : <div></div>;
+    )
+  ) : (
+    <div></div>
+  );
 
-  const sideBarWhole =
+  const sideBarWhole = (
     <aside className={`side-bar-whole`}>
-      <div className='nav-top-left'>
-        <div
-          className='menu-bars'
-          onClick={props.closeModal}>
+      <div className="nav-top-left">
+        <div className="menu-bars" onClick={props.closeModal}>
           <i className="fas fa-bars"></i>
         </div>
 
-        <div className='nav-logo'>
-          <Link to='/' className='main-logo-text-link'>
+        <div className="nav-logo">
+          <Link to="/" className="main-logo-text-link">
             <i className="fab fa-youtube"></i>
-            <span className='nav-logo-text'>ViewTube</span>
+            <span className="nav-logo-text">ViewTube</span>
           </Link>
         </div>
       </div>
       <div className="side-bar-links">
-        <Link className="side-bar-links-wrap" to='/'>
+        <Link className="side-bar-links-wrap" to="/">
           <div className="side-bar-link-box">
             <div className="side-bar-icon">
               <i className="fas fa-home"></i>
@@ -51,7 +52,7 @@ const SideBarModal = (props) => {
           </div>
         </Link>
 
-        <Link className="side-bar-links-wrap" to='/upload'>
+        <Link className="side-bar-links-wrap" to="/upload">
           <div className="side-bar-link-box">
             <div className="side-bar-icon">
               <i className="fas fa-video"></i>
@@ -62,9 +63,11 @@ const SideBarModal = (props) => {
           </div>
         </Link>
 
-        <a href="https://https://github.com/jjcazel"
+        <a
+          href="https://https://github.com/jjcazel"
           className="side-bar-links-wrap"
-          target="_blank">
+          target="_blank"
+        >
           <div className="side-bar-link-box">
             <div className="side-bar-icon">
               <i className="fab fa-github"></i>
@@ -75,9 +78,11 @@ const SideBarModal = (props) => {
           </div>
         </a>
 
-        <a href="https://www.linkedin.com/in/jared-cazel-ab84a695/"
+        <a
+          href="https://www.linkedin.com/in/jared-cazel-ab84a695/"
           className="side-bar-links-wrap"
-          target="_blank">
+          target="_blank"
+        >
           <div className="side-bar-link-box">
             <div className="side-bar-icon">
               <i className="fab fa-linkedin"></i>
@@ -88,9 +93,11 @@ const SideBarModal = (props) => {
           </div>
         </a>
 
-        <a href="https://jaredcazel.com/"
+        <a
+          href="https://jaredcazel.com/"
           className="side-bar-links-wrap"
-          target="_blank">
+          target="_blank"
+        >
           <div className="side-bar-link-box">
             <div className="side-bar-icon">
               <i className="fas fa-user-circle"></i>
@@ -103,21 +110,23 @@ const SideBarModal = (props) => {
       </div>
 
       {loginSection}
-    </aside>;
+    </aside>
+  );
 
   // const closeModalFunc = props.closeModal;
   return (
     <div className={`modal-background ${modalStatus}`}>
       <div
         className="modal-child"
-        onClick={e => {
+        onClick={(e) => {
           e.stopPropagation();
           props.closeModal();
-        }}>
+        }}
+      >
         {sideBarWhole}
       </div>
     </div>
-  )
+  );
 };
 
 export default SideBarModal;

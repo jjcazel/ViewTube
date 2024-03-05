@@ -1,51 +1,53 @@
-import React from 'react';
-import { acct_validation, receiveErrors, demoLogin, clearErrors } from '../../actions/session_actions';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import {
+  acct_validation,
+  receiveErrors,
+  demoLogin,
+  clearErrors,
+} from "../../actions/session_actions";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const msp = state => {
+const msp = (state) => {
   let errors;
-  if(state.errors.session){
+  if (state.errors.session) {
     errors = state.errors.session;
   } else {
-  errors = [];
+    errors = [];
   }
 
   return {
-    errors
-  }
-  
-}
+    errors,
+  };
+};
 
-const mdp = dispatch => ({
-    action: (id) => dispatch(acct_validation(id)),
-    receiveErrors: (errors) => dispatch(receiveErrors(errors)),
-    demoLogin: () => dispatch(demoLogin()),
-    clearErrors: () => dispatch(clearErrors())
-})
-
+const mdp = (dispatch) => ({
+  action: (id) => dispatch(acct_validation(id)),
+  receiveErrors: (errors) => dispatch(receiveErrors(errors)),
+  demoLogin: () => dispatch(demoLogin()),
+  clearErrors: () => dispatch(clearErrors()),
+});
 
 class EmailForm extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {identifier: '', errors: ''}
-    this.update = this.update.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleClick = this.handleClick.bind(this)
+  constructor(props) {
+    super(props);
+    this.state = { identifier: "", errors: "" };
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.handleEnterPress = this.handleEnterPress.bind(this);
-    this.renderErrors = this.renderErrors.bind(this)
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
-
-  update(e){
-    this.setState({identifier: e.target.value })
+  update(e) {
+    this.setState({ identifier: e.target.value });
   }
 
-  handleClick(e){
+  handleClick(e) {
     e.preventDefault();
-    this.props.demoLogin().then(() => this.props.history.push('/'))
+    this.props.demoLogin().then(() => this.props.history.push("/"));
   }
 
   componentDidMount() {
@@ -56,71 +58,83 @@ class EmailForm extends React.Component {
     this.props.clearErrors();
   }
 
-  handleSubmit(e){
+  handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state).then(({ identifier }) => {
-      if (identifier){
+      if (identifier) {
         this.props.history.push({
-          pathname: '/login',
-          state: this.state.identifier
-        })
+          pathname: "/login",
+          state: this.state.identifier,
+        });
       } else {
-        this.props.receiveErrors( ['Couldn\'t find your Viewtube Account'])
+        this.props.receiveErrors(["Couldn't find your Viewtube Account"]);
       }
-    })
+    });
   }
 
-    handleEnterPress(e) {
-      if (e.keyCode === 13){
-        e.preventDefault();
-        this.handleSubmit(e);
-      }
+  handleEnterPress(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      this.handleSubmit(e);
     }
+  }
 
   renderErrors() {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li className='error'
-            key={`error-${i}`}>
-            <div className='error'>
-              <FontAwesomeIcon
-                    icon={faExclamationCircle}/>
-              <div className='err-message'>{error}</div>  
+          <li className="error" key={`error-${i}`}>
+            <div className="error">
+              <FontAwesomeIcon icon={faExclamationCircle} />
+              <div className="err-message">{error}</div>
             </div>
           </li>
         ))}
       </ul>
-    )
+    );
   }
 
   render() {
     return (
-      <div className='email-form'>
-          <form className='email-form-container' onSubmit={this.handleSubmit}>
-        
-          <h2 className='logo-placeholder'> <img className='logo' src={window.logoUrl} /> </h2>
-          <h2 className='other-text-email'>Sign in</h2>
+      <div className="email-form">
+        <form className="email-form-container" onSubmit={this.handleSubmit}>
+          <h2 className="logo-placeholder">
+            {" "}
+            <img className="logo" src={window.logoUrl} />{" "}
+          </h2>
+          <h2 className="other-text-email">Sign in</h2>
 
-          <h3 className='other-text-email-cont'>to continue to ViewTube</h3>
-        <div className='bottom-form'>
-          <label className='input-label'>
-            <input className='input-field-email' onKeyDown={this.handleEnterPress} type="text" placeholder="Email" 
-              value={this.state.identifier} onChange={this.update} />
-          </label>
-              
+          <h3 className="other-text-email-cont">to continue to ViewTube</h3>
+          <div className="bottom-form">
+            <label className="input-label">
+              <input
+                className="input-field-email"
+                onKeyDown={this.handleEnterPress}
+                type="text"
+                placeholder="Email"
+                value={this.state.identifier}
+                onChange={this.update}
+              />
+            </label>
+
             {this.renderErrors()}
-            <span className='plain-text'>Forgot email? Maybe just create another one... </span>
-            <button className='create-link-2' onClick={this.handleClick}>Or try the demo login!</button>
+            <span className="plain-text">
+              Forgot email? Maybe just create another one...{" "}
+            </span>
+            <button className="create-link-2" onClick={this.handleClick}>
+              Or try the demo login!
+            </button>
 
-          <span className='span-buttons'>
-            <Link className='create-link' to='/signup'>Create account</Link>
-            <input className='next' type="submit" value= "Next" />
-          </span>
-        </div>
+            <span className="span-buttons">
+              <Link className="create-link" to="/signup">
+                Create account
+              </Link>
+              <input className="next" type="submit" value="Next" />
+            </span>
+          </div>
         </form>
       </div>
-    )
+    );
   }
 }
 

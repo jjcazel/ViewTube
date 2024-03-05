@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
   // comment is pojo like below
@@ -10,18 +10,23 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
   //   video_id: 9
   // }
 
-
-  const deleteButton = currentUser ?
-    currentUser.id === comment.user_id ?
+  const deleteButton = currentUser ? (
+    currentUser.id === comment.user_id ? (
       <button
         className="comment-delete-btn"
-        onClick={() => { deleteComment(comment.id) }}
+        onClick={() => {
+          deleteComment(comment.id);
+        }}
       >
         DELETE
       </button>
-      : <div></div>
-    : <div></div>;
-  
+    ) : (
+      <div></div>
+    )
+  ) : (
+    <div></div>
+  );
+
   return (
     <div className="comment-item">
       <div className="comment-item-icon">
@@ -30,7 +35,8 @@ const CommentIndexItem = ({ comment, currentUser, deleteComment }) => {
       <div className="comment-username-body">
         <div className="comment-username">
           {/* commenter name */}
-          {`${comment.first_name} ${comment.last_name}`} {/* need to make this the user's first and last name */}
+          {`${comment.first_name} ${comment.last_name}`}{" "}
+          {/* need to make this the user's first and last name */}
         </div>
         <div className="comment-body">
           {/* comment body */}

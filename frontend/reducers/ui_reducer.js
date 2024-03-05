@@ -5,9 +5,8 @@ import {
   EXPAND_SIDEBAR,
   OPEN_MODAL,
   CLOSE_MODAL,
-  
-} from '../actions/ui_actions';
-import { merge } from 'lodash';
+} from "../actions/ui_actions";
+import { merge } from "lodash";
 
 let defaultState = {
   expand: true,
