@@ -7,7 +7,6 @@ class Api::VideosController < ApplicationController
       scores = search_scores(params[:search])
       @videos = @videos.select { |video| scores[video.id] > 0 }
     end
-    render 'api/videos/index'
   end
 
   def show 
