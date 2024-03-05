@@ -160,7 +160,6 @@ class VideoShow extends React.Component {
             </div>
 
             <div className="rightsidebar">
-              <h2 className="up-next">Up next</h2>
               <RightSidebarContainer />
             </div>
           </section>

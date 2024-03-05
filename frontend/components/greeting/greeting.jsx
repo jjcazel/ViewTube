@@ -48,7 +48,14 @@ class Greeting extends React.Component {
           <div className="navbar-container">
             <section className="nav-left">
               <div className="icon-button">
-                <img className="hamburger" src={window.hamburgerUrl} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 30 30"
+                >
+                  <path fill="white" d="M4 8h22v2H4zm0 7h22v2H4zm0 7h22v2H4z" />
+                </svg>
               </div>
               <div className="logo-play-container">
                 <img className="play-button" src={window.playIconUrl} />
@@ -70,8 +77,20 @@ class Greeting extends React.Component {
                   value={this.state.search}
                 ></input>
                 <button className="button-search">
-                  <img id="mag-glass" src={window.magGlass}></img>
-                  <img id="mag-glass-darker" src={window.magGlassDarker}></img>
+                  <button className="button-search">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      stroke-width="1"
+                    >
+                      <circle cx="10" cy="10" r="7"></circle>
+                      <line x1="14" y1="14" x2="20" y2="20"></line>
+                    </svg>
+                  </button>
                 </button>
               </form>
             </div>

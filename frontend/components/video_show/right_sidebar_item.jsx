@@ -21,7 +21,7 @@ const RightSidebarItem = (props) => {
 
   return (
     <div onClick={handleClick} className="rightsidebar-item">
-      <video width="170" height="90" className="thumbnail">
+      <video className="thumbnail">
         <source src={video.videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

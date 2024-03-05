@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  background-color: hsla(0, 0%, 93.3%, 0.4);
+  background-color: #000;
 }
 
 .video-show {
@@ -14,7 +14,7 @@
   padding-top: 22px;
   padding-right: 24px;
   min-height: 1000px;
-  background-color: hsla(0, 0%, 92.3%, 0.1);
+  background-color: #000;
   margin-top: 56px;
   min-width: 600px;
 }
@@ -30,13 +30,7 @@
   background: transparent;
   flex-wrap: wrap;
   margin-top: 60px;
-  background-color: hsla(0, 0%, 92.3%, 0.1);
-}
-
-.rightsidebar-top-vid {
-  border-bottom: 1px solid #dbdbdd;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
+  background-color: #000;
 }
 
 .rightsidebar-item {
@@ -56,19 +50,23 @@
   font-size: 18px;
   font-weight: 400;
   font-family: "roboto", sans-serif;
+  color: white;
 }
 
 .thumbnail {
-  align-items: right;
   position: relative;
   object-fit: fill;
   cursor: pointer;
+  width: 168px; /* Adjust width as needed */
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
 }
 
 .title {
   padding-top: 20px;
   padding-bottom: 8px;
-  color: #0d0d0d;
+  color: #fff;
   border-bottom: 1px solid #dbdbdd;
 }
 
@@ -78,6 +76,7 @@
   height: auto;
   max-height: 74vh;
   background-color: black;
+  border-radius: 12px;
 }
 
 .thumb-container {
@@ -98,7 +97,7 @@
 .thumb-info-right {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   font-size: 14px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
@@ -114,7 +113,7 @@
   font-family: "Roboto", sans-serif;
   line-height: 1.2rem;
   max-height: 3.2rem;
-  color: #0d0d0d;
+  color: #fff;
   text-decoration: none;
   padding-bottom: 7px;
   padding-top: 2px;

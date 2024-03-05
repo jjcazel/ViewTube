@@ -29,7 +29,7 @@
           margin-right: 24px;
           width: 24px;
           height: 24px;
-          color: #606060;
+          color: #fff;
 
           i {
             transform: scale(1.1);
@@ -54,7 +54,9 @@
       }
 
       .side-bar-link-box:hover {
-        background-color: #dcdcdc;
+        background-color: #3b3737;
+        border-radius: 10px;
+        margin: 0 4px;
       }
 
       .side-bar-link-box:active {
@@ -68,34 +70,34 @@
 
   .fa-home:before {
     content: "\f015";
-    color: slategrey;
+    color: #fff;
     font-size: x-large;
     padding-left: 18px;
   }
   .fa-video:before {
     content: "\f03d";
-    color: slategrey;
+    color: #fff;
     font-size: larger;
     padding-left: 18px;
   }
 
   .fa-linkedin:before {
     content: "\f08c";
-    color: steelblue;
+    color: white;
     font-size: x-large;
     padding-left: 18px;
   }
 
   .fa-github:before {
     content: "\f09b";
-    color: slategray;
+    color: #fff;
     font-size: x-large;
     padding-left: 18px;
   }
 
   .fa-user-circle:before {
     content: "\f2bd";
-    color: slategray;
+    color: #fff;
     font-size: x-large;
     padding-left: 18px;
   }

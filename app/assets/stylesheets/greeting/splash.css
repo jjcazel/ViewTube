@@ -17,22 +17,19 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: white;
   align-items: center;
-  border-radius: 3px;
-  border: 1px solid rgb(37, 108, 221);
-  color: #065fd4;
+  background-color: #000;
+  border-radius: 40px;
+  border: 1px solid rgb(48, 48, 48);
+  color: rgb(62, 166, 255);
   min-width: 100px;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 16px;
   cursor: pointer;
   letter-spacing: 0.25px;
   line-height: 20px;
   text-decoration: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 11px;
-  padding-right: 11px;
+  padding: 5px 11px 5px 11px;
   height: 34px;
 }
 
@@ -52,7 +49,6 @@
   cursor: pointer;
   font-weight: 500;
   align-items: center;
-  height: 40px;
 }
 
 .title-splash {
@@ -66,25 +62,13 @@
   color: #fff;
 }
 
-.search {
-  position: static;
-  width: 90%;
-  min-height: 24px;
-  padding-left: 8px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-weight: 300;
-  border: 1px solid #cccccc;
-  border-radius: 2px;
-  background-color: inherit;
-}
-
 .search-container {
   display: flex;
   max-width: 640px;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  color: #606060;
 }
 
 .nav-logo {
@@ -95,7 +79,8 @@
 }
 
 .thumbnail-2 {
-  object-fit: fill;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .thumb-title-2 {
@@ -144,7 +129,6 @@
 
 .signin-cont {
   position: relative;
-  border: 1px solid #dbdbdd;
 }
 
 .leftside {
@@ -236,7 +220,7 @@
 .play-button {
   height: 1.3rem;
   max-width: auto;
-  padding: 3px 6px;
+  padding: 3px;
 }
 
 .icon-button {
@@ -244,11 +228,18 @@
   margin-right: 16px;
 }
 
+.icon-button:hover {
+  background-color: #3b3737;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .viewtube-index {
   display: inline-block; /* Required for transform */
-  transform: scaleY(1.2); /* Scale the text vertically */
+  transform: scaleY(1.5); /* Scale the text vertically */
   text-decoration: none;
   color: #fff;
+  letter-spacing: -0.5px;
 }
 
 .nav-left {
@@ -322,4 +313,8 @@
   justify-content: center;
   align-items: center;
   color: #ffffff;
+}
+
+.user-email {
+  margin-left: 6px;
 }
