@@ -34,14 +34,14 @@
 .comment-username {
   font-size: 15px;
   font-weight: 700;
-  color: #0d0d0d;
+  color: #fff;
   height: 20px;
   margin-bottom: 8px;
 }
 
 .comment-body {
   font-size: 16px;
-  color: #111111;
+  color: #fff;
   height: fit-content;
   line-height: 20px;
   font-weight: 400;
@@ -60,13 +60,13 @@
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   letter-spacing: 0.2px;
-  color: #ffffff;
+  color: #000;
   width: 90%;
   height: 24px;
   border: none;
   outline: none;
-  border-radius: 2px;
-  background-color: #285fd4;
+  border-radius: 20px;
+  background-color: rgb(62, 166, 255);
 }
 
 .comment-delete-btn:hover {
@@ -81,6 +81,7 @@
 .comments-count {
   margin: 0 0 24px;
   height: 23px;
+  color: #fff;
 }
 
 p {
@@ -118,11 +119,12 @@ i {
 .comment-input-text {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  color: #0d0d0d;
+  color: #fff;
+  background-color: #000;
   width: 100%;
   outline: none;
   border: none;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #606060;
   padding-bottom: 4px;
   flex: 1;
 }
@@ -149,8 +151,8 @@ i {
   font-size: 14px;
   width: 86px;
   height: 36px;
-  color: #606060;
-  background-color: #ffffff;
+  color: #fff;
+  background-color: #000;
   border: none;
   outline: none;
   padding: 10px 16px;
@@ -163,8 +165,7 @@ i {
   font-size: 14px;
   width: 86px;
   height: 36px;
-  color: #606060;
-  background-color: #e2e2e2;
+  color: #fff;
   border: none;
   outline: none;
   padding: 10px 16px;
@@ -175,14 +176,14 @@ i {
 .comment-comment-btn {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  width: 101px;
+  width: auto;
   height: 36px;
-  color: #ffffff;
-  background-color: #cccccc;
-  border: none;
-  outline: none;
-  border-radius: 2px;
+  color: #cdc7c7;
+  background-color: #727171;
+  border-radius: 20px;
   padding: 10px 16px;
+  opacity: 0.4;
+  border: none;
 }
 
 .comment-comment-btn-blue {
@@ -190,11 +191,10 @@ i {
   font-size: 14px;
   width: 101px;
   height: 36px;
-  color: #ffffff;
-  background-color: #065fd4;
+  color: #000;
+  background-color: rgb(62, 166, 255);
   border: none;
-  outline: none;
-  border-radius: 2px;
+  border-radius: 20px;
   padding: 10px 16px;
   cursor: pointer;
 }

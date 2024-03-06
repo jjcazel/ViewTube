@@ -262,7 +262,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-width: 1000px;
+}
+
+@media (max-width: 900px) {
+  .inner-container {
+    flex-direction: column;
+  }
 }
 
 .video-index-splash {

@@ -61,7 +61,7 @@ class VideoShow extends React.Component {
 
   renderVideo(video) {
     return (
-      <div className="video-show-item-containe">
+      <div className="video-show-item-container">
         <video
           key={video.videoUrl}
           width="520"

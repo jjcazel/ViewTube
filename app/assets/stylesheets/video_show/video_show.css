@@ -1,8 +1,13 @@
 .show-form {
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  background-color: #000;
+}
+
+@media (max-width: 900px) {
+  .show-form {
+    display: flex;
+    flex-direction: column; /* Switch to column layout on screens smaller than 900px */
+  }
 }
 
 .video-show {
@@ -10,8 +15,8 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 72%;
-  margin-left: 24px;
-  padding-top: 22px;
+  margin-left: 40px;
+  padding-top: 20px;
   padding-right: 24px;
   min-height: 1000px;
   background-color: #000;
@@ -43,6 +48,12 @@
   cursor: pointer;
 }
 
+@media (min-width: 901px) and (max-width: 1400px) {
+  .rightsidebar-item {
+    flex-direction: column;
+  }
+}
+
 .title,
 .description {
   display: flex;
@@ -64,10 +75,20 @@
 }
 
 .title {
-  padding-top: 20px;
-  padding-bottom: 8px;
   color: #fff;
-  border-bottom: 1px solid #dbdbdd;
+}
+
+.video-show-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(13, 13, 13, 1) 100%
+  );
+  padding: 20px; /* Adjust padding to control the size of the gradient border */
+  border-radius: 12px; /* Optional: Matches the video player's border-radius */
 }
 
 .video-big {
@@ -160,22 +181,18 @@
 .description {
   box-sizing: border-box;
   font-size: 16px;
-  color: #0d0d0d;
+  color: #fff;
   margin-top: 8px;
   margin-bottom: 8px;
   padding-left: 60px;
 }
 
 .creator {
-  box-sizing: border-box;
   display: flex;
   padding-top: 10px;
-  color: rgb(13, 13, 13);
-  text-decoration-color: rgb(13, 13, 13);
-  text-decoration-style: solid;
+  color: #fff;
   font-weight: bold;
   font-size: 16px;
-  color: #0d0d0d;
   font-family: Arial, sans-serif;
   margin-bottom: 12px;
 }
@@ -184,8 +201,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #dbdbdd;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #606060;
+  background-color: #606060;
+  border-radius: 20px;
 }
 
 .date-index-views-cont {
@@ -201,13 +220,11 @@
   font-size: 16px;
   color: #606060;
   font-weight: 400;
-  /* margin-left: 6px; */
 }
 
 .video-show-cont {
   display: flex;
   flex-direction: row;
-  padding-top: 4px;
   justify-content: space-between;
   align-items: center;
 }
