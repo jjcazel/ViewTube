@@ -82,9 +82,12 @@ class VideoUpload extends React.Component {
     uploadValues.append("title", this.state.title);
     uploadValues.append("description", this.state.description);
     uploadValues.append("video", this.state.video);
-    this.props.createVideo(uploadValues).then((action) => {
-      this.props.history.push(`/videos/${Object.keys(action.video)[0]}`);
-    }).catch(error => console.error(`There was an error: ${error}`));
+    this.props
+      .createVideo(uploadValues)
+      .then((action) => {
+        this.props.history.push(`/videos/${Object.keys(action.video)[0]}`);
+      })
+      .catch((error) => console.error(`There was an error: ${error}`));
   }
 
   render() {

@@ -3,7 +3,6 @@ import {
   DELETE_COMMENT,
 } from '../actions/comment_actions';
 import {
-  RECEIVE_VIDEOS,
   RECEIVE_VIDEO,
 } from '../actions/video_actions';
 

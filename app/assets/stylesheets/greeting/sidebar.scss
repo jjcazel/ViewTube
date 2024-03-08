@@ -1,9 +1,8 @@
 .side-bar-whole {
   width: 72px;
-  background-color: #ffffff;
+  background-color: #000;
 
   .side-bar-links {
-  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +11,7 @@
 
     .side-bar-links-wrap {
       text-decoration: none;
-      
+
       .side-bar-link-box {
         padding: 16px 0 14px;
         height: 60px;
@@ -20,7 +19,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+
         cursor: pointer;
 
         .side-bar-icon {
@@ -30,7 +29,7 @@
           margin-right: 24px;
           width: 24px;
           height: 24px;
-          color: #606060;
+          color: #fff;
 
           i {
             transform: scale(1.1);
@@ -40,11 +39,10 @@
         .side-bar-text {
           display: flex;
           align-items: center;
-          font-family: 'Roboto', sans-serif;
-          color: #0d0d0d;
+          font-family: "Roboto", sans-serif;
+          color: #fff;
           margin-right: 24px;
           height: 21px;
-          
 
           span {
             font-size: 12px;
@@ -56,9 +54,11 @@
       }
 
       .side-bar-link-box:hover {
-        background-color: #dcdcdc;
+        background-color: #3b3737;
+        border-radius: 10px;
+        margin: 0 4px;
       }
-      
+
       .side-bar-link-box:active {
         background-color: #c3c3c3;
         .side-bar-icon {
@@ -68,37 +68,36 @@
     }
   }
 
-
   .fa-home:before {
     content: "\f015";
-    color: slategrey;
+    color: #fff;
     font-size: x-large;
     padding-left: 18px;
-  } 
+  }
   .fa-video:before {
     content: "\f03d";
-    color: slategrey;
+    color: #fff;
     font-size: larger;
     padding-left: 18px;
   }
 
   .fa-linkedin:before {
     content: "\f08c";
-    color: steelblue;
+    color: white;
     font-size: x-large;
     padding-left: 18px;
   }
 
   .fa-github:before {
     content: "\f09b";
-    color: slategray;
+    color: #fff;
     font-size: x-large;
     padding-left: 18px;
-  } 
+  }
 
   .fa-user-circle:before {
     content: "\f2bd";
-    color: slategray;
+    color: #fff;
     font-size: x-large;
     padding-left: 18px;
   }
@@ -113,7 +112,7 @@
     border-bottom: 1px solid #dcdcdc;
 
     .side-bar-login-text {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       color: #0d0d0d;
       line-height: 1.35;
       margin-bottom: 15px;

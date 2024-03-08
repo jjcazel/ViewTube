@@ -1,36 +1,36 @@
 import {
-    RECEIVE_VIDEO,
-    RECEIVE_VIDEOS,
-    RECEIVE_SEARCH_VIDEOS
-} from '../../actions/video_actions';
+  RECEIVE_VIDEO,
+  RECEIVE_VIDEOS,
+  RECEIVE_SEARCH_VIDEOS,
+} from "../../actions/video_actions";
 
-import { merge } from 'lodash'
+import { merge } from "lodash";
 
 const videosReducer = (state = {}, action) => {
-    Object.freeze(state);
-    const newState = merge({}, state);
-    switch (action.type) {
-        case RECEIVE_VIDEO:
-            let views = action.views ? Object.keys(action.views).length : 0;
-            let videoId = Object.keys(action.video)[0]
-            action.video[videoId].views = views;
-            return merge(newState, action.video);
+  Object.freeze(state);
+  const newState = merge({}, state);
+  switch (action.type) {
+    case RECEIVE_VIDEO:
+      let views = action.views ? Object.keys(action.views).length : 0;
+      let videoId = Object.keys(action.video)[0];
+      action.video[videoId].views = views;
+      return merge(newState, action.video);
 
-        case RECEIVE_VIDEOS:
-            return merge(newState, action.videos);
+    case RECEIVE_VIDEOS:
+      return merge(newState, action.videos);
 
-        case RECEIVE_SEARCH_VIDEOS:
-            return merge({}, action.videos)
-            
-        default:
-            return newState;
-    }
-}
+    case RECEIVE_SEARCH_VIDEOS:
+      return merge({}, action.videos);
+
+    default:
+      return newState;
+  }
+};
 
 export default videosReducer;
 
-// videos: { 
-//    25: { 
+// videos: {
+//    25: {
 //       id: 25,
 //       creatorId: 62,
 //       title: "She kissed my girlfriend!",
