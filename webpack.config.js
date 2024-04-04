@@ -2,10 +2,9 @@ const path = require("path");
 const webpack = require("webpack"); // Import webpack to use its built-in plugins
 
 module.exports = {
+  mode: "production",
   context: __dirname,
-  entry: [
-    "./frontend/view_tube.jsx",
-  ],
+  entry: ["./frontend/view_tube.jsx"],
   output: {
     path: path.resolve(__dirname, "app", "assets", "javascripts"),
     filename: "bundle.js",
