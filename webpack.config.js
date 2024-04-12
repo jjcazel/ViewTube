@@ -1,6 +1,9 @@
 const path = require("path");
 const webpack = require("webpack"); // Import webpack to use its built-in plugins
-
+const plugins = [];
+if (process.env.NODE_ENV !== "production") {
+  plugins.push(new webpack.HotModuleReplacementPlugin());
+}
 module.exports = {
   mode: "production",
   context: __dirname,
@@ -18,7 +21,7 @@ module.exports = {
           loader: "babel-loader",
           options: {
             // Changed "query" to "options" as per latest syntax
-            presets: ["@babel/env", "@babel/react"],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
@@ -28,9 +31,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", "*"],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(), // Enables HMR
-  ],
+  plugins: plugins,
   devServer: {
     hot: true, // Enable HMR on the server
     contentBase: path.resolve(__dirname, "app", "assets", "javascripts"),
